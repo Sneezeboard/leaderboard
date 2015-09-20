@@ -39,6 +39,8 @@ play, and find people to challenge to a game.
     - "You're in 3rd place at Yahoo!"
       - Link to _place detail view_ so user can see leaderboard there.
 
+[Wireframes](https://www.dropbox.com/s/tnf15ivq24zjc5y/2015-09-20%2012.30.13.jpg?dl=0)
+
 ### APIs
 - [Parse](https://parse.com/docs/ios/guide) as data store
 - [Foursquare](https://developer.foursquare.com/) API for locations
