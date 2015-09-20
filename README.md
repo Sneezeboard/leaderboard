@@ -42,6 +42,7 @@ play, and find people to challenge to a game.
 [Wireframes](https://www.dropbox.com/s/tnf15ivq24zjc5y/2015-09-20%2012.30.13.jpg?dl=0)
 
 ### APIs
+- [Elo rating system](https://en.wikipedia.org/wiki/Elo_rating_system) Algorithm for creating leaderboards
 - [Parse](https://parse.com/docs/ios/guide) as data store
 - [Foursquare](https://developer.foursquare.com/) API for locations
 - [Facebook](https://developers.facebook.com/docs/facebook-login) Signup, login, name, profile photo, and social graph.
@@ -53,4 +54,3 @@ play, and find people to challenge to a game.
 #### Optional
 
 ### Walkthrough
-
