@@ -6,6 +6,10 @@
 //  Copyright © 2015 patrick. All rights reserved.
 //
 
-class User {
+import Parse
+
+@objc class User: PFObject, PFSubclassing {
   static var currentUser: User! = nil
+  
+  class func parseClassName() -> String { return "User" }
 }

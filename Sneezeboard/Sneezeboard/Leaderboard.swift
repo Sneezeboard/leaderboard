@@ -6,12 +6,18 @@
 //  Copyright © 2015 patrick. All rights reserved.
 //
 
-class Leaderboard {
+import Parse
+
+@objc class Leaderboard: PFObject, PFSubclassing {
   let name: String
   let id: Int
   
-  init() {
+  class func parseClassName() -> String { return "Leaderboard" }
+  
+  override init() {
     name = "Unknown"
     id = 0
+    
+    super.init()
   }
 }

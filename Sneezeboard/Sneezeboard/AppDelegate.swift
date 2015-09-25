@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,16 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    var storyboard: UIStoryboard! = nil
-    
-    if let _ = User.currentUser {
-      storyboard = UIStoryboard(name: "Main", bundle: nil)
-    } else {
-      storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
-    }
-    
-    window?.rootViewController = storyboard.instantiateInitialViewController()
-    
+    setupParse()
+    pickLaunchStoryboard()
     return true
   }
 
@@ -48,6 +41,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func applicationWillTerminate(application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+  }
+  
+  private func pickLaunchStoryboard() {
+    var storyboard: UIStoryboard! = nil
+    if let _ = User.currentUser {
+      storyboard = UIStoryboard(name: "Main", bundle: nil)
+    } else {
+      storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+    }
+    window?.rootViewController = storyboard.instantiateInitialViewController()
+  }
+  private func setupParse() {
+    User.registerSubclass()
+    Leaderboard.registerSubclass()
+    Parse.setApplicationId("JTmtYRYHh6qDkgtwPHIgHWfsSx4TmMp6TFQqTlBN", clientKey: "EPS17m0XEpJtWf45AfhdZ0zmQvrhtCWS7WrY8LcZ")
   }
 }
 
