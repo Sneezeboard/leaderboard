@@ -67,7 +67,7 @@
         <!--Social-->
         <scene sceneID="f16-8O-Xhm">
             <objects>
-                <viewController title="Social" id="fLQ-J7-56O" sceneMemberID="viewController">
+                <viewController title="Social" id="fLQ-J7-56O" customClass="SocialController" customModule="Sneezeboard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KMR-mA-ilZ"/>
                         <viewControllerLayoutGuide type="bottom" id="UzU-SW-mG8"/>
@@ -103,7 +103,7 @@
                                 <rect key="frame" x="256" y="349" width="89" height="30"/>
                                 <state key="normal" title="Be Antisocial"/>
                                 <connections>
-                                    <segue destination="7AS-PU-wiW" kind="show" id="gNB-Ta-l9r"/>
+                                    <segue destination="GiF-qr-5vX" kind="presentation" id="NKx-e9-DJh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -122,64 +122,21 @@
                             <constraint firstItem="0m3-A8-fzg" firstAttribute="width" secondItem="j4c-Kq-0gr" secondAttribute="width" id="vm5-gV-N5q"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="bBG-1I-lSM" kind="show" identifier="segue.launch" id="5l2-VO-I92"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="873-uB-eDH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1406" y="870"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="in6-gB-Col">
+        <!--LeaguePicker-->
+        <scene sceneID="Wgs-Xa-G7O">
             <objects>
-                <tableViewController id="7AS-PU-wiW" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="DKF-Om-l1q">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="idb-DJ-2Ng">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the big leagues!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="it0-77-klt">
-                                    <rect key="frame" x="191" y="22" width="217" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mV-jj-jdm">
-                                    <rect key="frame" x="549" y="18" width="43" height="30"/>
-                                    <state key="normal" title="Ready"/>
-                                    <connections>
-                                        <segue destination="bBG-1I-lSM" kind="show" id="sux-HM-tqO"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="trailing" secondItem="1mV-jj-jdm" secondAttribute="trailing" constant="8" id="4ro-hU-jD6"/>
-                                <constraint firstItem="it0-77-klt" firstAttribute="centerY" secondItem="idb-DJ-2Ng" secondAttribute="centerY" id="Tu1-u9-IXu"/>
-                                <constraint firstItem="it0-77-klt" firstAttribute="centerX" secondItem="idb-DJ-2Ng" secondAttribute="centerX" id="dwZ-Mb-nm7"/>
-                                <constraint firstItem="1mV-jj-jdm" firstAttribute="centerY" secondItem="idb-DJ-2Ng" secondAttribute="centerY" id="yj7-5L-OF2"/>
-                            </constraints>
-                        </view>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell.league" id="txy-Sf-P21">
-                                <rect key="frame" x="0.0" y="93" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="txy-Sf-P21" id="0B8-8M-QaI">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="7AS-PU-wiW" id="ILK-Nh-Fka"/>
-                            <outlet property="delegate" destination="7AS-PU-wiW" id="tO2-bZ-iab"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vLF-eR-dgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="LeaguePicker" id="GiF-qr-5vX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIB-pg-u4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2147" y="870"/>
+            <point key="canvasLocation" x="1918" y="791"/>
         </scene>
         <!--Main-->
         <scene sceneID="Nwb-XW-N9b">
@@ -187,7 +144,7 @@
                 <viewControllerPlaceholder storyboardName="Main" id="bBG-1I-lSM" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMU-le-Iuc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2593" y="870"/>
+            <point key="canvasLocation" x="1892.5" y="943"/>
         </scene>
         <!--Login-->
         <scene sceneID="uxL-ii-UJ6">

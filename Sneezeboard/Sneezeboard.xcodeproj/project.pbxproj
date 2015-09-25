@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3803530A1BB5F7BF00306DA7 /* LeaguePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380353091BB5F7BF00306DA7 /* LeaguePickerController.swift */; settings = {ASSET_TAGS = (); }; };
+		3803530C1BB5F9E500306DA7 /* LeaguePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3803530B1BB5F9E500306DA7 /* LeaguePicker.storyboard */; settings = {ASSET_TAGS = (); }; };
+		3803530E1BB5FBE700306DA7 /* SocialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803530D1BB5FBE700306DA7 /* SocialController.swift */; settings = {ASSET_TAGS = (); }; };
 		38F0C8E51BB5DD440030EC5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0C8E41BB5DD440030EC5D /* AppDelegate.swift */; };
-		38F0C8E71BB5DD440030EC5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0C8E61BB5DD440030EC5D /* ViewController.swift */; };
 		38F0C8EC1BB5DD440030EC5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38F0C8EB1BB5DD440030EC5D /* Assets.xcassets */; };
 		38F0C8EF1BB5DD440030EC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F0C8ED1BB5DD440030EC5D /* LaunchScreen.storyboard */; };
 		38F0C8F81BB5DE4A0030EC5D /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F0C8F71BB5DE4A0030EC5D /* Onboarding.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -23,9 +25,11 @@
 
 /* Begin PBXFileReference section */
 		1D8B24372D15B18AD2625715 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		380353091BB5F7BF00306DA7 /* LeaguePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaguePickerController.swift; sourceTree = "<group>"; };
+		3803530B1BB5F9E500306DA7 /* LeaguePicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LeaguePicker.storyboard; sourceTree = "<group>"; };
+		3803530D1BB5FBE700306DA7 /* SocialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialController.swift; sourceTree = "<group>"; };
 		38F0C8E11BB5DD440030EC5D /* Sneezeboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sneezeboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F0C8E41BB5DD440030EC5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		38F0C8E61BB5DD440030EC5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		38F0C8EB1BB5DD440030EC5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38F0C8EE1BB5DD440030EC5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38F0C8F01BB5DD440030EC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +65,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		380353061BB5F5ED00306DA7 /* NIBs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NIBs;
+			sourceTree = "<group>";
+		};
 		38F0C8D81BB5DD440030EC5D = {
 			isa = PBXGroup;
 			children = (
@@ -82,12 +93,12 @@
 		38F0C8E31BB5DD440030EC5D /* Sneezeboard */ = {
 			isa = PBXGroup;
 			children = (
+				380353061BB5F5ED00306DA7 /* NIBs */,
 				38F0C8FE1BB5DEC70030EC5D /* Models */,
 				38F0C8FD1BB5DE7C0030EC5D /* ViewControllers */,
 				38F0C8F61BB5DE3A0030EC5D /* Storyboards */,
 				38F0C8EB1BB5DD440030EC5D /* Assets.xcassets */,
 				38F0C8E41BB5DD440030EC5D /* AppDelegate.swift */,
-				38F0C8E61BB5DD440030EC5D /* ViewController.swift */,
 				38F0C8ED1BB5DD440030EC5D /* LaunchScreen.storyboard */,
 				38F0C8F01BB5DD440030EC5D /* Info.plist */,
 			);
@@ -100,6 +111,7 @@
 				38F0C8F71BB5DE4A0030EC5D /* Onboarding.storyboard */,
 				38F0C8F91BB5DE600030EC5D /* Main.storyboard */,
 				38F0C8FB1BB5DE670030EC5D /* Game.storyboard */,
+				3803530B1BB5F9E500306DA7 /* LeaguePicker.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -109,6 +121,8 @@
 			children = (
 				38F0C9031BB5EBAA0030EC5D /* SignupController.swift */,
 				38F0C9051BB5EBC20030EC5D /* LoginController.swift */,
+				380353091BB5F7BF00306DA7 /* LeaguePickerController.swift */,
+				3803530D1BB5FBE700306DA7 /* SocialController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -192,6 +206,7 @@
 			files = (
 				38F0C8FC1BB5DE670030EC5D /* Game.storyboard in Resources */,
 				38F0C8EF1BB5DD440030EC5D /* LaunchScreen.storyboard in Resources */,
+				3803530C1BB5F9E500306DA7 /* LeaguePicker.storyboard in Resources */,
 				38F0C8FA1BB5DE600030EC5D /* Main.storyboard in Resources */,
 				38F0C8EC1BB5DD440030EC5D /* Assets.xcassets in Resources */,
 				38F0C8F81BB5DE4A0030EC5D /* Onboarding.storyboard in Resources */,
@@ -253,12 +268,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38F0C8E71BB5DD440030EC5D /* ViewController.swift in Sources */,
+				3803530E1BB5FBE700306DA7 /* SocialController.swift in Sources */,
 				38F0C9061BB5EBC20030EC5D /* LoginController.swift in Sources */,
 				38F0C9021BB5E0850030EC5D /* Leaderboard.swift in Sources */,
 				38F0C8E51BB5DD440030EC5D /* AppDelegate.swift in Sources */,
 				38F0C9041BB5EBAA0030EC5D /* SignupController.swift in Sources */,
 				38F0C9001BB5DED50030EC5D /* User.swift in Sources */,
+				3803530A1BB5F7BF00306DA7 /* LeaguePickerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
