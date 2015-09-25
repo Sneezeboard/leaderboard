@@ -8,8 +8,6 @@
 
 import Parse
 
-@objc class User: PFObject, PFSubclassing {
-  static var currentUser: User! = nil
-  
-  class func parseClassName() -> String { return "User" }
+class User: PFUser {
+
 }

@@ -30,13 +30,16 @@
                                         <rect key="frame" x="165" y="97" width="46" height="30"/>
                                         <state key="normal" title="Go"/>
                                         <connections>
-                                            <segue destination="fLQ-J7-56O" kind="show" id="0dl-eO-Nm0"/>
+                                            <action selector="signupTouched:" destination="MHz-BW-Yle" eventType="touchUpInside" id="Pv3-Io-3zT"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sfr-Jy-h2G">
                                         <rect key="frame" x="28" y="97" width="129" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="MHz-BW-Yle" id="zR1-J9-a0j"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNz-f5-LjI">
                                         <rect key="frame" x="34" y="185" width="175" height="30"/>
@@ -59,6 +62,10 @@
                             <constraint firstItem="c73-cj-0Wm" firstAttribute="centerY" secondItem="rKQ-Vt-zD5" secondAttribute="centerY" id="S1R-vl-hEL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="usernameField" destination="sfr-Jy-h2G" id="h8J-cQ-w47"/>
+                        <segue destination="fLQ-J7-56O" kind="show" identifier="segue.signup.social" id="5M4-JL-aZb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="brR-9Z-JBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,6 +101,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gm3-yo-gY0">
                                 <rect key="frame" x="230" y="226" width="140" height="30"/>
                                 <state key="normal" title="Do it with Facebook!"/>
+                                <connections>
+                                    <action selector="facebookTouched:" destination="fLQ-J7-56O" eventType="touchUpInside" id="MIR-8q-Vgg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTL-RP-By4">
                                 <rect key="frame" x="240" y="264" width="121" height="30"/>
@@ -162,17 +172,12 @@
                                 <rect key="frame" x="180" y="189" width="240" height="223"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Or4-JL-d5Y">
-                                        <rect key="frame" x="165" y="97" width="46" height="30"/>
+                                        <rect key="frame" x="179" y="97" width="46" height="30"/>
                                         <state key="normal" title="Go"/>
                                         <connections>
-                                            <segue destination="fLQ-J7-56O" kind="show" id="xOO-OU-MvP"/>
+                                            <action selector="loginTouched:" destination="fjB-4c-HDp" eventType="touchUpInside" id="c4x-Qv-qD9"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Api-Ld-SG7">
-                                        <rect key="frame" x="28" y="97" width="129" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNb-et-LOT">
                                         <rect key="frame" x="62" y="185" width="120" height="30"/>
                                         <state key="normal" title="Wait, I was wrong"/>
@@ -180,8 +185,18 @@
                                             <action selector="backTouched:" destination="fjB-4c-HDp" eventType="touchUpInside" id="D2i-Gf-b9e"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uft-eb-5xl">
-                                        <rect key="frame" x="71" y="68" width="100" height="21"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffp-us-eHS">
+                                        <rect key="frame" x="42" y="98" width="129" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Api-Ld-SG7">
+                                        <rect key="frame" x="42" y="135" width="129" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uft-eb-5xl">
+                                        <rect key="frame" x="97" y="69" width="47" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -200,6 +215,11 @@
                             <constraint firstItem="a5A-qn-xF4" firstAttribute="centerX" secondItem="hba-cf-rhU" secondAttribute="centerX" id="aDl-Nz-ICK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordField" destination="Api-Ld-SG7" id="vfh-pP-ara"/>
+                        <outlet property="usernameField" destination="ffp-us-eHS" id="U0q-U4-8l4"/>
+                        <segue destination="fLQ-J7-56O" kind="show" identifier="segue.login.social" id="Be3-2i-kTe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l2g-sQ-SsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -207,6 +227,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0dl-eO-Nm0"/>
+        <segue reference="Be3-2i-kTe"/>
     </inferredMetricsTieBreakers>
 </document>
