@@ -10,12 +10,14 @@
 		3803530A1BB5F7BF00306DA7 /* LeaguePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380353091BB5F7BF00306DA7 /* LeaguePickerController.swift */; settings = {ASSET_TAGS = (); }; };
 		3803530C1BB5F9E500306DA7 /* LeaguePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3803530B1BB5F9E500306DA7 /* LeaguePicker.storyboard */; settings = {ASSET_TAGS = (); }; };
 		3803530E1BB5FBE700306DA7 /* SocialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803530D1BB5FBE700306DA7 /* SocialController.swift */; settings = {ASSET_TAGS = (); }; };
+		380353101BBA083900306DA7 /* ActivityFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3803530F1BBA083900306DA7 /* ActivityFeed.storyboard */; settings = {ASSET_TAGS = (); }; };
+		380353121BBA08B100306DA7 /* LeaderboardList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380353111BBA08B100306DA7 /* LeaderboardList.storyboard */; settings = {ASSET_TAGS = (); }; };
 		38F0C8E51BB5DD440030EC5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0C8E41BB5DD440030EC5D /* AppDelegate.swift */; };
 		38F0C8EC1BB5DD440030EC5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38F0C8EB1BB5DD440030EC5D /* Assets.xcassets */; };
 		38F0C8EF1BB5DD440030EC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F0C8ED1BB5DD440030EC5D /* LaunchScreen.storyboard */; };
 		38F0C8F81BB5DE4A0030EC5D /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F0C8F71BB5DE4A0030EC5D /* Onboarding.storyboard */; settings = {ASSET_TAGS = (); }; };
 		38F0C8FA1BB5DE600030EC5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F0C8F91BB5DE600030EC5D /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		38F0C8FC1BB5DE670030EC5D /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F0C8FB1BB5DE670030EC5D /* Game.storyboard */; settings = {ASSET_TAGS = (); }; };
+		38F0C8FC1BB5DE670030EC5D /* RecordGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F0C8FB1BB5DE670030EC5D /* RecordGame.storyboard */; settings = {ASSET_TAGS = (); }; };
 		38F0C9001BB5DED50030EC5D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0C8FF1BB5DED50030EC5D /* User.swift */; settings = {ASSET_TAGS = (); }; };
 		38F0C9021BB5E0850030EC5D /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0C9011BB5E0850030EC5D /* Leaderboard.swift */; settings = {ASSET_TAGS = (); }; };
 		38F0C9041BB5EBAA0030EC5D /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0C9031BB5EBAA0030EC5D /* SignupController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -28,6 +30,8 @@
 		380353091BB5F7BF00306DA7 /* LeaguePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaguePickerController.swift; sourceTree = "<group>"; };
 		3803530B1BB5F9E500306DA7 /* LeaguePicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LeaguePicker.storyboard; sourceTree = "<group>"; };
 		3803530D1BB5FBE700306DA7 /* SocialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialController.swift; sourceTree = "<group>"; };
+		3803530F1BBA083900306DA7 /* ActivityFeed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActivityFeed.storyboard; sourceTree = "<group>"; };
+		380353111BBA08B100306DA7 /* LeaderboardList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LeaderboardList.storyboard; sourceTree = "<group>"; };
 		38F0C8E11BB5DD440030EC5D /* Sneezeboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sneezeboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F0C8E41BB5DD440030EC5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38F0C8EB1BB5DD440030EC5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,7 +39,7 @@
 		38F0C8F01BB5DD440030EC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38F0C8F71BB5DE4A0030EC5D /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		38F0C8F91BB5DE600030EC5D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		38F0C8FB1BB5DE670030EC5D /* Game.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
+		38F0C8FB1BB5DE670030EC5D /* RecordGame.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecordGame.storyboard; sourceTree = "<group>"; };
 		38F0C8FF1BB5DED50030EC5D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		38F0C9011BB5E0850030EC5D /* Leaderboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
 		38F0C9031BB5EBAA0030EC5D /* SignupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
@@ -110,8 +114,10 @@
 				38F0C8ED1BB5DD440030EC5D /* LaunchScreen.storyboard */,
 				38F0C8F71BB5DE4A0030EC5D /* Onboarding.storyboard */,
 				38F0C8F91BB5DE600030EC5D /* Main.storyboard */,
-				38F0C8FB1BB5DE670030EC5D /* Game.storyboard */,
+				38F0C8FB1BB5DE670030EC5D /* RecordGame.storyboard */,
 				3803530B1BB5F9E500306DA7 /* LeaguePicker.storyboard */,
+				3803530F1BBA083900306DA7 /* ActivityFeed.storyboard */,
+				380353111BBA08B100306DA7 /* LeaderboardList.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -204,10 +210,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38F0C8FC1BB5DE670030EC5D /* Game.storyboard in Resources */,
+				38F0C8FC1BB5DE670030EC5D /* RecordGame.storyboard in Resources */,
 				38F0C8EF1BB5DD440030EC5D /* LaunchScreen.storyboard in Resources */,
+				380353121BBA08B100306DA7 /* LeaderboardList.storyboard in Resources */,
 				3803530C1BB5F9E500306DA7 /* LeaguePicker.storyboard in Resources */,
 				38F0C8FA1BB5DE600030EC5D /* Main.storyboard in Resources */,
+				380353101BBA083900306DA7 /* ActivityFeed.storyboard in Resources */,
 				38F0C8EC1BB5DD440030EC5D /* Assets.xcassets in Resources */,
 				38F0C8F81BB5DE4A0030EC5D /* Onboarding.storyboard in Resources */,
 			);
@@ -379,7 +387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Sneezeboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sneezefestival.Sneezeboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,7 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Sneezeboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sneezefestival.Sneezeboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";

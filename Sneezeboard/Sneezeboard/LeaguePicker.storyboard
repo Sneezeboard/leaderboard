@@ -18,7 +18,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="127"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HVt-fV-rHu" id="bvY-Tp-B89">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="126.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="127"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LAS-1V-Kia">
@@ -103,7 +103,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BmQ-aT-xfk" id="fHr-bs-qSE">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="87.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="88"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
