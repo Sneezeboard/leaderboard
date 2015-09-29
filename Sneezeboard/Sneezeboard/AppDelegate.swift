@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     setupParse(launchOptions)
+
     pickLaunchStoryboard()
     return true
   }
@@ -57,9 +58,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     window?.rootViewController = storyboard.instantiateInitialViewController()
   }
+    
   private func setupParse(launchOptions: [NSObject: AnyObject]?) {
     User.registerSubclass()
     Leaderboard.registerSubclass()
+    Match.registerSubclass()
     Parse.setApplicationId("JTmtYRYHh6qDkgtwPHIgHWfsSx4TmMp6TFQqTlBN", clientKey: "EPS17m0XEpJtWf45AfhdZ0zmQvrhtCWS7WrY8LcZ")
     PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
   }
