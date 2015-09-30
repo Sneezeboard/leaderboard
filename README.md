@@ -38,7 +38,8 @@ Thunder.  Dome.
  * Update ELO ranking
    * **(Optional)** Calculate in parse clouse
  * **(Optional)** Add results to league total
- * 
+ 
+
 ### **(Bonus)** Me
 
  * All time record
