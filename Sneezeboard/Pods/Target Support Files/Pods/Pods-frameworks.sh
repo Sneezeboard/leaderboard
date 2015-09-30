@@ -52,6 +52,7 @@ code_sign_if_enabled() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'Pods/AFNetworking.framework'
   install_framework 'Pods/Bolts.framework'
   install_framework 'Pods/FBSDKCoreKit.framework'
   install_framework 'Pods/FBSDKLoginKit.framework'
@@ -60,6 +61,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods/ParseFacebookUtilsV4.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'Pods/AFNetworking.framework'
   install_framework 'Pods/Bolts.framework'
   install_framework 'Pods/FBSDKCoreKit.framework'
   install_framework 'Pods/FBSDKLoginKit.framework'
