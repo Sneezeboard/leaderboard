@@ -25,6 +25,9 @@
 		4514CEC31BBA2F4A0056CD25 /* ActivityFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514CEC21BBA2F4A0056CD25 /* ActivityFeedViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4514CEC51BBA2FC80056CD25 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514CEC41BBA2FC80056CD25 /* Match.swift */; settings = {ASSET_TAGS = (); }; };
 		4514CEC71BBA31060056CD25 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514CEC61BBA31060056CD25 /* ActivityCell.swift */; settings = {ASSET_TAGS = (); }; };
+		4ED369611BBBADF60040AA0F /* OpponentTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED369601BBBADF60040AA0F /* OpponentTypesViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4ED369631BBBAEB30040AA0F /* OpponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED369621BBBAEB30040AA0F /* OpponentsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4ED369681BBBAF8E0040AA0F /* RecentOpponentsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED369671BBBAF8E0040AA0F /* RecentOpponentsDataSource.swift */; settings = {ASSET_TAGS = (); }; };
 		F3E294EEAC15535D9E2EFE14 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC985C982ECC214D66E5D5A3 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -50,6 +53,9 @@
 		4514CEC21BBA2F4A0056CD25 /* ActivityFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityFeedViewController.swift; sourceTree = "<group>"; };
 		4514CEC41BBA2FC80056CD25 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		4514CEC61BBA31060056CD25 /* ActivityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
+		4ED369601BBBADF60040AA0F /* OpponentTypesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpponentTypesViewController.swift; sourceTree = "<group>"; };
+		4ED369621BBBAEB30040AA0F /* OpponentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpponentsViewController.swift; sourceTree = "<group>"; };
+		4ED369671BBBAF8E0040AA0F /* RecentOpponentsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentOpponentsDataSource.swift; sourceTree = "<group>"; };
 		BC985C982ECC214D66E5D5A3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33A7E2D85736A99750CCA9F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +143,9 @@
 				380353091BB5F7BF00306DA7 /* LeaguePickerController.swift */,
 				3803530D1BB5FBE700306DA7 /* SocialController.swift */,
 				4514CEC21BBA2F4A0056CD25 /* ActivityFeedViewController.swift */,
+				4ED369601BBBADF60040AA0F /* OpponentTypesViewController.swift */,
+				4ED369621BBBAEB30040AA0F /* OpponentsViewController.swift */,
+				4ED369641BBBAF240040AA0F /* Opponents Data Sources */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -165,6 +174,14 @@
 				BC985C982ECC214D66E5D5A3 /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4ED369641BBBAF240040AA0F /* Opponents Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4ED369671BBBAF8E0040AA0F /* RecentOpponentsDataSource.swift */,
+			);
+			name = "Opponents Data Sources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,11 +311,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3803530E1BB5FBE700306DA7 /* SocialController.swift in Sources */,
+				4ED369631BBBAEB30040AA0F /* OpponentsViewController.swift in Sources */,
 				38F0C9061BB5EBC20030EC5D /* LoginController.swift in Sources */,
 				4514CEC71BBA31060056CD25 /* ActivityCell.swift in Sources */,
 				4514CEC51BBA2FC80056CD25 /* Match.swift in Sources */,
+				4ED369611BBBADF60040AA0F /* OpponentTypesViewController.swift in Sources */,
 				38F0C9021BB5E0850030EC5D /* Leaderboard.swift in Sources */,
 				38F0C8E51BB5DD440030EC5D /* AppDelegate.swift in Sources */,
+				4ED369681BBBAF8E0040AA0F /* RecentOpponentsDataSource.swift in Sources */,
 				38F0C9041BB5EBAA0030EC5D /* SignupController.swift in Sources */,
 				38F0C9001BB5DED50030EC5D /* User.swift in Sources */,
 				4514CEC31BBA2F4A0056CD25 /* ActivityFeedViewController.swift in Sources */,

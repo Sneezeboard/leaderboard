@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="T3T-dt-RR1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Aqx-aW-m8v">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
@@ -93,7 +93,181 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yuv-mc-yOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="326" y="470"/>
+            <point key="canvasLocation" x="550" y="1202"/>
+        </scene>
+        <!--Record-->
+        <scene sceneID="rb1-dK-ufy">
+            <objects>
+                <navigationController title="Record" automaticallyAdjustsScrollViewInsets="NO" id="Aqx-aW-m8v" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DRE-Uh-K0T">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="h0X-rR-LXz" kind="relationship" relationship="rootViewController" id="77L-L4-TsI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wzf-v4-ZXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327" y="497"/>
+        </scene>
+        <!--Pick Opponent-->
+        <scene sceneID="Des-pb-pIG">
+            <objects>
+                <viewController id="h0X-rR-LXz" userLabel="Pick Opponent" customClass="OpponentTypesViewController" customModule="Sneezeboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yI3-VJ-jTC"/>
+                        <viewControllerLayoutGuide type="bottom" id="byJ-IR-c4e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EzV-7r-k51">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVh-yl-SNf">
+                                <rect key="frame" x="73" y="162" width="48" height="30"/>
+                                <state key="normal" title="Recent"/>
+                                <connections>
+                                    <segue destination="fI9-c8-Bkb" kind="push" identifier="segue.opponents.recent" id="lv7-4u-BXA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgJ-Zb-r9g">
+                                <rect key="frame" x="190" y="162" width="50" height="30"/>
+                                <state key="normal" title="Nearby"/>
+                                <connections>
+                                    <segue destination="fI9-c8-Bkb" kind="push" identifier="segue.opponents.nearby" id="ZKJ-7p-oW2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5K-GN-APu">
+                                <rect key="frame" x="72" y="282" width="51" height="30"/>
+                                <state key="normal" title="Friends"/>
+                                <connections>
+                                    <segue destination="fI9-c8-Bkb" kind="push" identifier="segue.opponents.friends" id="jrv-aH-P4N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNt-bi-hYy">
+                                <rect key="frame" x="197" y="282" width="37" height="30"/>
+                                <state key="normal" title="Invite"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Choose Your Opponent" id="QF6-wF-6lx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3B-SP-VVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="498"/>
+        </scene>
+        <!--Opponent List-->
+        <scene sceneID="YDe-qw-yui">
+            <objects>
+                <tableViewController id="fI9-c8-Bkb" userLabel="Opponent List" customClass="OpponentsViewController" customModule="Sneezeboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="MVt-Kb-whn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell.opponent" textLabel="wLm-hP-pLc" rowHeight="100" style="IBUITableViewCellStyleDefault" id="3ET-n3-9RU">
+                                <rect key="frame" x="0.0" y="92" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3ET-n3-9RU" id="7Zf-a8-z5I">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wLm-hP-pLc">
+                                            <rect key="frame" x="15" y="0.0" width="270" height="99"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="fbm-4j-dyI" kind="push" identifier="segue.sports" id="pj8-US-PEY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fI9-c8-Bkb" id="g5s-zW-0xx"/>
+                            <outlet property="delegate" destination="fI9-c8-Bkb" id="vgp-mU-sZn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Choose Your Opponent" id="glh-jF-TrL"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mhc-eT-NFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189" y="498"/>
+        </scene>
+        <!--Sports List-->
+        <scene sceneID="a9n-if-5my">
+            <objects>
+                <tableViewController id="fbm-4j-dyI" userLabel="Sports List" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="131" sectionHeaderHeight="28" sectionFooterHeight="28" id="q4U-8Q-wxz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="fwb-8l-uae" rowHeight="131" style="IBUITableViewCellStyleDefault" id="qcV-dB-Mgh">
+                                <rect key="frame" x="0.0" y="92" width="320" height="131"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qcV-dB-Mgh" id="hfD-wX-beq">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="130"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fwb-8l-uae">
+                                            <rect key="frame" x="15" y="0.0" width="270" height="130"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="3pf-2S-yvL" kind="push" identifier="segue.record_result" id="Ih0-LE-3YL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fbm-4j-dyI" id="VgR-Fl-gWC"/>
+                            <outlet property="delegate" destination="fbm-4j-dyI" id="8vT-lJ-NV0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Choose Your Sport" id="zKw-AF-apD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ehf-XS-j6q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1636" y="499"/>
+        </scene>
+        <!--Record Result-->
+        <scene sceneID="JcK-jm-A9f">
+            <objects>
+                <viewController id="3pf-2S-yvL" userLabel="Record Result" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Jk-yT-Wdh"/>
+                        <viewControllerLayoutGuide type="bottom" id="leO-DQ-3Z0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rnR-Ge-5qv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m78-d5-rd4">
+                                <rect key="frame" x="127" y="320" width="67" height="30"/>
+                                <state key="normal" title="Record It!"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Record It" id="lQZ-Vp-Z9e"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mus-tP-pkj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2074" y="498"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="lv7-4u-BXA"/>
+    </inferredMetricsTieBreakers>
 </document>

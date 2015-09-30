@@ -17,7 +17,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ebZ-Rp-gKQ" id="eM7-rp-cUl">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="71.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="71"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kJW-d4-Pzf">
@@ -34,7 +34,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKT-k3-9hw">
-                                            <rect key="frame" x="293" y="26" width="13" height="14.5"/>
+                                            <rect key="frame" x="293" y="26" width="13" height="15"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -47,13 +47,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cedric van Bonusly" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORB-Ia-2Ao">
-                                            <rect key="frame" x="381" y="8" width="136.5" height="17"/>
+                                            <rect key="frame" x="381" y="8" width="137" height="17"/>
                                             <fontDescription key="fontDescription" type="system" weight="black" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZ4-FQ-AJe">
-                                            <rect key="frame" x="381" y="29" width="13.5" height="29"/>
+                                            <rect key="frame" x="381" y="29" width="14" height="29"/>
                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
