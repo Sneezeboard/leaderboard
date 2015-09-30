@@ -8,7 +8,9 @@ Thunder.  Dome.
 
 ## Implementation
 
-### Onboarding @lpstein
+### Onboarding
+
+@lpstein
 
  * Sign up
  * Sign in
@@ -16,7 +18,9 @@ Thunder.  Dome.
  * Take profile photo
  * *(Optional)* Connect Twitter
 
-### Leaderboards @daltomania
+### Leaderboards
+
+@daltomania
 
  * List all leagues
    * Including global league (Interplanetary Multiverse Ladder)
@@ -24,15 +28,22 @@ Thunder.  Dome.
    * **(Optional)** Friends
    * **(Optional)** Create league
    * **(Optional)** Suggest nearby league
+ * Builtin leages
+   * Tumblr
+   * Yahoo
 
-### Activity Feed @etucker
+### Activity Feed
+
+@etucker
 
  * Reverse chron list of game results
    * Games you've played in
    * Games from leagues
    * **(Optional)** Friends
 
-### Record Match @cedrichan
+### Record Match
+
+@cedrichan
 
  * Choose opponent
    * Recent
