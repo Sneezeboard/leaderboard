@@ -14,6 +14,7 @@ class OpponentsViewController: UITableViewController {
         didSet {
             if let tableView = tableView {
                 tableView.dataSource = dataSource
+                tableView.reloadData()
             }
         }
     }
@@ -22,6 +23,7 @@ class OpponentsViewController: UITableViewController {
         super.viewDidLoad()
 
         tableView.dataSource = dataSource
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,6 +48,9 @@ class OpponentsViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+    
+        // Create a Match object and pass it on
+        // viewController.match = Match(me, otherGuy)
     }
     */
 

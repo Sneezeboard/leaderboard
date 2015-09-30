@@ -203,13 +203,13 @@
         <!--Sports List-->
         <scene sceneID="a9n-if-5my">
             <objects>
-                <tableViewController id="fbm-4j-dyI" userLabel="Sports List" sceneMemberID="viewController">
+                <tableViewController id="fbm-4j-dyI" userLabel="Sports List" customClass="SportsPickerViewController" customModule="Sneezeboard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="131" sectionHeaderHeight="28" sectionFooterHeight="28" id="q4U-8Q-wxz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="fwb-8l-uae" rowHeight="131" style="IBUITableViewCellStyleDefault" id="qcV-dB-Mgh">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell.sport" textLabel="fwb-8l-uae" rowHeight="131" style="IBUITableViewCellStyleDefault" id="qcV-dB-Mgh">
                                 <rect key="frame" x="0.0" y="92" width="320" height="131"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qcV-dB-Mgh" id="hfD-wX-beq">

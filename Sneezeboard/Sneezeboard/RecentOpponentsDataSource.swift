@@ -28,7 +28,7 @@ class RecentOpponentsDataSource: NSObject, UITableViewDataSource {
         return cell
     }
     
-    func fetch() {
+    func fetch() { // Probably want a completion block or something here
     }
     
 }
