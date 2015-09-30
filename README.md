@@ -9,7 +9,12 @@ Thunder.  Dome.
 ## Implementation
 
 ### Onboarding
- * 
+
+ * Sign up
+ * Sign in
+ * Connect FB
+ * Take profile photo
+ * *(Optional)* Connect Twitter
 
 ### Leaderboards
 
@@ -38,8 +43,8 @@ Thunder.  Dome.
  * Update ELO ranking
    * **(Optional)** Calculate in parse clouse
  * **(Optional)** Add results to league total
+ * **(Optional)** Boast on social media
  
-
 ### **(Bonus)** Me
 
  * All time record
