@@ -14,6 +14,7 @@ import Parse
     @NSManaged var user2: User?
     @NSManaged var score1: Int
     @NSManaged var score2: Int
+    @NSManaged var sport: Sport?
     @NSManaged var date: NSDate
     
     class func parseClassName() -> String { return "Match" }

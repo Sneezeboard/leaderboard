@@ -8,6 +8,10 @@
 
 import Parse
 
-class Sport: PFObject {
-    var name: String!
+class Sport: PFObject, PFSubclassing {
+
+    @NSManaged var name: String!
+
+    class func parseClassName() -> String { return "Sport" }
+    
 }
