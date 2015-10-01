@@ -48,7 +48,7 @@ class ParseClient {
                 completion(sports: (objects as! [Sport]), error: error)
             } else {
                 // Log details of the failure
-                print("Error getting matches: \(error)")
+                print("Error getting sports: \(error)")
                 completion(sports: [], error: error)
             }
         }
@@ -66,7 +66,7 @@ class ParseClient {
                 completion(leagues: (objects as! [League]), error: error)
             } else {
                 // Log details of the failure
-                print("Error getting matches: \(error)")
+                print("Error getting leagues: \(error)")
                 completion(leagues: [], error: error)
             }
         }
