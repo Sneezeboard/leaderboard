@@ -8,12 +8,20 @@
 
 import UIKit
 
-class ActivityFeedViewController: UIViewController {
+class ActivityFeedViewController: UITableViewController {
 
+    var matches: [Match] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
+        
+        ParseClient.sharedInstance.allMatches { (matches, error) -> () in
+            self.matches = matches
+            self.tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +29,18 @@ class ActivityFeedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("ActivityCell") as! ActivityCell
 
+        cell.match = matches[indexPath.row]
+
+        return cell
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return matches.count
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -25,6 +25,8 @@
 		4514CEC31BBA2F4A0056CD25 /* ActivityFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514CEC21BBA2F4A0056CD25 /* ActivityFeedViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4514CEC51BBA2FC80056CD25 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514CEC41BBA2FC80056CD25 /* Match.swift */; settings = {ASSET_TAGS = (); }; };
 		4514CEC71BBA31060056CD25 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514CEC61BBA31060056CD25 /* ActivityCell.swift */; settings = {ASSET_TAGS = (); }; };
+		45D4AA651BBCA9FA0018FE9B /* MatchApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4AA641BBCA9FA0018FE9B /* MatchApi.swift */; settings = {ASSET_TAGS = (); }; };
+		45D4AA671BBCAA180018FE9B /* ParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4AA661BBCAA180018FE9B /* ParseClient.swift */; settings = {ASSET_TAGS = (); }; };
 		4ED369611BBBADF60040AA0F /* OpponentTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED369601BBBADF60040AA0F /* OpponentTypesViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4ED369631BBBAEB30040AA0F /* OpponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED369621BBBAEB30040AA0F /* OpponentsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4ED369681BBBAF8E0040AA0F /* RecentOpponentsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED369671BBBAF8E0040AA0F /* RecentOpponentsDataSource.swift */; settings = {ASSET_TAGS = (); }; };
@@ -54,6 +56,8 @@
 		4514CEC21BBA2F4A0056CD25 /* ActivityFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityFeedViewController.swift; sourceTree = "<group>"; };
 		4514CEC41BBA2FC80056CD25 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		4514CEC61BBA31060056CD25 /* ActivityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
+		45D4AA641BBCA9FA0018FE9B /* MatchApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchApi.swift; sourceTree = "<group>"; };
+		45D4AA661BBCAA180018FE9B /* ParseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseClient.swift; sourceTree = "<group>"; };
 		4ED369601BBBADF60040AA0F /* OpponentTypesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpponentTypesViewController.swift; sourceTree = "<group>"; };
 		4ED369621BBBAEB30040AA0F /* OpponentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpponentsViewController.swift; sourceTree = "<group>"; };
 		4ED369671BBBAF8E0040AA0F /* RecentOpponentsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentOpponentsDataSource.swift; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 		38F0C8E31BB5DD440030EC5D /* Sneezeboard */ = {
 			isa = PBXGroup;
 			children = (
+				45D4AA631BBCA9B20018FE9B /* API */,
 				380353061BB5F5ED00306DA7 /* NIBs */,
 				4514CEC11BBA2F0C0056CD25 /* Views */,
 				38F0C8FE1BB5DEC70030EC5D /* Models */,
@@ -169,6 +174,15 @@
 				4514CEC61BBA31060056CD25 /* ActivityCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		45D4AA631BBCA9B20018FE9B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				45D4AA641BBCA9FA0018FE9B /* MatchApi.swift */,
+				45D4AA661BBCAA180018FE9B /* ParseClient.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		4B68B1264A9A7EEE1AA283E2 /* Frameworks */ = {
@@ -319,11 +333,13 @@
 				4514CEC71BBA31060056CD25 /* ActivityCell.swift in Sources */,
 				4514CEC51BBA2FC80056CD25 /* Match.swift in Sources */,
 				4ED369611BBBADF60040AA0F /* OpponentTypesViewController.swift in Sources */,
+				45D4AA671BBCAA180018FE9B /* ParseClient.swift in Sources */,
 				38F0C9021BB5E0850030EC5D /* Leaderboard.swift in Sources */,
 				38F0C8E51BB5DD440030EC5D /* AppDelegate.swift in Sources */,
 				4ED369681BBBAF8E0040AA0F /* RecentOpponentsDataSource.swift in Sources */,
 				38F0C9041BB5EBAA0030EC5D /* SignupController.swift in Sources */,
 				4ED3696C1BBBB9930040AA0F /* SportsPickerViewController.swift in Sources */,
+				45D4AA651BBCA9FA0018FE9B /* MatchApi.swift in Sources */,
 				38F0C9001BB5DED50030EC5D /* User.swift in Sources */,
 				4514CEC31BBA2F4A0056CD25 /* ActivityFeedViewController.swift in Sources */,
 				3803530A1BB5F7BF00306DA7 /* LeaguePickerController.swift in Sources */,
