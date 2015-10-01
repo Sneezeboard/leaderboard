@@ -1,6 +1,6 @@
 # Thunderdome
 
-Crushing your friends at ping pong isn't enough.  Record it for posterity, and make concrete your lesiure sport dominance.
+Crushing your friends at ping pong isn't enough.  Record it for posterity, and make concrete your leisure sport dominance.
 
 ## Elevator Pitch
 
