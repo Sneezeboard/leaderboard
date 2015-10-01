@@ -6,8 +6,12 @@
 //  Copyright © 2015 patrick. All rights reserved.
 //
 
-import UIKit
+import Parse
 
-class League: NSObject {
-
+class League: PFObject {
+    var name: String!
+    var createdBy: User!
+    var sport: Sport!
+    var location: PFGeoPoint!
+    var image: PFFile!
 }
