@@ -19,7 +19,7 @@ class ParseClient {
     
     func allMatches(completion: (matches: [Match], error: NSError?) -> ()) -> () {
         print("I'm here, peeps!")
-        let query = PFQuery(className:"Match")
+        let query = PFQuery(className: "Match")
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
             
@@ -37,7 +37,7 @@ class ParseClient {
     }
     
     func allSports(completion: (sports: [Sport], error: NSError?) -> ()) -> () {
-        let query = PFQuery(className:"Sport")
+        let query = PFQuery(className: "Sport")
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
             
@@ -50,6 +50,24 @@ class ParseClient {
                 // Log details of the failure
                 print("Error getting matches: \(error)")
                 completion(sports: [], error: error)
+            }
+        }
+    }
+    
+    func allLeagues(completion: (leagues: [League], error: NSError?) -> ()) -> () {
+        let query = PFQuery(className: "League")
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                // The find succeeded.
+                print("Successfully retrieved \(objects!.count) leagues")
+                // Do something with the found objects
+                completion(leagues: (objects as! [League]), error: error)
+            } else {
+                // Log details of the failure
+                print("Error getting matches: \(error)")
+                completion(leagues: [], error: error)
             }
         }
     }
