@@ -7,15 +7,12 @@
 //
 
 import UIKit
+import Parse
 
 class SportsPickerViewController: UITableViewController {
     
     var match: Match!
-    let sports: [(String, String)] = [
-        ("icon-chess.png", "Chess"),
-        ("icon-table-tennis.png", "Table Tennis"),
-        ("icon-tennis.png", "Tennis"),
-    ]
+    var sports: [Sport]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,30 +22,41 @@ class SportsPickerViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        fetchSports()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    private func fetchSports() {
+        let query = PFQuery(className:"Sport")
+        query.findObjectsInBackgroundWithBlock { (sports, error) -> Void in
+            if error != nil {
+                // TODO ERRRARR
+            } else {
+                self.sports = sports as? [Sport]
+                self.tableView.reloadData()
+            }
+        }
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return sports.count
+        return sports?.count ?? 0
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell.sport", forIndexPath: indexPath)
 
-        let (_, sportName) = sports[indexPath.row]
-        cell.textLabel?.text = sportName
+        let sport = sports?[indexPath.row]
+        cell.textLabel?.text = sport?.name
 
         return cell
     }
@@ -58,11 +66,12 @@ class SportsPickerViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "segue.record_result" {
-            if let cell = (sender as? UITableViewCell) {
-                let indexPath = tableView.indexPathForCell(cell)
-                let (_, sportName) = sports[indexPath!.row]
-                // match.sport = Sport
-                // viewController.match = match
+            let vc = segue.destinationViewController as! RecordMatchViewController
+            
+            if let cell = (sender as? UITableViewCell), let indexPath = tableView.indexPathForCell(cell) {
+                let sport = self.sports?[indexPath.row]
+                match.sport = sport
+                vc.match = match
             }
         }
     }

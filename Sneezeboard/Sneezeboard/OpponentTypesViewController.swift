@@ -46,4 +46,8 @@ class OpponentTypesViewController: UIViewController {
         }
     }
     
+    @IBAction func unwindToOpponentTypePicker(sender: UIStoryboardSegue) {
+        
+    }
+    
 }

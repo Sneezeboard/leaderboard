@@ -10,7 +10,7 @@ import UIKit
 
 class OpponentsViewController: UITableViewController {
     
-    var dataSource: UITableViewDataSource? {
+    var dataSource: protocol<UITableViewDataSource, OpponentsDataSource>? {
         didSet {
             if let tableView = tableView {
                 tableView.dataSource = dataSource
@@ -23,7 +23,9 @@ class OpponentsViewController: UITableViewController {
         super.viewDidLoad()
 
         tableView.dataSource = dataSource
-        tableView.reloadData()
+        dataSource?.fetch({ (objects, error) -> Void in
+            self.tableView.reloadData()
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,17 +43,18 @@ class OpponentsViewController: UITableViewController {
         return dataSource?.tableView(tableView, numberOfRowsInSection: section) ?? 0
     }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    
-        // Create a Match object and pass it on
-        // viewController.match = Match(me, otherGuy)
+        if segue.identifier == "segue.sports" {
+            let vc = segue.destinationViewController as! SportsPickerViewController
+            if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPathForCell(cell) {
+                let match = Match()
+                match.user1 = User.currentUser()
+                match.user2 = dataSource?.opponentForIndexPath(indexPath)
+                vc.match = match
+            }
+        }
     }
-    */
 
 }

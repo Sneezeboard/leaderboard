@@ -172,11 +172,11 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3ET-n3-9RU" id="7Zf-a8-z5I">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="99"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wLm-hP-pLc">
-                                            <rect key="frame" x="15" y="0.0" width="270" height="99"/>
+                                            <rect key="frame" x="15" y="0.0" width="270" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -213,11 +213,11 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="131"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qcV-dB-Mgh" id="hfD-wX-beq">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="130"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="130.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fwb-8l-uae">
-                                            <rect key="frame" x="15" y="0.0" width="270" height="130"/>
+                                            <rect key="frame" x="15" y="0.0" width="270" height="130.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -241,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="1636" y="499"/>
         </scene>
-        <!--Record Result-->
+        <!--Record Match-->
         <scene sceneID="JcK-jm-A9f">
             <objects>
-                <viewController id="3pf-2S-yvL" userLabel="Record Result" sceneMemberID="viewController">
+                <viewController id="3pf-2S-yvL" userLabel="Record Match" customClass="RecordMatchViewController" customModule="Sneezeboard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Jk-yT-Wdh"/>
                         <viewControllerLayoutGuide type="bottom" id="leO-DQ-3Z0"/>
@@ -256,13 +256,20 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m78-d5-rd4">
                                 <rect key="frame" x="127" y="320" width="67" height="30"/>
                                 <state key="normal" title="Record It!"/>
+                                <connections>
+                                    <action selector="saveMatch" destination="3pf-2S-yvL" eventType="touchUpInside" id="Tbj-7Z-eS3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Record It" id="lQZ-Vp-Z9e"/>
+                    <connections>
+                        <segue destination="NKV-g3-lfa" kind="unwind" identifier="segue.unwind_to_root" unwindAction="unwindToOpponentTypePicker:" id="AuP-5Y-BT3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mus-tP-pkj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="NKV-g3-lfa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2074" y="498"/>
         </scene>

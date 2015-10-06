@@ -61,10 +61,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
   private func setupParse(launchOptions: [NSObject: AnyObject]?) {
     User.registerSubclass()
+    Sport.registerSubclass()
     Leaderboard.registerSubclass()
     Match.registerSubclass()
     Parse.setApplicationId("JTmtYRYHh6qDkgtwPHIgHWfsSx4TmMp6TFQqTlBN", clientKey: "EPS17m0XEpJtWf45AfhdZ0zmQvrhtCWS7WrY8LcZ")
     PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+    
+//    do {
+//        try Sport.createSomeSports()
+//    } catch {
+//        
+//    }
   }
 }
 
