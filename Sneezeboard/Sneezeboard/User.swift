@@ -10,4 +10,5 @@ import Parse
 
 class User: PFUser {
   @NSManaged var avatar: PFFile?
+  @NSManaged var authData: NSDictionary?
 }

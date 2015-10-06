@@ -9,17 +9,8 @@
 import UIKit
 import Parse
 
-class SignupController: AuthController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SignupController: AuthController {
   var user: User!
-
-  func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-    dismissViewControllerAnimated(false, completion: nil)
-    let jpeg = UIImageJPEGRepresentation(image, 0.8)!
-    user.avatar = PFFile(data: jpeg, contentType: "image/jpeg")
-    user.saveEventually()
-    
-    performSegueWithIdentifier("segue.launch", sender: self)
-  }
   
   override func doAuth(username: String, password: String) {
     user = User()
@@ -27,17 +18,14 @@ class SignupController: AuthController, UIImagePickerControllerDelegate, UINavig
     user.password = password
     user.signUpInBackgroundWithBlock { (success, error) -> Void in
       if success {
-        self.requestProfilePhoto()
+        self.performSegueWithIdentifier("segue.signup.next", sender: self)
       } else {
-        NSLog("Failed to sign up:\n\(error!.description)")
+        let alert = UIAlertController(title: "No Bueno", message: "Bad credentials", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+          // Do nothing
+        }))
+        self.presentViewController(alert, animated: true, completion: nil)
       }
     }
-  }
-  
-  private func requestProfilePhoto() {
-    let vc = UIImagePickerController()
-    vc.sourceType = .PhotoLibrary
-    vc.delegate = self
-    presentViewController(vc, animated: true, completion: nil)
   }
 }
