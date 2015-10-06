@@ -9,5 +9,5 @@
 import Parse
 
 class User: PFUser {
-
+  @NSManaged var avatar: PFFile?
 }

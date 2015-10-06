@@ -7,33 +7,37 @@
 //
 
 import UIKit
+import Parse
 
-class SignupController: UIViewController, UITextFieldDelegate {
-  @IBOutlet weak var usernameField: UITextField!
-  
-  func textFieldShouldReturn(textField: UITextField) -> Bool {
-    doSignup()
-    return true
+class SignupController: AuthController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  var user: User!
+
+  func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+    dismissViewControllerAnimated(false, completion: nil)
+    let jpeg = UIImageJPEGRepresentation(image, 0.8)!
+    user.avatar = PFFile(data: jpeg, contentType: "image/jpeg")
+    user.saveEventually()
+    
+    performSegueWithIdentifier("segue.launch", sender: self)
   }
   
-  @IBAction func signupTouched(sender: AnyObject) {
-    doSignup()
-  }
-  
-  private func doSignup() {
-    let user = User()
-    user.username = usernameField.text
-    user.password = makePassword()
+  override func doAuth(username: String, password: String) {
+    user = User()
+    user.username = username
+    user.password = password
     user.signUpInBackgroundWithBlock { (success, error) -> Void in
       if success {
-        self.performSegueWithIdentifier("segue.signup.social", sender: self)
+        self.requestProfilePhoto()
       } else {
         NSLog("Failed to sign up:\n\(error!.description)")
       }
     }
   }
   
-  private func makePassword() -> String {
-    return "abc123" // Dear god someone fix me
+  private func requestProfilePhoto() {
+    let vc = UIImagePickerController()
+    vc.sourceType = .PhotoLibrary
+    vc.delegate = self
+    presentViewController(vc, animated: true, completion: nil)
   }
 }
