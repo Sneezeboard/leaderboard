@@ -20,7 +20,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="71.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kJW-d4-Pzf">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kJW-d4-Pzf" customClass="PFImageView">
                                             <rect key="frame" x="228" y="8" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="FJv-Sj-2wc"/>
@@ -39,7 +39,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2mC-QY-Keu">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2mC-QY-Keu" customClass="PFImageView">
                                             <rect key="frame" x="321" y="8" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="PeW-oS-23b"/>
@@ -86,10 +86,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="user1ImageView" destination="kJW-d4-Pzf" id="nwz-Qo-hHf"/>
+                                    <outlet property="user1ImageView" destination="kJW-d4-Pzf" id="Cu1-K8-4OF"/>
                                     <outlet property="user1NameLabel" destination="2zJ-OW-qBF" id="taQ-NK-ByK"/>
                                     <outlet property="user1ScoreLabel" destination="zxD-Ah-lpQ" id="hmk-7a-VG1"/>
-                                    <outlet property="user2ImageView" destination="2mC-QY-Keu" id="kwS-iD-Miy"/>
+                                    <outlet property="user2ImageView" destination="2mC-QY-Keu" id="Y39-Wv-Hxe"/>
                                     <outlet property="user2NameLabel" destination="ORB-Ia-2Ao" id="0fj-Sq-SYZ"/>
                                     <outlet property="user2ScoreLabel" destination="wZ4-FQ-AJe" id="goU-e2-u5N"/>
                                 </connections>

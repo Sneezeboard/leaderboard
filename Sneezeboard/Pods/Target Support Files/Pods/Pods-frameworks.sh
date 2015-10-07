@@ -59,6 +59,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods/FBSDKShareKit.framework'
   install_framework 'Pods/Parse.framework'
   install_framework 'Pods/ParseFacebookUtilsV4.framework'
+  install_framework 'Pods/ParseUI.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods/AFNetworking.framework'
@@ -68,4 +69,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods/FBSDKShareKit.framework'
   install_framework 'Pods/Parse.framework'
   install_framework 'Pods/ParseFacebookUtilsV4.framework'
+  install_framework 'Pods/ParseUI.framework'
 fi
