@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   private func pickLaunchStoryboard() {
     var storyboard: UIStoryboard! = nil
     if let _ = User.currentUser() {
-      storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+      storyboard = UIStoryboard(name: "Main", bundle: nil)
     } else {
       storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
     }
