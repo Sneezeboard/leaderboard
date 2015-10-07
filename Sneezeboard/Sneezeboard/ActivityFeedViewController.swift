@@ -18,9 +18,15 @@ class ActivityFeedViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
         
+        setupRefreshControl()
+        loadMatches()
+    }
+    
+    func loadMatches() {
         ParseClient.sharedInstance.allMatches { (matches, error) -> () in
             self.matches = matches
             self.tableView.reloadData()
+            self.refreshControl?.endRefreshing()
         }
     }
 
@@ -39,6 +45,13 @@ class ActivityFeedViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return matches.count
+    }
+    
+    // Hack to use Apple's standard UIRefreshControl in a UIViewController instead of a UITableViewController.
+    // See https://guides.codepath.com/ios/Table-View-Guide#implementing-pull-to-refresh-with-uirefreshcontrol
+    func setupRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl!.addTarget(self, action: "loadMatches", forControlEvents: UIControlEvents.ValueChanged)
     }
     
     /*

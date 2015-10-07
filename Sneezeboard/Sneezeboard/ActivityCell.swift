@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ActivityCell: UITableViewCell {
     
@@ -26,6 +27,22 @@ class ActivityCell: UITableViewCell {
     }
     
     func updateView() {
-        
+        if match != nil {
+            user1ScoreLabel.text = String(match.score1)
+            user2ScoreLabel.text = String(match.score2)
+            
+            match.user1?.fetchIfNeededInBackgroundWithBlock({ (obj: PFObject?, error: NSError?) -> Void in
+                let user = obj as! User
+                self.user1NameLabel.text = user.username
+            })
+
+            match.user2?.fetchIfNeededInBackgroundWithBlock({ (obj: PFObject?, error: NSError?) -> Void in
+                let user = obj as! User
+                self.user2NameLabel.text = user.username
+            })
+
+            // TODO: Set the profile images.
+//            user1ImageView.setImageWithURL(<#T##url: NSURL##NSURL#>)
+        }
     }
 }
