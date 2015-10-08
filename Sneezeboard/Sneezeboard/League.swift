@@ -8,10 +8,14 @@
 
 import Parse
 
-class League: PFObject {
-    var name: String!
-    var createdBy: User!
-    var sport: Sport!
-    var location: PFGeoPoint!
-    var image: PFFile!
+@objc class League: PFObject, PFSubclassing {
+    @NSManaged var name: String?
+    @NSManaged var createdBy: User?
+    @NSManaged var sport: Sport?
+    @NSManaged var location: PFGeoPoint?
+    @NSManaged var image: PFFile?
+    
+    class func parseClassName() -> String {
+        return "League"
+    }
 }

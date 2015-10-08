@@ -63,14 +63,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     Sport.registerSubclass()
     Leaderboard.registerSubclass()
     Match.registerSubclass()
+    League.registerSubclass()
     Parse.setApplicationId("JTmtYRYHh6qDkgtwPHIgHWfsSx4TmMp6TFQqTlBN", clientKey: "EPS17m0XEpJtWf45AfhdZ0zmQvrhtCWS7WrY8LcZ")
     PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
-    
-//    do {
-//        try Sport.createSomeSports()
-//    } catch {
-//        
-//    }
   }
 }
-
