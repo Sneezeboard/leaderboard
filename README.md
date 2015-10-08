@@ -37,9 +37,10 @@ Thunder.  Dome.
 @etucker
 
  * Reverse chron list of game results
-   * Games you've played in
-   * Games from leagues
-   * **(Optional)** Friends
+   * All games
+   * **(Optional)** Games you've played in
+   * **(Optional)** Games played in a specific league
+   * **(Optional)** Games your friends played in
 
 ### Record Match
 
