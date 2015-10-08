@@ -14,7 +14,6 @@ class LeagueTableViewCell: UITableViewCell {
 
     var league: League! {
         didSet {
-            print(league.name)
             updateView()
         }
     }

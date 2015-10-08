@@ -42,7 +42,6 @@ class LeaderboardTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("LeagueTableViewCell", forIndexPath: indexPath) as! LeagueTableViewCell
         cell.league = leagues[indexPath.row]
-        print("yo")
 
         return cell
     }
