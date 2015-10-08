@@ -7,6 +7,6 @@ pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
 pod 'FBSDKShareKit'
 pod 'AFNetworking'
-pod 'ESTabBarController'
 pod 'RESideMenu'
+pod 'RAMAnimatedTabBarController'
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RAMAnimatedTabBarController
 
 class RecordMatchViewController: UIViewController {
     
@@ -14,7 +15,7 @@ class RecordMatchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
         // Do any additional setup after loading the view.
         match.score1 = 100
         match.score2 = 9

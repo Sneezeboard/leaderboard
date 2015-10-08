@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RAMAnimatedTabBarController
 
 class ActivityFeedViewController: UITableViewController {
 
@@ -17,7 +18,7 @@ class ActivityFeedViewController: UITableViewController {
 
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
-        
+            
         setupRefreshControl()
         loadMatches()
     }

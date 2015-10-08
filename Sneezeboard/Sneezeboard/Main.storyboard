@@ -12,7 +12,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8GF-OR-5X4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5" y="467"/>
+            <point key="canvasLocation" x="-4" y="1859"/>
         </scene>
         <!--RecordGame-->
         <scene sceneID="Fiy-1k-6Rc">
@@ -22,7 +22,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MNb-oA-vLj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5.5" y="598"/>
+            <point key="canvasLocation" x="-3.5" y="1988"/>
         </scene>
         <!--LeaderboardList-->
         <scene sceneID="aVW-Vm-zVK">
@@ -32,7 +32,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZK2-Aq-eTK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17" y="710"/>
+            <point key="canvasLocation" x="6" y="2110"/>
         </scene>
         <!--Root Controller-->
         <scene sceneID="QTB-cz-gam">
@@ -90,10 +90,25 @@
                             <outlet property="delegate" destination="Te4-IK-yNc" id="YtJ-s3-w4J"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="ONM-5p-e4v"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTW-5Q-n7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-405" y="1296"/>
+        </scene>
+        <!--Tabs-->
+        <scene sceneID="bDs-om-CVa">
+            <objects>
+                <tabBarController storyboardIdentifier="vc.tabs" title="Tabs" id="jLb-gE-cRr" customClass="RAMAnimatedTabBarController" customModule="RAMAnimatedTabBarController" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="U0b-nb-EHj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="alZ-uc-F3r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-405" y="1985"/>
         </scene>
     </scenes>
 </document>
