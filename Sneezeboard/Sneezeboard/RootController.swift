@@ -20,7 +20,9 @@ class RootController: UIViewController {
   
     setupTabBar()
     menuController = storyboard?.instantiateViewControllerWithIdentifier("vc.menu")
-    mainController = RESideMenu(contentViewController: tabBar, leftMenuViewController: menuController, rightMenuViewController: nil)    
+    menuController.view.backgroundColor = UIColor.clearColor() // Design is black for visibility, clear it
+    mainController = RESideMenu(contentViewController: tabBar, leftMenuViewController: menuController, rightMenuViewController: nil)
+    mainController.backgroundImage = UIImage(named: "dark-texture")
     addChildViewController(mainController)
     view.addSubview(mainController.view)
     mainController.view.frame = view.bounds
@@ -58,7 +60,8 @@ class RootController: UIViewController {
     }
 
     tabBar.viewControllers = vcs
-    tabBar.tabBar.barTintColor = UIColor.grayColor()
+    tabBar.tabBar.barTintColor = UIColor(red: 255 / 255.0, green: 94 / 255.0, blue: 85 / 255.0, alpha: 1)
+    tabBar.tabBar.selectedImageTintColor = UIColor.whiteColor()
     tabBar.tabBar.backgroundImage = UIImage()
     tabBar.tabBar.translucent = false
     tabBar.tabBar.shadowImage = UIImage()

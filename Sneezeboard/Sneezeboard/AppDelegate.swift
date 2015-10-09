@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {    
+    theme()
     setupParse(launchOptions)
     pickLaunchStoryboard()
     return true
@@ -46,6 +47,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
     return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+  }
+  
+  private func theme() {
+    let a = UINavigationBar.appearance()
+    a.tintColor = UIColor(red: 255 / 255.0, green: 94 / 255.0, blue: 85 / 255.0, alpha: 1)
+    a.barTintColor = UIColor.whiteColor()
   }
   
   private func pickLaunchStoryboard() {

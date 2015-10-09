@@ -3,6 +3,11 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="us101.ttf">
+            <string>U.S.101</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--ActivityFeed-->
         <scene sceneID="21d-sb-Ndp">
@@ -53,48 +58,64 @@
             <point key="canvasLocation" x="-405" y="598"/>
         </scene>
         <!--Menu-->
-        <scene sceneID="qD4-gd-6c2">
+        <scene sceneID="Snl-hb-cVm">
             <objects>
-                <tableViewController storyboardIdentifier="vc.menu" title="Menu" id="Te4-IK-yNc" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="CS4-lS-ENE">
+                <viewController storyboardIdentifier="vc.menu" title="Menu" id="zC3-Lq-xqg" customClass="MenuController" customModule="Sneezeboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lhF-Mh-8n8"/>
+                        <viewControllerLayoutGuide type="bottom" id="oHC-rK-MAN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tpd-0j-jqn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection headerTitle="Settings" id="nJg-je-2lC">
-                                <cells/>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Account" id="Gx8-g9-tNb">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Vqa-oe-zBp">
-                                        <rect key="frame" x="0.0" y="56" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vqa-oe-zBp" id="yqv-BJ-1Nm">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRm-qp-XIQ">
-                                                    <rect key="frame" x="8" y="11" width="67" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="Te4-IK-yNc" id="mOu-Rq-czz"/>
-                            <outlet property="delegate" destination="Te4-IK-yNc" id="YtJ-s3-w4J"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="ONM-5p-e4v"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kTW-5Q-n7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozw-Ci-g9G">
+                                <rect key="frame" x="20" y="285" width="63" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutTapped:" destination="zC3-Lq-xqg" eventType="touchUpInside" id="IDE-TP-Wf1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9i-31-XCA">
+                                <rect key="frame" x="20" y="323" width="45" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="About">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2m-SK-dvT">
+                                <rect key="frame" x="20" y="247" width="62" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thunderdome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bp4-Jd-CJa">
+                                <rect key="frame" x="20" y="200" width="171" height="39"/>
+                                <fontDescription key="fontDescription" name="U.S.101" family="U.S. 101" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ozw-Ci-g9G" firstAttribute="leading" secondItem="Tpd-0j-jqn" secondAttribute="leading" constant="20" id="7GX-Fn-9EK"/>
+                            <constraint firstItem="z9i-31-XCA" firstAttribute="leading" secondItem="Ozw-Ci-g9G" secondAttribute="leading" id="9BE-WY-lII"/>
+                            <constraint firstItem="z9i-31-XCA" firstAttribute="top" secondItem="Ozw-Ci-g9G" secondAttribute="bottom" constant="8" id="Faf-el-BkC"/>
+                            <constraint firstItem="Ozw-Ci-g9G" firstAttribute="top" secondItem="i2m-SK-dvT" secondAttribute="bottom" constant="8" id="HMM-Sb-dTn"/>
+                            <constraint firstItem="i2m-SK-dvT" firstAttribute="leading" secondItem="bp4-Jd-CJa" secondAttribute="leading" id="Lrn-QH-0RB"/>
+                            <constraint firstItem="Ozw-Ci-g9G" firstAttribute="leading" secondItem="i2m-SK-dvT" secondAttribute="leading" id="NmH-u8-qvi"/>
+                            <constraint firstItem="Ozw-Ci-g9G" firstAttribute="centerY" secondItem="Tpd-0j-jqn" secondAttribute="centerY" id="TuP-2g-0Pz"/>
+                            <constraint firstItem="i2m-SK-dvT" firstAttribute="top" secondItem="bp4-Jd-CJa" secondAttribute="bottom" constant="8" id="nb6-Gq-6IO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yku-tu-ZZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-405" y="1296"/>
+            <point key="canvasLocation" x="-405" y="1309"/>
         </scene>
         <!--Tabs-->
         <scene sceneID="bDs-om-CVa">

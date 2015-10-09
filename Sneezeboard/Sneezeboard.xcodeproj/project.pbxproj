@@ -13,6 +13,8 @@
 		380353101BBA083900306DA7 /* ActivityFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3803530F1BBA083900306DA7 /* ActivityFeed.storyboard */; settings = {ASSET_TAGS = (); }; };
 		380353121BBA08B100306DA7 /* LeaderboardList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380353111BBA08B100306DA7 /* LeaderboardList.storyboard */; settings = {ASSET_TAGS = (); }; };
 		380353141BC33C7400306DA7 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380353131BC33C7400306DA7 /* AuthController.swift */; settings = {ASSET_TAGS = (); }; };
+		38710E741BC73F7600AE94D5 /* us101.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38710E731BC73F7600AE94D5 /* us101.ttf */; settings = {ASSET_TAGS = (); }; };
+		38710E761BC74A3400AE94D5 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38710E751BC74A3400AE94D5 /* MenuController.swift */; settings = {ASSET_TAGS = (); }; };
 		38A4A5821BC48BB5001F9F28 /* MugshotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A4A5811BC48BB5001F9F28 /* MugshotController.swift */; settings = {ASSET_TAGS = (); }; };
 		38A4A5841BC581FB001F9F28 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A4A5831BC581FB001F9F28 /* RootController.swift */; settings = {ASSET_TAGS = (); }; };
 		38F0C8E51BB5DD440030EC5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0C8E41BB5DD440030EC5D /* AppDelegate.swift */; };
@@ -51,6 +53,8 @@
 		3803530F1BBA083900306DA7 /* ActivityFeed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActivityFeed.storyboard; sourceTree = "<group>"; };
 		380353111BBA08B100306DA7 /* LeaderboardList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LeaderboardList.storyboard; sourceTree = "<group>"; };
 		380353131BC33C7400306DA7 /* AuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		38710E731BC73F7600AE94D5 /* us101.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = us101.ttf; sourceTree = "<group>"; };
+		38710E751BC74A3400AE94D5 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		38A4A5811BC48BB5001F9F28 /* MugshotController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MugshotController.swift; sourceTree = "<group>"; };
 		38A4A5831BC581FB001F9F28 /* RootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
 		38F0C8E11BB5DD440030EC5D /* Sneezeboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sneezeboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +158,7 @@
 				38F0C8FD1BB5DE7C0030EC5D /* ViewControllers */,
 				38F0C8EB1BB5DD440030EC5D /* Assets.xcassets */,
 				38F0C8E41BB5DD440030EC5D /* AppDelegate.swift */,
+				38710E731BC73F7600AE94D5 /* us101.ttf */,
 				38F0C8F01BB5DD440030EC5D /* Info.plist */,
 			);
 			path = Sneezeboard;
@@ -181,6 +186,7 @@
 				826AFF2C1BBCB1C400AB12B8 /* Record Match */,
 				38A4A5831BC581FB001F9F28 /* RootController.swift */,
 				4514CEC21BBA2F4A0056CD25 /* ActivityFeedViewController.swift */,
+				38710E751BC74A3400AE94D5 /* MenuController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 				3803530C1BB5F9E500306DA7 /* LeaguePicker.storyboard in Resources */,
 				38F0C8FA1BB5DE600030EC5D /* Main.storyboard in Resources */,
 				380353101BBA083900306DA7 /* ActivityFeed.storyboard in Resources */,
+				38710E741BC73F7600AE94D5 /* us101.ttf in Resources */,
 				38F0C8EC1BB5DD440030EC5D /* Assets.xcassets in Resources */,
 				38F0C8F81BB5DE4A0030EC5D /* Onboarding.storyboard in Resources */,
 			);
@@ -402,6 +409,7 @@
 				38F0C9001BB5DED50030EC5D /* User.swift in Sources */,
 				9DD758331BBCC6EA003348FA /* League.swift in Sources */,
 				4514CEC31BBA2F4A0056CD25 /* ActivityFeedViewController.swift in Sources */,
+				38710E761BC74A3400AE94D5 /* MenuController.swift in Sources */,
 				3803530A1BB5F7BF00306DA7 /* LeaguePickerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
