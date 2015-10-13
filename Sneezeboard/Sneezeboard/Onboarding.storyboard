@@ -262,27 +262,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YqG-KE-q8q">
                                 <rect key="frame" x="0.0" y="150" width="600" height="450"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7M4-6Y-bta">
-                                        <rect key="frame" x="220" y="235" width="160" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="160" id="10e-c0-DHr"/>
-                                            <constraint firstAttribute="height" constant="30" id="SSp-fF-TQw"/>
-                                        </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHE-uS-yT3">
-                                        <rect key="frame" x="220" y="412" width="161" height="30"/>
-                                        <state key="normal" title="This ain't my first rodeo">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="OuJ-Vp-Pcm" kind="presentation" id="zwK-PF-edD"/>
-                                        </connections>
-                                    </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0qQ-AG-MP8">
-                                        <rect key="frame" x="220" y="185" width="160" height="30"/>
+                                        <rect key="frame" x="220" y="165" width="160" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="160" id="QqK-ru-hSH"/>
                                             <constraint firstAttribute="height" constant="30" id="RbR-O5-m0t"/>
@@ -291,40 +272,72 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7M4-6Y-bta">
+                                        <rect key="frame" x="220" y="215" width="160" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="10e-c0-DHr"/>
+                                            <constraint firstAttribute="height" constant="30" id="SSp-fF-TQw"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C86-iu-R8h">
+                                        <rect key="frame" x="311" y="253" width="69" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Get Hype">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="triggerAuth" destination="KvB-jC-VO2" eventType="primaryActionTriggered" id="7GD-5C-vkU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHE-uS-yT3">
+                                        <rect key="frame" x="220" y="412" width="161" height="30"/>
+                                        <state key="normal" title="This ain't my first rodeo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="OuJ-Vp-Pcm" kind="presentation" animates="NO" id="zwK-PF-edD"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97254901960784312" green="0.27450980392156865" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="7M4-6Y-bta" firstAttribute="centerX" secondItem="YqG-KE-q8q" secondAttribute="centerX" id="0NZ-Ps-C3w"/>
                                     <constraint firstAttribute="bottom" secondItem="GHE-uS-yT3" secondAttribute="bottom" constant="8" id="7cR-Pr-XmM"/>
-                                    <constraint firstItem="0qQ-AG-MP8" firstAttribute="centerY" secondItem="YqG-KE-q8q" secondAttribute="centerY" constant="-25" id="LAU-aR-VGi"/>
+                                    <constraint firstItem="C86-iu-R8h" firstAttribute="trailing" secondItem="7M4-6Y-bta" secondAttribute="trailing" id="EZk-dY-FFE"/>
+                                    <constraint firstItem="C86-iu-R8h" firstAttribute="top" secondItem="7M4-6Y-bta" secondAttribute="bottom" constant="8" id="KOy-uh-bhw"/>
+                                    <constraint firstItem="0qQ-AG-MP8" firstAttribute="centerY" secondItem="YqG-KE-q8q" secondAttribute="centerY" constant="-45" id="LAU-aR-VGi"/>
                                     <constraint firstItem="0qQ-AG-MP8" firstAttribute="centerX" secondItem="YqG-KE-q8q" secondAttribute="centerX" id="WnN-ke-RX3"/>
-                                    <constraint firstItem="7M4-6Y-bta" firstAttribute="centerY" secondItem="YqG-KE-q8q" secondAttribute="centerY" constant="25" id="olU-Eq-RAV"/>
+                                    <constraint firstItem="7M4-6Y-bta" firstAttribute="top" secondItem="0qQ-AG-MP8" secondAttribute="bottom" constant="20" id="uAh-Gg-gpY"/>
                                     <constraint firstItem="GHE-uS-yT3" firstAttribute="centerX" secondItem="YqG-KE-q8q" secondAttribute="centerX" id="x1G-Ko-eZD"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9s-Oc-qRH">
-                                <rect key="frame" x="191" y="140" width="118" height="62"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dod-EP-Jb9">
+                                <rect key="frame" x="191" y="150" width="118" height="50"/>
                                 <fontDescription key="fontDescription" name="U.S.101" family="U.S. 101" pointSize="45"/>
-                                <state key="normal" title="Sign Up"/>
-                                <connections>
-                                    <action selector="triggerAuth" destination="KvB-jC-VO2" eventType="primaryActionTriggered" id="hO5-WD-C8g"/>
-                                </connections>
-                            </button>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="a9s-Oc-qRH" firstAttribute="leading" secondItem="VTd-RZ-Glz" secondAttribute="leading" id="9sG-fZ-ImA"/>
                             <constraint firstItem="YqG-KE-q8q" firstAttribute="leading" secondItem="Nuo-NX-KHc" secondAttribute="leading" id="AWb-mx-s26"/>
                             <constraint firstAttribute="trailing" secondItem="YqG-KE-q8q" secondAttribute="trailing" id="Cao-nW-I0J"/>
                             <constraint firstItem="4wG-C8-abu" firstAttribute="top" secondItem="YqG-KE-q8q" secondAttribute="bottom" id="Cg2-XM-foR"/>
+                            <constraint firstItem="dod-EP-Jb9" firstAttribute="top" secondItem="VTd-RZ-Glz" secondAttribute="bottom" constant="-13" id="G2I-id-rpi"/>
+                            <constraint firstItem="YqG-KE-q8q" firstAttribute="top" secondItem="Nuo-NX-KHc" secondAttribute="bottom" multiplier="0.25" id="LEe-Ej-YZ9"/>
+                            <constraint firstItem="dod-EP-Jb9" firstAttribute="leading" secondItem="VTd-RZ-Glz" secondAttribute="leading" id="fZV-Do-fa3"/>
                             <constraint firstItem="VTd-RZ-Glz" firstAttribute="centerX" secondItem="Nuo-NX-KHc" secondAttribute="centerX" id="l8w-kD-isA"/>
-                            <constraint firstItem="a9s-Oc-qRH" firstAttribute="top" secondItem="VTd-RZ-Glz" secondAttribute="bottom" constant="-23" id="odH-xx-2Tm"/>
                             <constraint firstItem="VTd-RZ-Glz" firstAttribute="bottom" secondItem="YqG-KE-q8q" secondAttribute="top" constant="13" id="taw-EB-dnB"/>
-                            <constraint firstItem="YqG-KE-q8q" firstAttribute="height" secondItem="Nuo-NX-KHc" secondAttribute="height" multiplier="0.75" id="xdv-y4-i7m"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomConstraint" destination="Cg2-XM-foR" id="0cG-WT-pP4"/>
                         <outlet property="passwordField" destination="7M4-6Y-bta" id="8Wd-Sy-75n"/>
+                        <outlet property="titleText" destination="dod-EP-Jb9" id="TYX-kx-RnH"/>
+                        <outlet property="topConstraint" destination="LEe-Ej-YZ9" id="S89-t4-cJN"/>
                         <outlet property="usernameField" destination="0qQ-AG-MP8" id="aPc-GR-ULW"/>
                         <segue destination="zVe-7k-4Ns" kind="showDetail" identifier="segue.signup.next" id="w6U-ck-0vW"/>
                     </connections>

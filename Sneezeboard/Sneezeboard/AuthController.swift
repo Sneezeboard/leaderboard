@@ -11,6 +11,9 @@ import UIKit
 class AuthController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var usernameField: UITextField!
   @IBOutlet weak var passwordField: UITextField!
+  @IBOutlet weak var titleText: UILabel!
+  @IBOutlet weak var topConstraint: NSLayoutConstraint!
+  @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,6 +29,32 @@ class AuthController: UIViewController, UITextFieldDelegate {
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardShown:", name: UIKeyboardWillShowNotification, object: nil)
   }
 
+  override func viewWillDisappear(animated: Bool) {
+    super.viewWillDisappear(animated)
+    
+    let f: () -> Void = { () -> Void in
+      self.transformSubviews(200)
+    }
+    if animated {
+      UIView.animateWithDuration(0.5, animations: f)
+    } else {
+      f()
+    }
+  }
+  
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    let f: () -> Void = { () -> Void in
+      self.transformSubviews(0)
+    }
+    if animated {
+      UIView.animateWithDuration(0.5, animations: f)
+    } else {
+      f()
+    }
+  }
+  
   @IBAction func triggerAuth() {
     doAuth(usernameField.text ?? "", password: passwordField.text ?? "")
   }
@@ -47,14 +76,28 @@ class AuthController: UIViewController, UITextFieldDelegate {
     if let raw = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
       let keyboardFrame = raw.CGRectValue()
     
+      self.view.layoutIfNeeded()
       UIView.animateWithDuration(0.5) { () -> Void in
-        self.view.transform = CGAffineTransformMakeTranslation(0, -keyboardFrame.height)
+        self.topConstraint.constant = -70
+        self.bottomConstraint.constant = keyboardFrame.height
+        self.view.layoutIfNeeded()
       }
     }
   }
   func keyboardHidden(notification: NSNotification) {
     UIView.animateWithDuration(0.5) { () -> Void in
-      self.view.transform = CGAffineTransformIdentity
+      self.topConstraint.constant = 0
+      self.bottomConstraint.constant = 0
+      self.view.layoutIfNeeded()
+    }
+  }
+  
+  private func transformSubviews(x: CGFloat) {
+    let mat = CGAffineTransformMakeTranslation(x, 0)
+    for view in self.view.subviews {
+      for v in view.subviews {
+        v.transform = mat
+      }
     }
   }
   
