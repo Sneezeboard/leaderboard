@@ -20,8 +20,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="71.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kJW-d4-Pzf" customClass="PFImageView">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kJW-d4-Pzf" customClass="PFImageView">
                                             <rect key="frame" x="228" y="8" width="50" height="50"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="FJv-Sj-2wc"/>
                                                 <constraint firstAttribute="height" constant="50" id="HGD-3Y-GWe"/>
@@ -39,8 +40,9 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2mC-QY-Keu" customClass="PFImageView">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2mC-QY-Keu" customClass="PFImageView">
                                             <rect key="frame" x="321" y="8" width="50" height="50"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="PeW-oS-23b"/>
                                                 <constraint firstAttribute="height" constant="50" id="sO8-bB-wDs"/>
@@ -100,7 +102,7 @@
                             <outlet property="delegate" destination="cV8-Do-rSJ" id="wu7-cO-pdb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Activity Feed" id="1bh-VE-Ya8"/>
+                    <navigationItem key="navigationItem" title="Activity" id="1bh-VE-Ya8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Fu-7b-EOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
