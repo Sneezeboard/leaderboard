@@ -28,9 +28,9 @@
                                                 <constraint firstAttribute="height" constant="50" id="HGD-3Y-GWe"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will Dalton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zJ-OW-qBF">
-                                            <rect key="frame" x="141" y="8" width="77" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="14"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will Dalton" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zJ-OW-qBF">
+                                            <rect key="frame" x="150" y="8" width="68" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -49,19 +49,19 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cedric van Bonusly" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORB-Ia-2Ao">
-                                            <rect key="frame" x="381" y="8" width="137" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="14"/>
+                                            <rect key="frame" x="381" y="8" width="120" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZ4-FQ-AJe">
-                                            <rect key="frame" x="381" y="29" width="14" height="29"/>
+                                            <rect key="frame" x="381" y="27" width="14" height="29"/>
                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxD-Ah-lpQ">
-                                            <rect key="frame" x="198" y="29" width="20" height="29"/>
+                                            <rect key="frame" x="198" y="26" width="20" height="29"/>
                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
