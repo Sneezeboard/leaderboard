@@ -7,11 +7,32 @@
 //
 
 import UIKit
+import RESideMenu
 
-class MenuController: UIViewController {
+class MenuController: UIViewController, RESideMenuDelegate {
 
-  @IBAction func signOutTapped(sender: AnyObject) {
+  @IBAction func signOutTapped(sender: AnyObject) {    
+    if let parent = parentViewController as? RESideMenu {
+      parent.delegate = self
+      parent.hideMenuViewController()
+    } else {
+      finishLogout()
+    }
+  }
+  
+  func sideMenu(sideMenu: RESideMenu!, didHideMenuViewController menuViewController: UIViewController!) {
+    finishLogout()
+  }
+  
+  private func finishLogout() {
     User.logOut()
-    UIApplication.sharedApplication().windows[0].rootViewController = UIStoryboard(name: "Onboarding", bundle: nil).instantiateInitialViewController()
+    let vc = UIStoryboard(name: "Onboarding", bundle: nil).instantiateInitialViewController()
+    let window = UIApplication.sharedApplication().windows[0]
+    
+    UIView.transitionWithView(window, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+      window.rootViewController = vc
+    }) { (_) -> Void in
+      
+    }
   }
 }
