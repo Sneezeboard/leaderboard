@@ -18,7 +18,7 @@ class SignupController: AuthController {
     user.password = password
     user.signUpInBackgroundWithBlock { (success, error) -> Void in
       if success {
-        self.performSegueWithIdentifier("segue.signup.next", sender: self)
+        self.finish("segue.signup.next")
       } else {
         let alert = UIAlertController(title: "No Bueno", message: "Bad credentials", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (action) -> Void in

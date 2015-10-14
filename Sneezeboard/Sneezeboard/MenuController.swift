@@ -11,6 +11,7 @@ import UIKit
 class MenuController: UIViewController {
 
   @IBAction func signOutTapped(sender: AnyObject) {
+    User.logOut()
     UIApplication.sharedApplication().windows[0].rootViewController = UIStoryboard(name: "Onboarding", bundle: nil).instantiateInitialViewController()
   }
 }

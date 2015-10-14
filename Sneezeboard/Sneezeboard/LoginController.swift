@@ -9,10 +9,6 @@
 import UIKit
 
 class LoginController: AuthController {
-  @IBAction func backTouched(sender: AnyObject) {
-    dismissViewControllerAnimated(true, completion: nil)
-  }
-  
   override func doAuth(username: String, password: String) {
     User.logInWithUsernameInBackground(username, password: password) { (user, error) -> Void in
       if let _ = error {
@@ -22,7 +18,7 @@ class LoginController: AuthController {
         }))
         self.presentViewController(alert, animated: true, completion: nil)
       } else {
-        self.performSegueWithIdentifier("segue.login.launch", sender: self)
+        self.finish("segue.login.launch")
       }
     }
   }

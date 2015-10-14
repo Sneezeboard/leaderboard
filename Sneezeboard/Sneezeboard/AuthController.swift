@@ -28,35 +28,71 @@ class AuthController: UIViewController, UITextFieldDelegate {
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardHidden:", name: UIKeyboardWillHideNotification, object: nil)
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardShown:", name: UIKeyboardWillShowNotification, object: nil)
   }
-
-  override func viewWillDisappear(animated: Bool) {
-    super.viewWillDisappear(animated)
+  
+  override func segueForUnwindingToViewController(toViewController: UIViewController, fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue? {
+    if let _ = fromViewController as? AuthController {
+      let segue = InPlaceSegue(identifier: identifier, source: fromViewController, destination: toViewController, performHandler: { () -> Void in
+        
+      })
+      segue.unwind = true
+      return segue
+    }
     
-    let f: () -> Void = { () -> Void in
-      self.transformSubviews(200)
-    }
-    if animated {
-      UIView.animateWithDuration(0.5, animations: f)
-    } else {
-      f()
-    }
+    return super.segueForUnwindingToViewController(toViewController, fromViewController: fromViewController, identifier: identifier)
   }
   
-  override func viewDidAppear(animated: Bool) {
-    super.viewDidAppear(animated)
-    
-    let f: () -> Void = { () -> Void in
-      self.transformSubviews(0)
-    }
-    if animated {
-      UIView.animateWithDuration(0.5, animations: f)
-    } else {
-      f()
-    }
+  func slideOut(completion: (() -> Void)?) {
+    transformSubviews(-view.bounds.width, animated: true, completion: completion)
+  }
+  
+  func slideIn(completion: (() -> Void)?) {
+    transformSubviews(view.bounds.width, animated: false, completion: nil)
+    transformSubviews(0, animated: true, completion: completion)
   }
   
   @IBAction func triggerAuth() {
     doAuth(usernameField.text ?? "", password: passwordField.text ?? "")
+  }
+  
+  @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
+    
+  }
+  
+  func finish(segue: String) {
+    // We need to animate the title text based on it's top left, but once
+    // we change the anchorpoint it'll shift in the view.  The translation is
+    // used to correct this.
+    titleText.layer.anchorPoint = CGPointMake(0, 0)
+    titleText.layer.transform = CATransform3DMakeTranslation(titleText.layer.bounds.width / -2, titleText.layer.bounds.height / -2, 0)
+
+    // Set up a layer transform.  This won't screw with the auto layer, and
+    // makes it easy to customize the ease curve.
+    let rotateAnim = CABasicAnimation(keyPath: "transform")
+    rotateAnim.fillMode = kCAFillModeForwards
+    rotateAnim.removedOnCompletion = false
+    rotateAnim.duration = 0.4
+    rotateAnim.timingFunction = CAMediaTimingFunction(controlPoints: 0.06, 1.82, 0.55, 0.80)
+    rotateAnim.toValue = NSValue(CATransform3D: CATransform3DRotate(titleText.layer.transform, CGFloat(M_PI_2) - 0.2, 0, 0, 1))
+    titleText.layer.addAnimation(rotateAnim, forKey: nil)
+    
+    // Once the text is done rotating, slide the whole thing down
+    let options = UIViewAnimationOptions.CurveEaseIn
+    UIView.animateWithDuration(0.3, delay: 0.2, options: options, animations: { () -> Void in
+      self.topConstraint.constant = self.view.bounds.height * 0.75
+      self.view.layoutIfNeeded()
+    }, completion: nil)
+    
+    // Overlap a fade with the translation, as a slighty-hacky way to tidy
+    // everything up
+    UIView.animateWithDuration(0.2, delay: 0.3, options: options, animations: { () -> Void in
+      for v in self.view.subviews {
+        v.alpha = 0
+      }
+    }) { (_) -> Void in
+      if segue != "" {
+        self.performSegueWithIdentifier(segue, sender: self)
+      }
+    }
   }
   
   func doAuth(username: String, password: String) {
@@ -92,13 +128,31 @@ class AuthController: UIViewController, UITextFieldDelegate {
     }
   }
   
-  private func transformSubviews(x: CGFloat) {
+  private func transformSubviews(x: CGFloat, animated: Bool, completion: (() -> Void)?) {
     let mat = CGAffineTransformMakeTranslation(x, 0)
+    
+    let f: () -> Void = { () -> Void in
+      self.transformSubviews(mat)
+      self.titleText.transform = mat
+    }
+    if animated {
+      let curve = x < 0 ? UIViewAnimationOptions.CurveEaseOut : UIViewAnimationOptions.CurveEaseIn
+      UIView.animateWithDuration(0.3, delay: 0, options: curve, animations: f, completion: { (_) -> Void in
+        completion?()
+      })
+    } else {
+      f()
+      completion?()
+    }
+  }
+  
+  private func transformSubviews(mat: CGAffineTransform) {
     for view in self.view.subviews {
       for v in view.subviews {
         v.transform = mat
       }
     }
+    titleText.transform = mat
   }
   
   private func setupButton(field: UITextField) {
