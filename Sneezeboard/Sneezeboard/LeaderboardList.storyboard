@@ -21,7 +21,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tumblr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1Y-gY-Z4q">
-                                            <rect key="frame" x="8" y="11" width="54" height="21"/>
+                                            <rect key="frame" x="8" y="11" width="584" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -30,6 +30,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="leagueNameLabel" destination="C1Y-gY-Z4q" id="SF2-kN-IlU"/>
+                                    <segue destination="CrS-Qx-d7Y" kind="show" id="Fok-0g-rkz"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -38,11 +39,39 @@
                             <outlet property="delegate" destination="sZ3-9m-eKp" id="ZZf-M1-7sA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Leaderboards" id="e0W-Af-DQa"/>
+                    <navigationItem key="navigationItem" title="Leagues" id="e0W-Af-DQa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVf-1R-QYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="653" y="480"/>
+        </scene>
+        <!--League Detail Table View Controller-->
+        <scene sceneID="KsO-OF-tXE">
+            <objects>
+                <tableViewController id="CrS-Qx-d7Y" customClass="LeagueDetailTableViewController" customModule="Sneezeboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GaZ-vY-KfV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="OjU-Lt-0JW">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OjU-Lt-0JW" id="KrF-MQ-M40">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CrS-Qx-d7Y" id="hy7-qa-Ay2"/>
+                            <outlet property="delegate" destination="CrS-Qx-d7Y" id="dS5-Cl-tuf"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQ5-ig-khJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1308" y="480"/>
         </scene>
         <!--Leaderboards-->
         <scene sceneID="3kR-dd-vSe">
