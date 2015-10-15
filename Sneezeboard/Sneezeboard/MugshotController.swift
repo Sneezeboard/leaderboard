@@ -6,21 +6,29 @@
 //  Copyright © 2015 patrick. All rights reserved.
 //
 
-import AVFoundation
 import UIKit
 import AFNetworking
 import Parse
 import ParseFacebookUtilsV4
 
-class MugshotController: UIViewController {
+class MugshotController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   @IBOutlet weak var profileImage: UIImageView!
+  @IBOutlet weak var doneButton: UIButton!
+  @IBOutlet weak var usernameLabel: UILabel!
 
   let user = User.currentUser()
   
   override func viewDidLoad() {
+    setupDoneButton()
+    
+    usernameLabel.text = user?.username
+    
+    let defaultImage = UIImage(named: "default-avatar")
     if let id = user?.authData?["facebook"]?["id"] as? String {
       profileImage.setImageWithURL(NSURL(string: "https://graph.facebook.com/\(id)/picture?type=large")!,
-        placeholderImage: UIImage(named: "thunderdome"))
+        placeholderImage: defaultImage)
+    } else {
+      profileImage.image = defaultImage
     }
   }
   
@@ -36,41 +44,34 @@ class MugshotController: UIViewController {
   }
   
   @IBAction func chooseTapped(sender: AnyObject) {
-    var device: AVCaptureDevice! = nil
-    let session = AVCaptureSession()
-    session.sessionPreset = AVCaptureSessionPresetPhoto
-    
-    // Get the front camera
-    let devices = AVCaptureDevice.devices()
-    for d in devices {
-      if !d.hasMediaType(AVMediaTypeVideo) {
-        continue
-      }
-      if d.position == AVCaptureDevicePosition.Front {
-        device = d as! AVCaptureDevice
-      }
-    }
-    if device == nil {
-      NSLog("Unable to find an appropriate camera")
-      device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
-    }
-    
-    // Set up the output receiver
-    let output = AVCaptureStillImageOutput()
-    output.outputSettings = [ AVVideoCodecKey : AVVideoCodecJPEG ]
-    session.addOutput(output)
-    
-    // Start using the camera we found
-    do {
-      try session.addInput(AVCaptureDeviceInput(device: device))
-    } catch {
-      NSLog("Error setting capture input: \(error)")
+    pickImage(.SavedPhotosAlbum)
+  }
+  
+  @IBAction func takePhotoTapped(sender: AnyObject) {
+    pickImage(.Camera)
+  }
+  
+  func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+    profileImage.image = image
+    dismissViewControllerAnimated(true, completion: nil)
+  }
+  
+  private func pickImage(type: UIImagePickerControllerSourceType) {
+    if !UIImagePickerController.isSourceTypeAvailable(type) {
+      NSLog("Unsupported source type")
       return
     }
-    let preview = AVCaptureVideoPreviewLayer(session: session)
-    preview.frame = profileImage.bounds
-    profileImage.layer.addSublayer(preview)
-    session.startRunning()
     
+    let picker = UIImagePickerController()
+    picker.delegate = self
+    picker.sourceType = type
+    picker.allowsEditing = true
+    
+    presentViewController(picker, animated: true, completion: nil)
+  }
+  
+  private func setupDoneButton() {
+    doneButton.backgroundColor = doneButton.titleColorForState(.Normal)
+    doneButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
   }
 }

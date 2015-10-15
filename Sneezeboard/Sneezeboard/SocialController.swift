@@ -12,13 +12,18 @@ import ParseFacebookUtilsV4
 
 class SocialController: UIViewController {
   @IBOutlet weak var facebookButton: UIButton!
-  @IBOutlet weak var skipButton: UIBarButtonItem!
+  @IBOutlet weak var skipButton: UIButton!
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    addBorderToSkipButton()
+  }
+  
   @IBAction func facebookTouched(sender: AnyObject) {
     if !PFFacebookUtils.isLinkedWithUser(User.currentUser()!) {
       PFFacebookUtils.linkUserInBackground(User.currentUser()!, withReadPermissions: nil, block: { (success, error) -> Void in
         if success {
-          self.skipButton.title = "Next"
           self.facebookButton.enabled = false
           self.facebookButton.backgroundColor = UIColor.lightGrayColor()
         } else {
@@ -33,5 +38,13 @@ class SocialController: UIViewController {
         }
       })
     }
+  }
+  
+  private func addBorderToSkipButton() {
+    let color = skipButton.titleColorForState(.Normal)!
+    let border = CALayer()
+    border.frame = CGRectMake(0, 0, skipButton.bounds.width, 1)
+    border.backgroundColor = color.CGColor
+    skipButton.layer.addSublayer(border)
   }
 }
