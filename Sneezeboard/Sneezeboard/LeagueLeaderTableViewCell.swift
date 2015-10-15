@@ -11,6 +11,7 @@ import UIKit
 class LeagueLeaderTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var eloLabel: UILabel!
     
     var user: User! {
         didSet {
@@ -20,6 +21,7 @@ class LeagueLeaderTableViewCell: UITableViewCell {
     
     func updateView() {
         nameLabel.text = user.username
+        eloLabel.text = "\(user!.elo)"
     }
     
     override func awakeFromNib() {
