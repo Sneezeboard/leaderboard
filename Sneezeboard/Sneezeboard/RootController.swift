@@ -59,12 +59,15 @@ class RootController: UIViewController {
       }
     }
 
+    let blur = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
+    blur.frame = tabBar.tabBar.bounds
     tabBar.viewControllers = vcs
     tabBar.tabBar.barTintColor = UIColor(red: 255 / 255.0, green: 94 / 255.0, blue: 85 / 255.0, alpha: 1)
     tabBar.tabBar.selectedImageTintColor = UIColor.whiteColor()
     tabBar.tabBar.backgroundImage = UIImage()
-    tabBar.tabBar.translucent = false
+    tabBar.tabBar.translucent = true
     tabBar.tabBar.shadowImage = UIImage()
+    tabBar.tabBar.insertSubview(blur, atIndex: 0)
     
     let middleView = tabBar.tabBar.subviews[1]
     middleView.layer.cornerRadius = 30.0
@@ -76,7 +79,7 @@ class RootController: UIViewController {
     cover.clipsToBounds = true
     cover.backgroundColor = tabBar.tabBar.barTintColor
     cover.translatesAutoresizingMaskIntoConstraints = false
-    tabBar.view.insertSubview(cover, atIndex: 1)
+    tabBar.view.insertSubview(cover, atIndex: 2)
     cover.addConstraint(NSLayoutConstraint(
       item: cover,
       attribute: NSLayoutAttribute.Height,
@@ -111,7 +114,7 @@ class RootController: UIViewController {
       toItem: tabBar.view,
       attribute: NSLayoutAttribute.Bottom,
       multiplier: 1.0,
-      constant: 0.0)
+      constant: 5.0)
     )
     tabBar.view.layoutSubviews()
   }

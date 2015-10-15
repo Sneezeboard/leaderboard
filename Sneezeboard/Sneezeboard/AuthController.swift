@@ -100,11 +100,11 @@ class AuthController: UIViewController, UITextFieldDelegate {
   }
   
   func textFieldShouldReturn(textField: UITextField) -> Bool {
-    if (textField != passwordField) {
-      return true
+    if (textField == usernameField) {
+      passwordField.becomeFirstResponder()
+    } else if (textField == passwordField) {
+      triggerAuth()
     }
-    
-    triggerAuth()
     return true
   }
   
