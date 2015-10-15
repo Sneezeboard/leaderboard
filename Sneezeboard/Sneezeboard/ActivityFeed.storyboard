@@ -20,16 +20,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="71.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kJW-d4-Pzf" customClass="PFImageView">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kJW-d4-Pzf" customClass="PFImageView">
                                             <rect key="frame" x="228" y="8" width="50" height="50"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="FJv-Sj-2wc"/>
                                                 <constraint firstAttribute="height" constant="50" id="HGD-3Y-GWe"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will Dalton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zJ-OW-qBF">
-                                            <rect key="frame" x="141" y="8" width="77" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="14"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will Dalton" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zJ-OW-qBF">
+                                            <rect key="frame" x="150" y="8" width="68" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -39,27 +40,28 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2mC-QY-Keu" customClass="PFImageView">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2mC-QY-Keu" customClass="PFImageView">
                                             <rect key="frame" x="321" y="8" width="50" height="50"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="PeW-oS-23b"/>
                                                 <constraint firstAttribute="height" constant="50" id="sO8-bB-wDs"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cedric van Bonusly" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORB-Ia-2Ao">
-                                            <rect key="frame" x="381" y="8" width="137" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="14"/>
+                                            <rect key="frame" x="381" y="8" width="120" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZ4-FQ-AJe">
-                                            <rect key="frame" x="381" y="29" width="14" height="29"/>
+                                            <rect key="frame" x="381" y="27" width="14" height="29"/>
                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxD-Ah-lpQ">
-                                            <rect key="frame" x="198" y="29" width="20" height="29"/>
+                                            <rect key="frame" x="198" y="26" width="20" height="29"/>
                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -100,7 +102,7 @@
                             <outlet property="delegate" destination="cV8-Do-rSJ" id="wu7-cO-pdb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Activity Feed" id="1bh-VE-Ya8"/>
+                    <navigationItem key="navigationItem" title="Activity" id="1bh-VE-Ya8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Fu-7b-EOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

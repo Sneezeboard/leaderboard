@@ -31,6 +31,13 @@ class ActivityFeedViewController: UITableViewController {
         }
     }
 
+    func addCompletedMatch(match: Match) {
+        print("Adding completed match")
+        let newMatches = [match] + matches
+        matches = newMatches
+        self.tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
