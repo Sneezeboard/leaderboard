@@ -11,6 +11,7 @@ import UIKit
 class LeagueDetailTableViewController: UITableViewController {
 
     var league: League?
+    var leaguePlayers: [User] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +20,22 @@ class LeagueDetailTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        loadLeaguePlayers()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func loadLeaguePlayers() {
+        ParseClient.sharedInstance.allUsersByLeague(league!) { (users, error) -> () in
+            if error != nil {
+                print("panic")
+                return
+            }
+            self.leaguePlayers = users
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - Table view data source
@@ -32,19 +45,14 @@ class LeagueDetailTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return leaguePlayers.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("LeagueLeaderTableViewCell", forIndexPath: indexPath) as! LeagueLeaderTableViewCell
+        cell.user = leaguePlayers[indexPath.row]
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

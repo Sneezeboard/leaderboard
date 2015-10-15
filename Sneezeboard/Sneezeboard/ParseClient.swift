@@ -24,12 +24,9 @@ class ParseClient {
             (objects: [PFObject]?, error: NSError?) -> Void in
             
             if error == nil {
-                // The find succeeded.
                 print("Successfully retrieved \(objects!.count) matches")
-                // Do something with the found objects
                 completion(matches: (objects as! [Match]), error: error)
             } else {
-                // Log details of the failure
                 print("Error getting matches: \(error)")
                 completion(matches: [], error: error)
             }
@@ -38,16 +35,12 @@ class ParseClient {
     
     func allSports(completion: (sports: [Sport], error: NSError?) -> ()) -> () {
         let query = PFQuery(className: Sport.parseClassName())
-        query.findObjectsInBackgroundWithBlock {
-            (objects: [PFObject]?, error: NSError?) -> Void in
+        query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
             
             if error == nil {
-                // The find succeeded.
                 print("Successfully retrieved \(objects!.count) sports")
-                // Do something with the found objects
                 completion(sports: (objects as! [Sport]), error: error)
             } else {
-                // Log details of the failure
                 print("Error getting sports: \(error)")
                 completion(sports: [], error: error)
             }
@@ -56,24 +49,30 @@ class ParseClient {
     
     func allLeagues(completion: (leagues: [League], error: NSError?) -> ()) -> () {
         let query = PFQuery(className: League.parseClassName())
-        query.findObjectsInBackgroundWithBlock {
-            (objects: [PFObject]?, error: NSError?) -> Void in
+        query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
             
             if error == nil {
-                // The find succeeded.
                 print("Successfully retrieved \(objects!.count) leagues")
-                // Do something with the found objects
                 completion(leagues: (objects as! [League]), error: error)
             } else {
-                // Log details of the failure
                 print("Error getting leagues: \(error)")
                 completion(leagues: [], error: error)
             }
         }
     }
     
-    func allUsersByLeague(league: League, completetion: (users: [User], error: NSError?) -> ()) -> () {
-        //let query =
+    func allUsersByLeague(league: League, completion: (users: [User], error: NSError?) -> ()) -> () {
+        let query = PFQuery(className: User.parseClassName())
+        query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                print("Successfully retrieved \(objects!.count) users")
+                completion(users: (objects as! [User]), error: error)
+            } else {
+                print("Error getting league users: \(error)")
+                completion(users: [], error: error)
+            }
+        }
     }
 
 }
