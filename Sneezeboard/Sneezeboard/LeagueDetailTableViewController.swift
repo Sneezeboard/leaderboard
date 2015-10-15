@@ -1,20 +1,24 @@
 //
-//  LeaderboardTableViewController.swift
+//  LeagueDetailTableViewController.swift
 //  Sneezeboard
 //
-//  Created by Will Dalton on 10/7/15.
+//  Created by Will Dalton on 10/14/15.
 //  Copyright © 2015 patrick. All rights reserved.
 //
 
 import UIKit
 
-class LeaderboardTableViewController: UITableViewController {
+class LeagueDetailTableViewController: UITableViewController {
 
-    var leagues: [League] = []
+    var league: League?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadLeagues()
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,30 +27,24 @@ class LeaderboardTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return leagues.count
-    }
-    
-    func loadLeagues() {
-        // instantiate a fake global league
-        let globalLeague = League()
-        globalLeague.name = "THUNDERDOME GALAXY" // this name is negotiable
-        
-        ParseClient.sharedInstance.allLeagues { (leagues, error) -> () in
-            self.leagues = [globalLeague]
-            for league in leagues {
-                self.leagues.append(league)
-            }
-            self.tableView.reloadData()
-        }
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
 
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 0
+    }
+
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("LeagueTableViewCell", forIndexPath: indexPath) as! LeagueTableViewCell
-        cell.league = leagues[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+
+        // Configure the cell...
 
         return cell
     }
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -85,13 +83,12 @@ class LeaderboardTableViewController: UITableViewController {
 
     /*
     // MARK: - Navigation
-    */
 
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let vc = segue.destinationViewController as! LeagueDetailTableViewController
-        //let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
-        let cell = sender as! LeagueTableViewCell
-        vc.league = cell.league
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
+    */
 
 }
