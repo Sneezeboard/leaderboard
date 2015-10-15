@@ -63,6 +63,7 @@ class ParseClient {
     
     func allUsersByLeague(league: League, completion: (users: [User], error: NSError?) -> ()) -> () {
         let query = PFQuery(className: User.parseClassName())
+        query.orderByDescending("elo")
         query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
             
             if error == nil {
