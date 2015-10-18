@@ -39,6 +39,7 @@ class OpponentsViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return dataSource?.numberOfSectionsInTableView?(tableView) ?? 0
     }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource?.tableView(tableView, numberOfRowsInSection: section) ?? 0
     }
