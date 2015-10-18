@@ -9,16 +9,22 @@
 import UIKit
 import RAMAnimatedTabBarController
 
-class RecordMatchViewController: UIViewController {
+class RecordMatchViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     var match: Match!
+    var scores: [Int] = [1,2,3,4,5,6,7,8,9,10,11]
 
+    @IBOutlet weak var scorePicker: UIPickerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       
         // Do any additional setup after loading the view.
         match.score1 = 9
         match.score2 = 11
+        
+        self.scorePicker.dataSource = self
+        self.scorePicker.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,6 +54,28 @@ class RecordMatchViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 2
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 11
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return String(self.scores[row])
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("row: \(row); component: \(component)")
+        if (component == 0) {
+            match.score1 = scores[row]
+        } else {
+            match.score2 = scores[row]
+        }
+        
     }
     
     /*

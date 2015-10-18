@@ -219,7 +219,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wLm-hP-pLc">
-                                            <rect key="frame" x="15" y="0.0" width="270" height="99.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="270" height="100"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -295,18 +295,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m78-d5-rd4">
-                                <rect key="frame" x="127" y="320" width="67" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m78-d5-rd4">
+                                <rect key="frame" x="127" y="439" width="67" height="30"/>
                                 <state key="normal" title="Record It!"/>
                                 <connections>
                                     <action selector="saveMatch" destination="3pf-2S-yvL" eventType="touchUpInside" id="Tbj-7Z-eS3"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KuW-jN-bBu">
+                                <rect key="frame" x="0.0" y="203" width="320" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KuW-jN-bBu" firstAttribute="leading" secondItem="rnR-Ge-5qv" secondAttribute="leading" id="AQ8-sp-bTv"/>
+                            <constraint firstItem="m78-d5-rd4" firstAttribute="top" secondItem="KuW-jN-bBu" secondAttribute="bottom" constant="20" id="aXZ-M9-XD6"/>
+                            <constraint firstItem="leO-DQ-3Z0" firstAttribute="top" secondItem="m78-d5-rd4" secondAttribute="bottom" constant="50" id="b8s-y2-88Q"/>
+                            <constraint firstAttribute="trailing" secondItem="KuW-jN-bBu" secondAttribute="trailing" id="rnQ-v4-cnF"/>
+                            <constraint firstItem="m78-d5-rd4" firstAttribute="centerX" secondItem="rnR-Ge-5qv" secondAttribute="centerX" id="uwy-Gh-Ue8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Record It" id="lQZ-Vp-Z9e"/>
                     <connections>
+                        <outlet property="scorePicker" destination="KuW-jN-bBu" id="ANp-qx-Par"/>
                         <segue destination="NKV-g3-lfa" kind="unwind" identifier="segue.unwind_to_root" unwindAction="unwindToOpponentTypePicker:" id="AuP-5Y-BT3"/>
                     </connections>
                 </viewController>
