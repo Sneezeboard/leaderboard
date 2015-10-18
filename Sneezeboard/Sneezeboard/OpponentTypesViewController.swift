@@ -7,13 +7,24 @@
 //
 
 import UIKit
+import ParseUI
 
 class OpponentTypesViewController: UIViewController {
+    
+    @IBOutlet weak var user1ImageView: PFImageView!
+    @IBOutlet weak var user1NameLabel: UILabel!
+    @IBOutlet weak var user2ImageView: PFImageView!
+    @IBOutlet weak var user2NameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        user1NameLabel.text = User.currentUser()?.username
+        user1ImageView.file = User.currentUser()?.avatar
+        user1ImageView.loadInBackground()
+
+        user2NameLabel.text = "???"
     }
     
     override func didReceiveMemoryWarning() {
