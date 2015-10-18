@@ -44,11 +44,6 @@ class RecordMatchViewController: UIViewController {
                     self.performSegueWithIdentifier("segue.unwind_to_root", sender: self)
                     
                     activityFeedViewController.addCompletedMatch(self.match)
-                    
-                    let alert = UIAlertController(title: "Game Recorded", message: "Thanks for playing!", preferredStyle: UIAlertControllerStyle.Alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                    self.presentViewController(alert, animated: true, completion: nil)
-                    
                     tabBarController.selectedIndex = 0
                 }
             }

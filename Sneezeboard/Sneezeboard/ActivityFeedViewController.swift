@@ -13,6 +13,9 @@ class ActivityFeedViewController: UITableViewController {
 
     var matches: [Match] = []
     
+    // If a match was just added, this flag is used to animate it in.
+    var completedMatchJustAdded: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +36,8 @@ class ActivityFeedViewController: UITableViewController {
 
     func addCompletedMatch(match: Match) {
         print("Adding completed match")
+        completedMatchJustAdded = true
+        
         let newMatches = [match] + matches
         matches = newMatches
         self.tableView.reloadData()
@@ -47,6 +52,17 @@ class ActivityFeedViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("ActivityCell") as! ActivityCell
 
         cell.match = matches[indexPath.row]
+
+        if (indexPath.row == 0 && completedMatchJustAdded) {
+            cell.contentView.alpha = 0
+            cell.contentView.transform = CGAffineTransformMakeScale(4, 4)
+            UIView.animateWithDuration(1.0, delay: 0.1, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+                    cell.contentView.alpha = 1
+                    cell.contentView.transform = CGAffineTransformMakeScale(1, 1)
+                }, completion: { (Bool) -> Void in
+                    self.completedMatchJustAdded = false
+            })
+        }
 
         return cell
     }
