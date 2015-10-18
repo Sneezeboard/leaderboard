@@ -13,7 +13,7 @@ import ParseUI
 class RecordMatchViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     var match: Match!
-    var scores: [Int] = [1,2,3,4,5,6,7,8,9,10,11]
+    var scores: [Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]
 
     @IBOutlet weak var user1ImageView: PFImageView!
     @IBOutlet weak var user1Label: UILabel!
