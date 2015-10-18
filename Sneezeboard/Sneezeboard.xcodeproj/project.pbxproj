@@ -76,6 +76,7 @@
 		4514CEC21BBA2F4A0056CD25 /* ActivityFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityFeedViewController.swift; sourceTree = "<group>"; };
 		4514CEC41BBA2FC80056CD25 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		4514CEC61BBA31060056CD25 /* ActivityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
+		4571BBD81BD4378D004F04CB /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		45D4AA641BBCA9FA0018FE9B /* MatchApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchApi.swift; sourceTree = "<group>"; };
 		45D4AA661BBCAA180018FE9B /* ParseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseClient.swift; sourceTree = "<group>"; };
 		4ED369601BBBADF60040AA0F /* OpponentTypesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpponentTypesViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +168,7 @@
 				38710E731BC73F7600AE94D5 /* us101.ttf */,
 				38F0C8F01BB5DD440030EC5D /* Info.plist */,
 				38710E771BCD8A3200AE94D5 /* InPlaceSegue.swift */,
+				4571BBD81BD4378D004F04CB /* BridgingHeader.h */,
 			);
 			path = Sneezeboard;
 			sourceTree = "<group>";

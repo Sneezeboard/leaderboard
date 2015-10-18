@@ -9,9 +9,12 @@
 import UIKit
 import Parse
 import ParseUI
+import DateTools
 
 class ActivityCell: UITableViewCell {
     
+
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var user1NameLabel: UILabel!
     @IBOutlet weak var user1ScoreLabel: UILabel!
     @IBOutlet weak var user1ImageView: PFImageView!
@@ -29,6 +32,9 @@ class ActivityCell: UITableViewCell {
     
     func updateView() {
         if match != nil {
+            
+            timeLabel.text = match.createdAt?.shortTimeAgoSinceNow()
+            
             user1ScoreLabel.text = String(match.score1)
             user2ScoreLabel.text = String(match.score2)
             
