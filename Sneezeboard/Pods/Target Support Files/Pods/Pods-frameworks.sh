@@ -61,7 +61,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods/Parse.framework'
   install_framework 'Pods/ParseFacebookUtilsV4.framework'
   install_framework 'Pods/ParseUI.framework'
-  install_framework 'Pods/RAMAnimatedTabBarController.framework'
   install_framework 'Pods/RESideMenu.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -74,6 +73,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods/Parse.framework'
   install_framework 'Pods/ParseFacebookUtilsV4.framework'
   install_framework 'Pods/ParseUI.framework'
-  install_framework 'Pods/RAMAnimatedTabBarController.framework'
   install_framework 'Pods/RESideMenu.framework'
 fi

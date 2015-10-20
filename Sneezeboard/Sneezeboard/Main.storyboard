@@ -120,7 +120,7 @@
         <!--Tabs-->
         <scene sceneID="bDs-om-CVa">
             <objects>
-                <tabBarController storyboardIdentifier="vc.tabs" title="Tabs" id="jLb-gE-cRr" customClass="RAMAnimatedTabBarController" customModule="RAMAnimatedTabBarController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="vc.tabs" title="Tabs" id="jLb-gE-cRr" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="U0b-nb-EHj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

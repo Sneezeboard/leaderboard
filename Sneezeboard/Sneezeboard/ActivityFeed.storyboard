@@ -17,7 +17,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="96"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ebZ-Rp-gKQ" id="eM7-rp-cUl">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="95.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="96"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kJW-d4-Pzf" customClass="PFImageView">
@@ -29,13 +29,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will Dalton" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zJ-OW-qBF">
-                                            <rect key="frame" x="150" y="25" width="67.5" height="14.5"/>
+                                            <rect key="frame" x="150" y="25" width="68" height="15"/>
                                             <fontDescription key="fontDescription" type="system" weight="black" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKT-k3-9hw">
-                                            <rect key="frame" x="293" y="40" width="13" height="14.5"/>
+                                            <rect key="frame" x="293" y="40" width="13" height="15"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -49,13 +49,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cedric van Bonusly" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORB-Ia-2Ao">
-                                            <rect key="frame" x="381" y="25" width="119.5" height="14.5"/>
+                                            <rect key="frame" x="381" y="25" width="120" height="15"/>
                                             <fontDescription key="fontDescription" type="system" weight="black" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZ4-FQ-AJe">
-                                            <rect key="frame" x="381" y="43" width="13.5" height="29"/>
+                                            <rect key="frame" x="381" y="43" width="14" height="29"/>
                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -67,7 +67,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2h ago" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olX-3Z-fRr">
-                                            <rect key="frame" x="558.5" y="8" width="33.5" height="12"/>
+                                            <rect key="frame" x="559" y="8" width="34" height="12"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -121,11 +121,7 @@
         <scene sceneID="eg5-ey-UCj">
             <objects>
                 <navigationController title="Activity" id="SJm-3Q-agG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Activity" image="activity" selectedImage="activity" id="chN-54-gk0" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
-                        <connections>
-                            <outlet property="animation" destination="juo-pb-TMz" id="GEO-I6-RjP"/>
-                        </connections>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Activity" image="activity" selectedImage="activity" id="chN-54-gk0"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Mn-sK-JfY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -136,7 +132,6 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rAG-sl-y49" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="juo-pb-TMz" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="-287" y="520"/>
         </scene>

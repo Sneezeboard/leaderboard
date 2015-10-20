@@ -12,7 +12,7 @@ import RAMAnimatedTabBarController
 
 class RootController: UIViewController {
   var menuController: UIViewController!
-  var tabBar: RAMAnimatedTabBarController!
+  var tabBar: UITabBarController!
   var mainController: RESideMenu!
   
   override func viewDidLoad() {
@@ -34,7 +34,7 @@ class RootController: UIViewController {
   }
   
   private func setupTabBar() {
-    tabBar = storyboard?.instantiateViewControllerWithIdentifier("vc.tabs") as! RAMAnimatedTabBarController
+    tabBar = storyboard?.instantiateViewControllerWithIdentifier("vc.tabs") as! UITabBarController
     
     let vcs = [
       storyboard!.instantiateViewControllerWithIdentifier("vc.0"),
@@ -62,8 +62,8 @@ class RootController: UIViewController {
     let blur = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
     blur.frame = tabBar.tabBar.bounds
     tabBar.viewControllers = vcs
-    tabBar.tabBar.barTintColor = UIColor(red: 255 / 255.0, green: 94 / 255.0, blue: 85 / 255.0, alpha: 1)
-    tabBar.tabBar.selectedImageTintColor = UIColor.whiteColor()
+    tabBar.tabBar.barTintColor = UIColor.whiteColor() // UIColor(red: 255 / 255.0, green: 94 / 255.0, blue: 85 / 255.0, alpha: 1)
+    tabBar.tabBar.tintColor = UIColor(red: 255 / 255.0, green: 94 / 255.0, blue: 85 / 255.0, alpha: 1)//UIColor.whiteColor()
     tabBar.tabBar.backgroundImage = UIImage()
     tabBar.tabBar.translucent = true
     tabBar.tabBar.shadowImage = UIImage()

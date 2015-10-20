@@ -99,11 +99,7 @@
         <scene sceneID="rb1-dK-ufy">
             <objects>
                 <navigationController title="Record" automaticallyAdjustsScrollViewInsets="NO" id="Aqx-aW-m8v" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Record" image="create" selectedImage="create" id="YS2-iO-zKV" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
-                        <connections>
-                            <outlet property="animation" destination="nX2-pe-7Oj" id="yGC-ei-Hok"/>
-                        </connections>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Record" image="create" selectedImage="create" id="YS2-iO-zKV"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DRE-Uh-K0T">
@@ -116,7 +112,6 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzf-v4-ZXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="nX2-pe-7Oj" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="327" y="497"/>
         </scene>
@@ -312,15 +307,15 @@
                                 <rect key="frame" x="0.0" y="203" width="320" height="216"/>
                             </pickerView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Utu-J6-3zc" customClass="PFImageView">
-                                <rect key="frame" x="183.5" y="94" width="50" height="50"/>
+                                <rect key="frame" x="184" y="94" width="50" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="I6j-MZ-Jv6"/>
                                     <constraint firstAttribute="width" constant="50" id="Uta-rt-6Rk"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paul Bunyon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68P-EO-17e">
-                                <rect key="frame" x="183" y="154" width="77" height="14.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Paul Bunyon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68P-EO-17e">
+                                <rect key="frame" x="183" y="154" width="77" height="15"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -334,12 +329,12 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhE-tS-d0h">
-                                <rect key="frame" x="151" y="108" width="17.5" height="20.5"/>
+                                <rect key="frame" x="151" y="108" width="18" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will Dalton" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLi-Eq-yfP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Will Dalton" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLi-Eq-yfP">
                                 <rect key="frame" x="68" y="154" width="68" height="15"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>

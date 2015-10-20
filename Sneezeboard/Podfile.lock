@@ -50,7 +50,6 @@ PODS:
   - ParseUI (1.1.6):
     - Bolts/Tasks (~> 1.2)
     - Parse (~> 1.8)
-  - RAMAnimatedTabBarController (1.0.1)
   - RESideMenu (4.0.7)
 
 DEPENDENCIES:
@@ -62,7 +61,6 @@ DEPENDENCIES:
   - Parse
   - ParseFacebookUtilsV4
   - ParseUI
-  - RAMAnimatedTabBarController
   - RESideMenu
 
 SPEC CHECKSUMS:
@@ -75,7 +73,6 @@ SPEC CHECKSUMS:
   Parse: 17ad8e0677ed682f7f00503860fcda0f4eb74168
   ParseFacebookUtilsV4: cc51857cf984c6fc743e7f17c2ddebdb6f02f963
   ParseUI: 8a22e448c03f825203d8c379c80523517f68baa3
-  RAMAnimatedTabBarController: 58b220dff7ad27efff90663a8656f3a73f8e76b6
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
 
 COCOAPODS: 0.38.2
