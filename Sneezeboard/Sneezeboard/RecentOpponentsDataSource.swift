@@ -54,7 +54,11 @@ class RecentOpponentsDataSource: NSObject, UITableViewDataSource, OpponentsDataS
             return nil
         }
         
-        return allOpponents?[indexPath.row]
+        if (indexPath.section == 0) {
+            return recentOpponents?[indexPath.row]
+        } else {
+            return allOpponents?[indexPath.row]
+        }
     }
     
     func fetch(completion: (users: [User]?, error: NSError?) -> Void) {
