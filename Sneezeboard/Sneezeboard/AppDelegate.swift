@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   private func theme() {
     let a = UINavigationBar.appearance()
     a.translucent = false
-    a.barTintColor = UIColor(red: 255 / 255.0, green: 94 / 255.0, blue: 85 / 255.0, alpha: 1)
+    a.barTintColor = UIColor(red: 248 / 255.0, green: 70 / 255.0, blue: 72 / 255.0, alpha: 1)
     a.tintColor = UIColor.whiteColor()
     a.titleTextAttributes = [
       NSForegroundColorAttributeName : UIColor.whiteColor(),

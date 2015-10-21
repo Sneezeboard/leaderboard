@@ -60,14 +60,14 @@ class RootController: UIViewController {
     blur.frame = tabBar.tabBar.bounds
     tabBar.viewControllers = vcs
     tabBar.tabBar.barTintColor = UIColor.whiteColor() // UIColor(red: 255 / 255.0, green: 94 / 255.0, blue: 85 / 255.0, alpha: 1)
-    tabBar.tabBar.tintColor = UIColor(red: 255 / 255.0, green: 94 / 255.0, blue: 85 / 255.0, alpha: 1)//UIColor.whiteColor()
+    tabBar.tabBar.tintColor = UIColor(red: 248 / 255.0, green: 70 / 255.0, blue: 72 / 255.0, alpha: 1)//UIColor.whiteColor()
     tabBar.tabBar.backgroundImage = UIImage()
     tabBar.tabBar.translucent = true
     tabBar.tabBar.shadowImage = UIImage()
     tabBar.tabBar.insertSubview(blur, atIndex: 0)
     
     let border = UIView(frame: CGRectMake(0, 0, tabBar.tabBar.bounds.width, 2))
-    border.backgroundColor = UIColor(red: 255 / 255.0, green: 94 / 255.0, blue: 85 / 255.0, alpha: 1)
+    border.backgroundColor = UIColor(red: 248 / 255.0, green: 70 / 255.0, blue: 72 / 255.0, alpha: 1)
     tabBar.tabBar.addSubview(border)
   }
   
