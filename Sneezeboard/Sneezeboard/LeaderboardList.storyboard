@@ -68,9 +68,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" restorationIdentifier="LeagueHeaderView" id="yWp-ed-Fpp" customClass="LeagueHeaderView" customModule="Sneezeboard" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="64" width="600" height="79"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KEn-gb-M1f" customClass="PFImageView">
+                                    <rect key="frame" x="8" y="11" width="48" height="48"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="League Leaders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGA-b8-WN2">
+                                    <rect key="frame" x="64" y="24" width="122" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeagueLeaderTableViewCell" rowHeight="81" id="OjU-Lt-0JW" customClass="LeagueLeaderTableViewCell" customModule="Sneezeboard" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="81"/>
+                                <rect key="frame" x="0.0" y="171" width="600" height="81"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OjU-Lt-0JW" id="KrF-MQ-M40">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
@@ -131,6 +147,10 @@
                             <outlet property="delegate" destination="CrS-Qx-d7Y" id="dS5-Cl-tuf"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="leagueHeaderImageView" destination="KEn-gb-M1f" id="9P8-87-z16"/>
+                        <outlet property="leagueNameLabel" destination="FGA-b8-WN2" id="GVN-lt-38y"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQ5-ig-khJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

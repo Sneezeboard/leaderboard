@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
 class LeagueDetailTableViewController: UITableViewController {
 
     var league: League!
     var leaguePlayers: [User] = []
     
+    @IBOutlet weak var leagueHeaderImageView: PFImageView!
+    @IBOutlet weak var leagueNameLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
@@ -22,6 +27,8 @@ class LeagueDetailTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         loadLeaguePlayers()
         navigationItem.title = league.name
+        self.leagueHeaderImageView.file = league.image
+        self.leagueHeaderImageView.loadInBackground()
     }
 
     override func didReceiveMemoryWarning() {
