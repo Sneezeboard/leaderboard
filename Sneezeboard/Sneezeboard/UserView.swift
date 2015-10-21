@@ -27,20 +27,24 @@ class UserView: UIView {
   
   var user: User! {
     didSet {
-      usernameLabel.text = user.username
-      
-      if let urlStr = user.avatar?.url, url = NSURL(string: urlStr) {
-        avatarImage.alpha = 0
-        let req = NSURLRequest(URL: url)
-        avatarImage.setImageWithURLRequest(req, placeholderImage: nil, success: { (_, _, img) -> Void in
-          UIView.animateWithDuration(0.2, animations: { () -> Void in
-            self.avatarImage.image = img
-            self.avatarImage.alpha = 1
-          })
-        }, failure: nil)
-      }
+        usernameLabel.text = user.username
+        if (user.avatar != nil) {
+            if let urlStr = user.avatar?.url, url = NSURL(string: urlStr) {
+                avatarImage.alpha = 0
+                let req = NSURLRequest(URL: url)
+                avatarImage.setImageWithURLRequest(req, placeholderImage: nil, success: { (_, _, img) -> Void in
+                    UIView.animateWithDuration(0.2, animations: { () -> Void in
+                        self.avatarImage.image = img
+                        self.avatarImage.alpha = 1
+                    })
+                    }, failure: nil)
+            }
+        } else {
+            avatarImage.image = UIImage(named: "default-avatar")
+        }
+
+        }
     }
-  }
   
   override func layoutSubviews() {
     super.layoutSubviews()
