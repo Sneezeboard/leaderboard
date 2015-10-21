@@ -8,7 +8,6 @@
 
 import UIKit
 import RESideMenu
-import RAMAnimatedTabBarController
 
 class RootController: UIViewController {
   var menuController: UIViewController!

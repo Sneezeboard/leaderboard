@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RAMAnimatedTabBarController
 import ParseUI
 
 class RecordMatchViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
