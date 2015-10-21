@@ -8,27 +8,41 @@
         <scene sceneID="Lwq-uR-UE1">
             <objects>
                 <tableViewController title="Leaderboard List" id="sZ3-9m-eKp" customClass="LeaderboardTableViewController" customModule="Sneezeboard" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RVu-CF-W6f">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="RVu-CF-W6f">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeagueTableViewCell" id="ST3-Fy-aA7" customClass="LeagueTableViewCell" customModule="Sneezeboard" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeagueTableViewCell" rowHeight="75" id="ST3-Fy-aA7" customClass="LeagueTableViewCell" customModule="Sneezeboard" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ST3-Fy-aA7" id="IgA-Lp-xWM">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tumblr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1Y-gY-Z4q">
-                                            <rect key="frame" x="8" y="11" width="584" height="21"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dJS-K2-bw0" customClass="PFImageView">
+                                            <rect key="frame" x="8" y="11" width="48" height="48"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="48" id="p0o-xq-U9f"/>
+                                                <constraint firstAttribute="height" constant="48" id="qLY-b2-NcQ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tumblr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1Y-gY-Z4q">
+                                            <rect key="frame" x="64" y="24" width="528" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dJS-K2-bw0" firstAttribute="leading" secondItem="IgA-Lp-xWM" secondAttribute="leading" constant="8" id="Fey-sC-Wdr"/>
+                                        <constraint firstItem="dJS-K2-bw0" firstAttribute="top" secondItem="IgA-Lp-xWM" secondAttribute="top" constant="11" id="IMd-tD-tA4"/>
+                                        <constraint firstAttribute="bottom" secondItem="dJS-K2-bw0" secondAttribute="bottom" constant="15" id="b6g-mm-ArX"/>
+                                        <constraint firstItem="C1Y-gY-Z4q" firstAttribute="leading" secondItem="dJS-K2-bw0" secondAttribute="trailing" constant="8" id="ltN-Rx-sK8"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="leagueImageView" destination="dJS-K2-bw0" id="IPZ-bi-oyQ"/>
                                     <outlet property="leagueNameLabel" destination="C1Y-gY-Z4q" id="SF2-kN-IlU"/>
                                     <segue destination="CrS-Qx-d7Y" kind="show" id="Fok-0g-rkz"/>
                                 </connections>
