@@ -63,14 +63,15 @@ class SportsPickerViewController: UITableViewController {
 
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "segue.record_result" {
-            let vc = segue.destinationViewController as! RecordMatchViewController
-            
+        if segue.identifier == "segue.league" {
+            let vc = segue.destinationViewController as! LeaguePickerTableViewController
             if let cell = (sender as? UITableViewCell), let indexPath = tableView.indexPathForCell(cell) {
                 let sport = self.sports?[indexPath.row]
+                let match = Match()
                 match.sport = sport
+                match.user1 = self.match.user1
+                match.user2 = self.match.user2
                 vc.match = match
             }
         }
