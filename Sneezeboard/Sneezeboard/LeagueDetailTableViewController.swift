@@ -21,6 +21,7 @@ class LeagueDetailTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         loadLeaguePlayers()
+        navigationItem.title = league.name
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +30,6 @@ class LeagueDetailTableViewController: UITableViewController {
     
     func loadLeaguePlayers() {
         ParseClient.sharedInstance.allUsersByLeague(league, completion: { (users, error) -> () in
-            print(users.count)
             if error != nil {
                 print("idk what happened")
                 return
@@ -52,7 +52,11 @@ class LeagueDetailTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("LeagueLeaderTableViewCell", forIndexPath: indexPath) as! LeagueLeaderTableViewCell
+
+        // let the cell know whether we've got a dang league leader on our hands here
+        cell.leagueLeader = (indexPath.row == 0)
         cell.user = leaguePlayers[indexPath.row]
+
         return cell
     }
 
