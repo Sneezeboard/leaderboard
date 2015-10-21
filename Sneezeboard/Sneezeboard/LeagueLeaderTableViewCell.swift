@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
 class LeagueLeaderTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var eloLabel: UILabel!
+    @IBOutlet weak var userImageView: PFImageView!
     
     var user: User! {
         didSet {
@@ -22,6 +25,8 @@ class LeagueLeaderTableViewCell: UITableViewCell {
     func updateView() {
         nameLabel.text = user.username
         eloLabel.text = "\(user!.elo)"
+        self.userImageView.file = user.avatar
+        self.userImageView.loadInBackground()
     }
     
     override func awakeFromNib() {
