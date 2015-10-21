@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3803530A1BB5F7BF00306DA7 /* LeaguePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380353091BB5F7BF00306DA7 /* LeaguePickerController.swift */; settings = {ASSET_TAGS = (); }; };
+		3803530C1BB5F9E500306DA7 /* LeaguePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3803530B1BB5F9E500306DA7 /* LeaguePicker.storyboard */; settings = {ASSET_TAGS = (); }; };
+		3803530E1BB5FBE700306DA7 /* SocialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803530D1BB5FBE700306DA7 /* SocialController.swift */; settings = {ASSET_TAGS = (); }; };
+		380353101BBA083900306DA7 /* ActivityFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3803530F1BBA083900306DA7 /* ActivityFeed.storyboard */; settings = {ASSET_TAGS = (); }; };
+		380353121BBA08B100306DA7 /* LeaderboardList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380353111BBA08B100306DA7 /* LeaderboardList.storyboard */; settings = {ASSET_TAGS = (); }; };
+		380353141BC33C7400306DA7 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380353131BC33C7400306DA7 /* AuthController.swift */; settings = {ASSET_TAGS = (); }; };
+		381AB2711BD72B0C00FE606F /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381AB2701BD72B0C00FE606F /* UserView.swift */; settings = {ASSET_TAGS = (); }; };
+		381AB2731BD72B4700FE606F /* UserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381AB2721BD72B4700FE606F /* UserView.xib */; settings = {ASSET_TAGS = (); }; };
+		38710E741BC73F7600AE94D5 /* us101.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38710E731BC73F7600AE94D5 /* us101.ttf */; settings = {ASSET_TAGS = (); }; };
+		38710E761BC74A3400AE94D5 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38710E751BC74A3400AE94D5 /* MenuController.swift */; settings = {ASSET_TAGS = (); }; };
+		38710E781BCD8A3200AE94D5 /* InPlaceSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38710E771BCD8A3200AE94D5 /* InPlaceSegue.swift */; settings = {ASSET_TAGS = (); }; };
+		38A4A5821BC48BB5001F9F28 /* MugshotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A4A5811BC48BB5001F9F28 /* MugshotController.swift */; settings = {ASSET_TAGS = (); }; };
+		38A4A5841BC581FB001F9F28 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A4A5831BC581FB001F9F28 /* RootController.swift */; settings = {ASSET_TAGS = (); }; };
+		38F0C8E51BB5DD440030EC5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0C8E41BB5DD440030EC5D /* AppDelegate.swift */; };
+		38F0C8EC1BB5DD440030EC5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38F0C8EB1BB5DD440030EC5D /* Assets.xcassets */; };
+		38F0C8EF1BB5DD440030EC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F0C8ED1BB5DD440030EC5D /* LaunchScreen.storyboard */; };
+		38F0C8F81BB5DE4A0030EC5D /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F0C8F71BB5DE4A0030EC5D /* Onboarding.storyboard */; settings = {ASSET_TAGS = (); }; };
+		38F0C8FA1BB5DE600030EC5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F0C8F91BB5DE600030EC5D /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		38F0C8FC1BB5DE670030EC5D /* RecordGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F0C8FB1BB5DE670030EC5D /* RecordGame.storyboard */; settings = {ASSET_TAGS = (); }; };
+		38F0C9001BB5DED50030EC5D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0C8FF1BB5DED50030EC5D /* User.swift */; settings = {ASSET_TAGS = (); }; };
+		38F0C9021BB5E0850030EC5D /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0C9011BB5E0850030EC5D /* Leaderboard.swift */; settings = {ASSET_TAGS = (); }; };
+		38F0C9041BB5EBAA0030EC5D /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0C9031BB5EBAA0030EC5D /* SignupController.swift */; settings = {ASSET_TAGS = (); }; };
+		38F0C9061BB5EBC20030EC5D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0C9051BB5EBC20030EC5D /* LoginController.swift */; settings = {ASSET_TAGS = (); }; };
+		4514CEC31BBA2F4A0056CD25 /* ActivityFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514CEC21BBA2F4A0056CD25 /* ActivityFeedViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4514CEC51BBA2FC80056CD25 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514CEC41BBA2FC80056CD25 /* Match.swift */; settings = {ASSET_TAGS = (); }; };
+		4514CEC71BBA31060056CD25 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514CEC61BBA31060056CD25 /* ActivityCell.swift */; settings = {ASSET_TAGS = (); }; };
+		45D4AA651BBCA9FA0018FE9B /* MatchApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4AA641BBCA9FA0018FE9B /* MatchApi.swift */; settings = {ASSET_TAGS = (); }; };
+		45D4AA671BBCAA180018FE9B /* ParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4AA661BBCAA180018FE9B /* ParseClient.swift */; settings = {ASSET_TAGS = (); }; };
+		4ED369611BBBADF60040AA0F /* OpponentTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED369601BBBADF60040AA0F /* OpponentTypesViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4ED369631BBBAEB30040AA0F /* OpponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED369621BBBAEB30040AA0F /* OpponentsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4ED369681BBBAF8E0040AA0F /* RecentOpponentsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED369671BBBAF8E0040AA0F /* RecentOpponentsDataSource.swift */; settings = {ASSET_TAGS = (); }; };
+		4ED3696C1BBBB9930040AA0F /* SportsPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3696B1BBBB9930040AA0F /* SportsPickerViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		826AFF261BBCA07300AB12B8 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826AFF251BBCA07300AB12B8 /* Sport.swift */; settings = {ASSET_TAGS = (); }; };
+		826AFF2A1BBCAD0E00AB12B8 /* OpponentsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826AFF291BBCAD0E00AB12B8 /* OpponentsDataSource.swift */; settings = {ASSET_TAGS = (); }; };
+		826AFF2E1BBD13E200AB12B8 /* RecordMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826AFF2D1BBD13E200AB12B8 /* RecordMatchViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9D68F4DD1BC5DF91000F145A /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D68F4DC1BC5DF91000F145A /* LeaderboardTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9D68F4DF1BC5E3D3000F145A /* LeagueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D68F4DE1BC5E3D3000F145A /* LeagueTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		9D7677B41BCF1ADA00CD5649 /* LeagueDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7677B31BCF1ADA00CD5649 /* LeagueDetailTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9D7677B61BCF301500CD5649 /* LeagueLeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7677B51BCF301500CD5649 /* LeagueLeaderTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		9DA551CE1BD700BF00CD79A7 /* LeaguePickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA551CD1BD700BF00CD79A7 /* LeaguePickerTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9DA551D01BD7037800CD79A7 /* LeagueSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA551CF1BD7037800CD79A7 /* LeagueSelectionTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		9DD758331BBCC6EA003348FA /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD758311BBCC6EA003348FA /* League.swift */; settings = {ASSET_TAGS = (); }; };
+		F3E294EEAC15535D9E2EFE14 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC985C982ECC214D66E5D5A3 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D8B24372D15B18AD2625715 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		380353091BB5F7BF00306DA7 /* LeaguePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaguePickerController.swift; sourceTree = "<group>"; };
+		3803530B1BB5F9E500306DA7 /* LeaguePicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LeaguePicker.storyboard; sourceTree = "<group>"; };
+		3803530D1BB5FBE700306DA7 /* SocialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialController.swift; sourceTree = "<group>"; };
+		3803530F1BBA083900306DA7 /* ActivityFeed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActivityFeed.storyboard; sourceTree = "<group>"; };
+		380353111BBA08B100306DA7 /* LeaderboardList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LeaderboardList.storyboard; sourceTree = "<group>"; };
+		380353131BC33C7400306DA7 /* AuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		381AB2701BD72B0C00FE606F /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		381AB2721BD72B4700FE606F /* UserView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserView.xib; sourceTree = "<group>"; };
+		38710E731BC73F7600AE94D5 /* us101.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = us101.ttf; sourceTree = "<group>"; };
+		38710E751BC74A3400AE94D5 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		38710E771BCD8A3200AE94D5 /* InPlaceSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InPlaceSegue.swift; sourceTree = "<group>"; };
+		38A4A5811BC48BB5001F9F28 /* MugshotController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MugshotController.swift; sourceTree = "<group>"; };
+		38A4A5831BC581FB001F9F28 /* RootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
+		38F0C8E11BB5DD440030EC5D /* Thunderdome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thunderdome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38F0C8E41BB5DD440030EC5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		38F0C8EB1BB5DD440030EC5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38F0C8EE1BB5DD440030EC5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		38F0C8F01BB5DD440030EC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38F0C8F71BB5DE4A0030EC5D /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		38F0C8F91BB5DE600030EC5D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		38F0C8FB1BB5DE670030EC5D /* RecordGame.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecordGame.storyboard; sourceTree = "<group>"; };
+		38F0C8FF1BB5DED50030EC5D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		38F0C9011BB5E0850030EC5D /* Leaderboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
+		38F0C9031BB5EBAA0030EC5D /* SignupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		38F0C9051BB5EBC20030EC5D /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		4514CEC21BBA2F4A0056CD25 /* ActivityFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityFeedViewController.swift; sourceTree = "<group>"; };
+		4514CEC41BBA2FC80056CD25 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		4514CEC61BBA31060056CD25 /* ActivityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
+		4571BBD81BD4378D004F04CB /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		45D4AA641BBCA9FA0018FE9B /* MatchApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchApi.swift; sourceTree = "<group>"; };
+		45D4AA661BBCAA180018FE9B /* ParseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseClient.swift; sourceTree = "<group>"; };
+		4ED369601BBBADF60040AA0F /* OpponentTypesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpponentTypesViewController.swift; sourceTree = "<group>"; };
+		4ED369621BBBAEB30040AA0F /* OpponentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpponentsViewController.swift; sourceTree = "<group>"; };
+		4ED369671BBBAF8E0040AA0F /* RecentOpponentsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentOpponentsDataSource.swift; sourceTree = "<group>"; };
+		4ED3696B1BBBB9930040AA0F /* SportsPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsPickerViewController.swift; sourceTree = "<group>"; };
+		826AFF251BBCA07300AB12B8 /* Sport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
+		826AFF291BBCAD0E00AB12B8 /* OpponentsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpponentsDataSource.swift; sourceTree = "<group>"; };
+		826AFF2D1BBD13E200AB12B8 /* RecordMatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordMatchViewController.swift; sourceTree = "<group>"; };
+		9D68F4DC1BC5DF91000F145A /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
+		9D68F4DE1BC5E3D3000F145A /* LeagueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueTableViewCell.swift; sourceTree = "<group>"; };
+		9D7677B31BCF1ADA00CD5649 /* LeagueDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueDetailTableViewController.swift; sourceTree = "<group>"; };
+		9D7677B51BCF301500CD5649 /* LeagueLeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueLeaderTableViewCell.swift; sourceTree = "<group>"; };
+		9DA551CD1BD700BF00CD79A7 /* LeaguePickerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaguePickerTableViewController.swift; sourceTree = "<group>"; };
+		9DA551CF1BD7037800CD79A7 /* LeagueSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		9DD758311BBCC6EA003348FA /* League.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		BC985C982ECC214D66E5D5A3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D33A7E2D85736A99750CCA9F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38F0C8DE1BB5DD440030EC5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3E294EEAC15535D9E2EFE14 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CAD1F645B9E798B5B37B3B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D8B24372D15B18AD2625715 /* Pods.debug.xcconfig */,
+				D33A7E2D85736A99750CCA9F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		380353061BB5F5ED00306DA7 /* NIBs */ = {
+			isa = PBXGroup;
+			children = (
+				381AB2721BD72B4700FE606F /* UserView.xib */,
+			);
+			name = NIBs;
+			sourceTree = "<group>";
+		};
+		38A4A5801BC482D5001F9F28 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				380353131BC33C7400306DA7 /* AuthController.swift */,
+				38F0C9031BB5EBAA0030EC5D /* SignupController.swift */,
+				38F0C9051BB5EBC20030EC5D /* LoginController.swift */,
+				380353091BB5F7BF00306DA7 /* LeaguePickerController.swift */,
+				3803530D1BB5FBE700306DA7 /* SocialController.swift */,
+				38A4A5811BC48BB5001F9F28 /* MugshotController.swift */,
+			);
+			name = Onboarding;
+			sourceTree = "<group>";
+		};
+		38F0C8D81BB5DD440030EC5D = {
+			isa = PBXGroup;
+			children = (
+				38F0C8E31BB5DD440030EC5D /* Thunderdome */,
+				38F0C8E21BB5DD440030EC5D /* Products */,
+				0CAD1F645B9E798B5B37B3B8 /* Pods */,
+				4B68B1264A9A7EEE1AA283E2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		38F0C8E21BB5DD440030EC5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38F0C8E11BB5DD440030EC5D /* Thunderdome.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38F0C8E31BB5DD440030EC5D /* Thunderdome */ = {
+			isa = PBXGroup;
+			children = (
+				38F0C8F61BB5DE3A0030EC5D /* Storyboards */,
+				45D4AA631BBCA9B20018FE9B /* API */,
+				380353061BB5F5ED00306DA7 /* NIBs */,
+				4514CEC11BBA2F0C0056CD25 /* Views */,
+				38F0C8FE1BB5DEC70030EC5D /* Models */,
+				38F0C8FD1BB5DE7C0030EC5D /* ViewControllers */,
+				38F0C8EB1BB5DD440030EC5D /* Assets.xcassets */,
+				38F0C8E41BB5DD440030EC5D /* AppDelegate.swift */,
+				38710E731BC73F7600AE94D5 /* us101.ttf */,
+				38F0C8F01BB5DD440030EC5D /* Info.plist */,
+				38710E771BCD8A3200AE94D5 /* InPlaceSegue.swift */,
+				4571BBD81BD4378D004F04CB /* BridgingHeader.h */,
+			);
+			path = Thunderdome;
+			sourceTree = "<group>";
+		};
+		38F0C8F61BB5DE3A0030EC5D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				38F0C8ED1BB5DD440030EC5D /* LaunchScreen.storyboard */,
+				38F0C8F71BB5DE4A0030EC5D /* Onboarding.storyboard */,
+				38F0C8F91BB5DE600030EC5D /* Main.storyboard */,
+				38F0C8FB1BB5DE670030EC5D /* RecordGame.storyboard */,
+				3803530B1BB5F9E500306DA7 /* LeaguePicker.storyboard */,
+				3803530F1BBA083900306DA7 /* ActivityFeed.storyboard */,
+				380353111BBA08B100306DA7 /* LeaderboardList.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		38F0C8FD1BB5DE7C0030EC5D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D68F4D71BC5DA36000F145A /* Leaderboard */,
+				38A4A5801BC482D5001F9F28 /* Onboarding */,
+				826AFF2C1BBCB1C400AB12B8 /* Record Match */,
+				38A4A5831BC581FB001F9F28 /* RootController.swift */,
+				4514CEC21BBA2F4A0056CD25 /* ActivityFeedViewController.swift */,
+				38710E751BC74A3400AE94D5 /* MenuController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		38F0C8FE1BB5DEC70030EC5D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9DD758311BBCC6EA003348FA /* League.swift */,
+				38F0C8FF1BB5DED50030EC5D /* User.swift */,
+				38F0C9011BB5E0850030EC5D /* Leaderboard.swift */,
+				4514CEC41BBA2FC80056CD25 /* Match.swift */,
+				826AFF251BBCA07300AB12B8 /* Sport.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4514CEC11BBA2F0C0056CD25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4514CEC61BBA31060056CD25 /* ActivityCell.swift */,
+				9D68F4DE1BC5E3D3000F145A /* LeagueTableViewCell.swift */,
+				9D7677B51BCF301500CD5649 /* LeagueLeaderTableViewCell.swift */,
+				9DA551CF1BD7037800CD79A7 /* LeagueSelectionTableViewCell.swift */,
+				381AB2701BD72B0C00FE606F /* UserView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		45D4AA631BBCA9B20018FE9B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				45D4AA641BBCA9FA0018FE9B /* MatchApi.swift */,
+				45D4AA661BBCAA180018FE9B /* ParseClient.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		4B68B1264A9A7EEE1AA283E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC985C982ECC214D66E5D5A3 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4ED369641BBBAF240040AA0F /* Opponents Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4ED369671BBBAF8E0040AA0F /* RecentOpponentsDataSource.swift */,
+				826AFF291BBCAD0E00AB12B8 /* OpponentsDataSource.swift */,
+			);
+			name = "Opponents Data Sources";
+			sourceTree = "<group>";
+		};
+		826AFF2C1BBCB1C400AB12B8 /* Record Match */ = {
+			isa = PBXGroup;
+			children = (
+				4ED369641BBBAF240040AA0F /* Opponents Data Sources */,
+				4ED369601BBBADF60040AA0F /* OpponentTypesViewController.swift */,
+				4ED369621BBBAEB30040AA0F /* OpponentsViewController.swift */,
+				4ED3696B1BBBB9930040AA0F /* SportsPickerViewController.swift */,
+				826AFF2D1BBD13E200AB12B8 /* RecordMatchViewController.swift */,
+				9DA551CD1BD700BF00CD79A7 /* LeaguePickerTableViewController.swift */,
+			);
+			name = "Record Match";
+			sourceTree = "<group>";
+		};
+		9D68F4D71BC5DA36000F145A /* Leaderboard */ = {
+			isa = PBXGroup;
+			children = (
+				9D68F4DC1BC5DF91000F145A /* LeaderboardTableViewController.swift */,
+				9D7677B31BCF1ADA00CD5649 /* LeagueDetailTableViewController.swift */,
+			);
+			name = Leaderboard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38F0C8E01BB5DD440030EC5D /* Thunderdome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38F0C8F31BB5DD440030EC5D /* Build configuration list for PBXNativeTarget "Thunderdome" */;
+			buildPhases = (
+				E398A27D20D0287850F2CF8F /* Check Pods Manifest.lock */,
+				38F0C8DD1BB5DD440030EC5D /* Sources */,
+				38F0C8DE1BB5DD440030EC5D /* Frameworks */,
+				38F0C8DF1BB5DD440030EC5D /* Resources */,
+				B9E1E8C2927A40626DF23AB3 /* Embed Pods Frameworks */,
+				26871CACE04F6B0ECADB3660 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Thunderdome;
+			productName = Thunderdome;
+			productReference = 38F0C8E11BB5DD440030EC5D /* Thunderdome.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38F0C8D91BB5DD440030EC5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = patrick;
+				TargetAttributes = {
+					38F0C8E01BB5DD440030EC5D = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 38F0C8DC1BB5DD440030EC5D /* Build configuration list for PBXProject "Thunderdome" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38F0C8D81BB5DD440030EC5D;
+			productRefGroup = 38F0C8E21BB5DD440030EC5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38F0C8E01BB5DD440030EC5D /* Thunderdome */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38F0C8DF1BB5DD440030EC5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38F0C8FC1BB5DE670030EC5D /* RecordGame.storyboard in Resources */,
+				38F0C8EF1BB5DD440030EC5D /* LaunchScreen.storyboard in Resources */,
+				380353121BBA08B100306DA7 /* LeaderboardList.storyboard in Resources */,
+				3803530C1BB5F9E500306DA7 /* LeaguePicker.storyboard in Resources */,
+				38F0C8FA1BB5DE600030EC5D /* Main.storyboard in Resources */,
+				380353101BBA083900306DA7 /* ActivityFeed.storyboard in Resources */,
+				38710E741BC73F7600AE94D5 /* us101.ttf in Resources */,
+				38F0C8EC1BB5DD440030EC5D /* Assets.xcassets in Resources */,
+				38F0C8F81BB5DE4A0030EC5D /* Onboarding.storyboard in Resources */,
+				381AB2731BD72B4700FE606F /* UserView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26871CACE04F6B0ECADB3660 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9E1E8C2927A40626DF23AB3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E398A27D20D0287850F2CF8F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38F0C8DD1BB5DD440030EC5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3803530E1BB5FBE700306DA7 /* SocialController.swift in Sources */,
+				38A4A5821BC48BB5001F9F28 /* MugshotController.swift in Sources */,
+				826AFF2A1BBCAD0E00AB12B8 /* OpponentsDataSource.swift in Sources */,
+				381AB2711BD72B0C00FE606F /* UserView.swift in Sources */,
+				4ED369631BBBAEB30040AA0F /* OpponentsViewController.swift in Sources */,
+				38F0C9061BB5EBC20030EC5D /* LoginController.swift in Sources */,
+				4514CEC71BBA31060056CD25 /* ActivityCell.swift in Sources */,
+				4514CEC51BBA2FC80056CD25 /* Match.swift in Sources */,
+				4ED369611BBBADF60040AA0F /* OpponentTypesViewController.swift in Sources */,
+				45D4AA671BBCAA180018FE9B /* ParseClient.swift in Sources */,
+				38F0C9021BB5E0850030EC5D /* Leaderboard.swift in Sources */,
+				9D7677B41BCF1ADA00CD5649 /* LeagueDetailTableViewController.swift in Sources */,
+				380353141BC33C7400306DA7 /* AuthController.swift in Sources */,
+				9D68F4DD1BC5DF91000F145A /* LeaderboardTableViewController.swift in Sources */,
+				38F0C8E51BB5DD440030EC5D /* AppDelegate.swift in Sources */,
+				4ED369681BBBAF8E0040AA0F /* RecentOpponentsDataSource.swift in Sources */,
+				38A4A5841BC581FB001F9F28 /* RootController.swift in Sources */,
+				9D7677B61BCF301500CD5649 /* LeagueLeaderTableViewCell.swift in Sources */,
+				38F0C9041BB5EBAA0030EC5D /* SignupController.swift in Sources */,
+				9D68F4DF1BC5E3D3000F145A /* LeagueTableViewCell.swift in Sources */,
+				826AFF261BBCA07300AB12B8 /* Sport.swift in Sources */,
+				38710E781BCD8A3200AE94D5 /* InPlaceSegue.swift in Sources */,
+				4ED3696C1BBBB9930040AA0F /* SportsPickerViewController.swift in Sources */,
+				9DA551CE1BD700BF00CD79A7 /* LeaguePickerTableViewController.swift in Sources */,
+				45D4AA651BBCA9FA0018FE9B /* MatchApi.swift in Sources */,
+				826AFF2E1BBD13E200AB12B8 /* RecordMatchViewController.swift in Sources */,
+				38F0C9001BB5DED50030EC5D /* User.swift in Sources */,
+				9DD758331BBCC6EA003348FA /* League.swift in Sources */,
+				4514CEC31BBA2F4A0056CD25 /* ActivityFeedViewController.swift in Sources */,
+				38710E761BC74A3400AE94D5 /* MenuController.swift in Sources */,
+				9DA551D01BD7037800CD79A7 /* LeagueSelectionTableViewCell.swift in Sources */,
+				3803530A1BB5F7BF00306DA7 /* LeaguePickerController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		38F0C8ED1BB5DD440030EC5D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38F0C8EE1BB5DD440030EC5D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38F0C8F11BB5DD440030EC5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		38F0C8F21BB5DD440030EC5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38F0C8F41BB5DD440030EC5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D8B24372D15B18AD2625715 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Thunderdome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sneezefestival.Thunderdome;
+				PRODUCT_NAME = Thunderdome;
+			};
+			name = Debug;
+		};
+		38F0C8F51BB5DD440030EC5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D33A7E2D85736A99750CCA9F /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Thunderdome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sneezefestival.Thunderdome;
+				PRODUCT_NAME = Thunderdome;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38F0C8DC1BB5DD440030EC5D /* Build configuration list for PBXProject "Thunderdome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38F0C8F11BB5DD440030EC5D /* Debug */,
+				38F0C8F21BB5DD440030EC5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38F0C8F31BB5DD440030EC5D /* Build configuration list for PBXNativeTarget "Thunderdome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38F0C8F41BB5DD440030EC5D /* Debug */,
+				38F0C8F51BB5DD440030EC5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38F0C8D91BB5DD440030EC5D /* Project object */;
+}
