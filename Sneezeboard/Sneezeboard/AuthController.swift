@@ -72,7 +72,7 @@ class AuthController: UIViewController, UITextFieldDelegate {
     rotateAnim.removedOnCompletion = false
     rotateAnim.duration = 0.4
     rotateAnim.timingFunction = CAMediaTimingFunction(controlPoints: 0.06, 1.82, 0.55, 0.80)
-    rotateAnim.toValue = NSValue(CATransform3D: CATransform3DRotate(titleText.layer.transform, CGFloat(M_PI_2) - 0.2, 0, 0, 1))
+    rotateAnim.toValue = NSValue(CATransform3D: CATransform3DRotate(titleText.layer.transform, CGFloat(M_PI_2), 0, 0, 1))
     titleText.layer.addAnimation(rotateAnim, forKey: nil)
     
     // Once the text is done rotating, slide the whole thing down

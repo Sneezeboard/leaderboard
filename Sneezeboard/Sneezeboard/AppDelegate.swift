@@ -50,6 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
   
   private func theme() {
+    window?.backgroundColor = UIColor(red: 248 / 255.0, green: 70 / 255.0, blue: 72 / 255.0, alpha: 1)
+    
     let a = UINavigationBar.appearance()
     a.translucent = false
     a.barTintColor = UIColor(red: 248 / 255.0, green: 70 / 255.0, blue: 72 / 255.0, alpha: 1)
