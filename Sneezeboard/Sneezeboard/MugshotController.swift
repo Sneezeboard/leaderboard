@@ -12,29 +12,28 @@ import Parse
 import ParseFacebookUtilsV4
 
 class MugshotController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-  @IBOutlet weak var profileImage: UIImageView!
   @IBOutlet weak var doneButton: UIButton!
-  @IBOutlet weak var usernameLabel: UILabel!
+  @IBOutlet weak var userView: UserView!
 
   let user = User.currentUser()
   
   override func viewDidLoad() {
     setupDoneButton()
     
-    usernameLabel.text = user?.username
+    userView.user = user
     
     let defaultImage = UIImage(named: "default-avatar")
     if let id = user?.authData?["facebook"]?["id"] as? String {
-      profileImage.setImageWithURL(NSURL(string: "https://graph.facebook.com/\(id)/picture?type=large")!,
+      userView.avatarImage.setImageWithURL(NSURL(string: "https://graph.facebook.com/\(id)/picture?type=large")!,
         placeholderImage: defaultImage)
     } else {
-      profileImage.image = defaultImage
+      userView.avatarImage.image = defaultImage
     }
   }
   
   @IBAction func doneTapped(sender: AnyObject) {
     if let user = user {
-      let imageData = NSData(data: UIImageJPEGRepresentation(profileImage.image!, 0.9)!)
+      let imageData = NSData(data: UIImageJPEGRepresentation(userView.avatarImage.image!, 0.9)!)
       user.avatar = PFFile(data: imageData)
       user.saveInBackground()
     }
@@ -52,8 +51,12 @@ class MugshotController: UIViewController, UIImagePickerControllerDelegate, UINa
   }
   
   func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-    profileImage.image = image
+    userView.avatarImage.image = image
     dismissViewControllerAnimated(true, completion: nil)
+  }
+  
+  override func viewDidLayoutSubviews() {
+    
   }
   
   private func pickImage(type: UIImagePickerControllerSourceType) {

@@ -13,6 +13,8 @@
 		380353101BBA083900306DA7 /* ActivityFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3803530F1BBA083900306DA7 /* ActivityFeed.storyboard */; settings = {ASSET_TAGS = (); }; };
 		380353121BBA08B100306DA7 /* LeaderboardList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380353111BBA08B100306DA7 /* LeaderboardList.storyboard */; settings = {ASSET_TAGS = (); }; };
 		380353141BC33C7400306DA7 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380353131BC33C7400306DA7 /* AuthController.swift */; settings = {ASSET_TAGS = (); }; };
+		381AB2711BD72B0C00FE606F /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381AB2701BD72B0C00FE606F /* UserView.swift */; settings = {ASSET_TAGS = (); }; };
+		381AB2731BD72B4700FE606F /* UserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381AB2721BD72B4700FE606F /* UserView.xib */; settings = {ASSET_TAGS = (); }; };
 		38710E741BC73F7600AE94D5 /* us101.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38710E731BC73F7600AE94D5 /* us101.ttf */; settings = {ASSET_TAGS = (); }; };
 		38710E761BC74A3400AE94D5 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38710E751BC74A3400AE94D5 /* MenuController.swift */; settings = {ASSET_TAGS = (); }; };
 		38710E781BCD8A3200AE94D5 /* InPlaceSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38710E771BCD8A3200AE94D5 /* InPlaceSegue.swift */; settings = {ASSET_TAGS = (); }; };
@@ -58,6 +60,8 @@
 		3803530F1BBA083900306DA7 /* ActivityFeed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActivityFeed.storyboard; sourceTree = "<group>"; };
 		380353111BBA08B100306DA7 /* LeaderboardList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LeaderboardList.storyboard; sourceTree = "<group>"; };
 		380353131BC33C7400306DA7 /* AuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		381AB2701BD72B0C00FE606F /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		381AB2721BD72B4700FE606F /* UserView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserView.xib; sourceTree = "<group>"; };
 		38710E731BC73F7600AE94D5 /* us101.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = us101.ttf; sourceTree = "<group>"; };
 		38710E751BC74A3400AE94D5 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		38710E771BCD8A3200AE94D5 /* InPlaceSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InPlaceSegue.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 		380353061BB5F5ED00306DA7 /* NIBs */ = {
 			isa = PBXGroup;
 			children = (
+				381AB2721BD72B4700FE606F /* UserView.xib */,
 			);
 			name = NIBs;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 				9D68F4DE1BC5E3D3000F145A /* LeagueTableViewCell.swift */,
 				9D7677B51BCF301500CD5649 /* LeagueLeaderTableViewCell.swift */,
 				9DA551CF1BD7037800CD79A7 /* LeagueSelectionTableViewCell.swift */,
+				381AB2701BD72B0C00FE606F /* UserView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -344,6 +350,7 @@
 				38710E741BC73F7600AE94D5 /* us101.ttf in Resources */,
 				38F0C8EC1BB5DD440030EC5D /* Assets.xcassets in Resources */,
 				38F0C8F81BB5DE4A0030EC5D /* Onboarding.storyboard in Resources */,
+				381AB2731BD72B4700FE606F /* UserView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +412,7 @@
 				3803530E1BB5FBE700306DA7 /* SocialController.swift in Sources */,
 				38A4A5821BC48BB5001F9F28 /* MugshotController.swift in Sources */,
 				826AFF2A1BBCAD0E00AB12B8 /* OpponentsDataSource.swift in Sources */,
+				381AB2711BD72B0C00FE606F /* UserView.swift in Sources */,
 				4ED369631BBBAEB30040AA0F /* OpponentsViewController.swift in Sources */,
 				38F0C9061BB5EBC20030EC5D /* LoginController.swift in Sources */,
 				4514CEC71BBA31060056CD25 /* ActivityCell.swift in Sources */,

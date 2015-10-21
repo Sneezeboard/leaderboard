@@ -56,9 +56,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     a.tintColor = UIColor.whiteColor()
     a.titleTextAttributes = [
       NSForegroundColorAttributeName : UIColor.whiteColor(),
-      NSFontAttributeName : UIFont(name: "U.S. 101", size: 32)!,
+      NSFontAttributeName : UIFont.boldSystemFontOfSize(20)
     ]
-    a.setTitleVerticalPositionAdjustment(4, forBarMetrics: .Default)
+//    a.setTitleVerticalPositionAdjustment(4, forBarMetrics: .Default)
     a.setBackgroundImage(UIImage(), forBarMetrics: .Default)
     a.shadowImage = UIImage()
   }
