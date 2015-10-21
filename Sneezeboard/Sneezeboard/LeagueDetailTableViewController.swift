@@ -10,7 +10,7 @@ import UIKit
 
 class LeagueDetailTableViewController: UITableViewController {
 
-    var league: League?
+    var league: League!
     var leaguePlayers: [User] = []
     
     override func viewDidLoad() {
@@ -28,14 +28,16 @@ class LeagueDetailTableViewController: UITableViewController {
     }
     
     func loadLeaguePlayers() {
-        ParseClient.sharedInstance.allUsersByLeague(league!) { (users, error) -> () in
+        ParseClient.sharedInstance.allUsersByLeague(league, completion: { (users, error) -> () in
+            print(users.count)
             if error != nil {
-                print("panic")
+                print("idk what happened")
                 return
             }
+            
             self.leaguePlayers = users
             self.tableView.reloadData()
-        }
+        })
     }
 
     // MARK: - Table view data source

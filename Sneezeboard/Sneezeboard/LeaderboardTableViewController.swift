@@ -30,7 +30,7 @@ class LeaderboardTableViewController: UITableViewController {
     func loadLeagues() {
         // instantiate a fake global league
         let globalLeague = League()
-        globalLeague.name = "THUNDERDOME GALAXY" // this name is negotiable
+        globalLeague.name = League.globalLeagueName()  // this name is negotiable
         
         ParseClient.sharedInstance.allLeagues { (leagues, error) -> () in
             self.leagues = [globalLeague]
@@ -89,7 +89,6 @@ class LeaderboardTableViewController: UITableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let vc = segue.destinationViewController as! LeagueDetailTableViewController
-        //let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
         let cell = sender as! LeagueTableViewCell
         vc.league = cell.league
     }

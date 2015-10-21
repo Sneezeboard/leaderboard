@@ -18,4 +18,8 @@ import Parse
     class func parseClassName() -> String {
         return "League"
     }
+    
+    class func globalLeagueName() -> String {
+        return "THUNDERDOME GALAXY"
+    }
 }
