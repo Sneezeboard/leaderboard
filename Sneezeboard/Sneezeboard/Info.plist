@@ -32,7 +32,7 @@
 	<key>FacebookAppID</key>
 	<string>1633722153536541</string>
 	<key>FacebookDisplayName</key>
-	<string>Sneezeboard</string>
+	<string>Thunderdome</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbauth2</string>

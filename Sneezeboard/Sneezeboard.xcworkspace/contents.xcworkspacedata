@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Sneezeboard.xcodeproj">
+      location = "group:/Users/lpstein/Development/CodePath/leaderboard/Sneezeboard/Thunderdome.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
