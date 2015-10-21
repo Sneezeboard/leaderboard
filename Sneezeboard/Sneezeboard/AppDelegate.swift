@@ -51,8 +51,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   private func theme() {
     let a = UINavigationBar.appearance()
-    a.tintColor = UIColor(red: 255 / 255.0, green: 94 / 255.0, blue: 85 / 255.0, alpha: 1)
-    a.barTintColor = UIColor.whiteColor()
+    a.translucent = false
+    a.barTintColor = UIColor(red: 255 / 255.0, green: 94 / 255.0, blue: 85 / 255.0, alpha: 1)
+    a.tintColor = UIColor.whiteColor()
+    a.titleTextAttributes = [
+      NSForegroundColorAttributeName : UIColor.whiteColor(),
+      NSFontAttributeName : UIFont(name: "U.S. 101", size: 32)!,
+    ]
+    a.setTitleVerticalPositionAdjustment(4, forBarMetrics: .Default)
+    a.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+    a.shadowImage = UIImage()
   }
   
   private func pickLaunchStoryboard() {
