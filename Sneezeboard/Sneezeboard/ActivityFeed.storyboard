@@ -30,7 +30,7 @@
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Will Dalton" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="2zJ-OW-qBF">
                                             <rect key="frame" x="8" y="9" width="199" height="63"/>
-                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="10"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -42,8 +42,14 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Cedric von Bonusly" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="ORB-Ia-2Ao">
                                             <rect key="frame" x="393" y="8" width="199" height="64"/>
-                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="10"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2h ago" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olX-3Z-fRr">
+                                            <rect key="frame" x="287" y="54" width="28" height="10"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2mC-QY-Keu" customClass="PFImageView">
@@ -54,12 +60,22 @@
                                                 <constraint firstAttribute="height" constant="64" id="sO8-bB-wDs"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2h ago" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olX-3Z-fRr">
-                                            <rect key="frame" x="286" y="54" width="28" height="10"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightning" translatesAutoresizingMaskIntoConstraints="NO" id="PFy-uf-hHa">
+                                            <rect key="frame" x="210" y="52" width="25" height="25"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="6Ih-kI-CLT"/>
+                                                <constraint firstAttribute="width" constant="25" id="EJL-jD-EQD"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightning" translatesAutoresizingMaskIntoConstraints="NO" id="pGH-08-h9U">
+                                            <rect key="frame" x="365" y="52" width="25" height="25"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="C0h-wB-J2A"/>
+                                                <constraint firstAttribute="width" constant="25" id="r4d-uL-rwu"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="olX-3Z-fRr" firstAttribute="top" secondItem="bKT-k3-9hw" secondAttribute="bottom" id="367-QV-eoW"/>
@@ -68,19 +84,23 @@
                                         <constraint firstItem="kJW-d4-Pzf" firstAttribute="top" secondItem="eM7-rp-cUl" secondAttribute="top" constant="8" id="8cH-Tw-0r8"/>
                                         <constraint firstItem="kJW-d4-Pzf" firstAttribute="leading" secondItem="2zJ-OW-qBF" secondAttribute="trailing" constant="8" id="99D-2R-mFe"/>
                                         <constraint firstItem="ORB-Ia-2Ao" firstAttribute="top" secondItem="eM7-rp-cUl" secondAttribute="top" constant="8" id="DL5-yB-2MJ"/>
+                                        <constraint firstItem="pGH-08-h9U" firstAttribute="bottom" secondItem="2mC-QY-Keu" secondAttribute="bottom" constant="5" id="E6Q-QJ-03Z"/>
                                         <constraint firstAttribute="bottom" secondItem="kJW-d4-Pzf" secondAttribute="bottom" constant="8" id="EBu-Pz-FyH"/>
                                         <constraint firstItem="2zJ-OW-qBF" firstAttribute="top" secondItem="eM7-rp-cUl" secondAttribute="top" constant="9" id="HER-E1-Rv7"/>
                                         <constraint firstItem="ORB-Ia-2Ao" firstAttribute="leading" secondItem="2mC-QY-Keu" secondAttribute="trailing" constant="8" id="IDL-Bw-0Gq"/>
                                         <constraint firstItem="2zJ-OW-qBF" firstAttribute="leading" secondItem="eM7-rp-cUl" secondAttribute="leading" constant="8" id="T6z-BN-9fo"/>
                                         <constraint firstAttribute="bottom" secondItem="ORB-Ia-2Ao" secondAttribute="bottom" constant="8" id="VW0-qW-ZwC"/>
                                         <constraint firstItem="ORB-Ia-2Ao" firstAttribute="leading" secondItem="2mC-QY-Keu" secondAttribute="trailing" constant="8" id="Vhi-gi-awQ"/>
+                                        <constraint firstItem="PFy-uf-hHa" firstAttribute="bottom" secondItem="kJW-d4-Pzf" secondAttribute="bottom" constant="5" id="XKh-QF-iEG"/>
                                         <constraint firstItem="2mC-QY-Keu" firstAttribute="leading" secondItem="bKT-k3-9hw" secondAttribute="trailing" constant="9" id="cvJ-mw-JWH"/>
                                         <constraint firstItem="bKT-k3-9hw" firstAttribute="centerY" secondItem="kJW-d4-Pzf" secondAttribute="centerY" id="dUq-7L-8r1"/>
                                         <constraint firstAttribute="bottom" secondItem="2zJ-OW-qBF" secondAttribute="bottom" constant="8" id="eFA-18-xNo"/>
                                         <constraint firstItem="olX-3Z-fRr" firstAttribute="centerX" secondItem="eM7-rp-cUl" secondAttribute="centerX" id="kHY-GH-rbj"/>
+                                        <constraint firstItem="pGH-08-h9U" firstAttribute="trailing" secondItem="2mC-QY-Keu" secondAttribute="trailing" constant="5" id="kW8-pK-iJW"/>
                                         <constraint firstItem="2mC-QY-Keu" firstAttribute="centerY" secondItem="kJW-d4-Pzf" secondAttribute="centerY" id="myQ-ak-h7C"/>
                                         <constraint firstItem="bKT-k3-9hw" firstAttribute="centerX" secondItem="eM7-rp-cUl" secondAttribute="centerX" id="riq-kT-bJM"/>
                                         <constraint firstItem="bKT-k3-9hw" firstAttribute="leading" secondItem="kJW-d4-Pzf" secondAttribute="trailing" constant="8" id="vDc-Uu-xPE"/>
+                                        <constraint firstItem="PFy-uf-hHa" firstAttribute="leading" secondItem="kJW-d4-Pzf" secondAttribute="leading" constant="-5" id="x6O-S0-iRU"/>
                                         <constraint firstItem="kJW-d4-Pzf" firstAttribute="leading" secondItem="2zJ-OW-qBF" secondAttribute="trailing" constant="8" id="xVL-1w-Kua"/>
                                         <constraint firstAttribute="trailing" secondItem="ORB-Ia-2Ao" secondAttribute="trailing" constant="8" id="z2N-TU-mKN"/>
                                     </constraints>
@@ -88,9 +108,12 @@
                                 <connections>
                                     <outlet property="timeLabel" destination="olX-3Z-fRr" id="tKv-Ny-8fY"/>
                                     <outlet property="user1ImageView" destination="kJW-d4-Pzf" id="Cu1-K8-4OF"/>
+                                    <outlet property="user1Lightning" destination="PFy-uf-hHa" id="Vy9-qd-FVb"/>
                                     <outlet property="user1NameLabel" destination="2zJ-OW-qBF" id="taQ-NK-ByK"/>
                                     <outlet property="user2ImageView" destination="2mC-QY-Keu" id="Y39-Wv-Hxe"/>
+                                    <outlet property="user2Lightning" destination="pGH-08-h9U" id="l5T-ii-dlh"/>
                                     <outlet property="user2NameLabel" destination="ORB-Ia-2Ao" id="0fj-Sq-SYZ"/>
+                                    <outlet property="view" destination="eM7-rp-cUl" id="Pm8-cd-0c5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -126,5 +149,6 @@
     </scenes>
     <resources>
         <image name="activity" width="150" height="150"/>
+        <image name="lightning" width="150" height="150"/>
     </resources>
 </document>

@@ -20,7 +20,7 @@ class ActivityFeedViewController: UITableViewController {
         super.viewDidLoad()
 
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 100
+        tableView.estimatedRowHeight = 82
         tableView.separatorStyle = .None
             
         setupRefreshControl()
@@ -37,9 +37,9 @@ class ActivityFeedViewController: UITableViewController {
 
     func addCompletedMatch(match: Match) {
         completedMatchJustAdded = true
-        
-        let newMatches = [match] + matches
-        matches = newMatches
+      
+        matches.insert(match, atIndex: 0)
+        self.tableView.setContentOffset(CGPointMake(0, -tableView.contentInset.top), animated: false)
         self.tableView.reloadData()
     }
     
@@ -49,18 +49,22 @@ class ActivityFeedViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+      NSLog("row \(indexPath.row) section \(indexPath.section)")
+      
       let cell = tableView.dequeueReusableCellWithIdentifier("ActivityCell", forIndexPath: indexPath) as! ActivityCell
       
         cell.match = matches[indexPath.section]
 
         if (indexPath.section == 0 && completedMatchJustAdded) {
+            cell.hideLightning()
             cell.contentView.alpha = 0
             cell.contentView.transform = CGAffineTransformMakeScale(4, 4)
             UIView.animateWithDuration(0.4, delay: 0.1, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
-                    cell.contentView.alpha = 1
-                    cell.contentView.transform = CGAffineTransformMakeScale(1, 1)
-                }, completion: { (Bool) -> Void in
-                    self.completedMatchJustAdded = false
+                cell.contentView.alpha = 1
+                cell.contentView.transform = CGAffineTransformMakeScale(1, 1)
+            }, completion: { (Bool) -> Void in
+                self.completedMatchJustAdded = false
+                cell.showLightning()
             })
         }
 
