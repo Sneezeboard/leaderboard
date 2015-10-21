@@ -30,7 +30,6 @@ class LeagueDetailTableViewController: UITableViewController {
     
     func loadLeaguePlayers() {
         ParseClient.sharedInstance.allUsersByLeague(league, completion: { (users, error) -> () in
-            print(users.count)
             if error != nil {
                 print("idk what happened")
                 return

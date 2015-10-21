@@ -26,8 +26,12 @@ class LeagueLeaderTableViewCell: UITableViewCell {
         nameLabel.text = user.username
         eloLabel.text = "\(user!.elo)"
         polishImage(userImageView)
-        self.userImageView.file = user.avatar
-        self.userImageView.loadInBackground()
+        if (user.avatar != nil) {
+            self.userImageView.file = user.avatar
+            self.userImageView.loadInBackground()
+        } else {
+            self.userImageView.image = UIImage(named: "default-avatar")
+        }
     }
     
     override func awakeFromNib() {
