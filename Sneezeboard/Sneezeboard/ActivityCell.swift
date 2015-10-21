@@ -57,9 +57,6 @@ class ActivityCell: UITableViewCell {
                 self.user2ImageView.file = user.avatar
                 self.user2ImageView.loadInBackground()
             })
-
-            // TODO: Set the profile images.
-//            user1ImageView.setImageWithURL(<#T##url: NSURL##NSURL#>)
         }
     }
 
