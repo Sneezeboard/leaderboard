@@ -20,6 +20,8 @@ class ParseClient {
     func allMatches(completion: (matches: [Match], error: NSError?) -> ()) -> () {
         let query = PFQuery(className: Match.parseClassName())
         query.orderByDescending("updatedAt")
+        query.includeKey("user1")
+        query.includeKey("user2")
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
             

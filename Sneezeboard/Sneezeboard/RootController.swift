@@ -43,14 +43,11 @@ class RootController: UIViewController {
     ]
     for vc in vcs {
       if let image = vc.tabBarItem?.image {
-        let scaled = scaleImage(image, size: vc.tabBarItem!.title == "Record" ? 50 : 30)
-        vc.tabBarItem.imageInsets.bottom = 10.0
+        let scaled = scaleImage(image, size: 30)
+        vc.tabBarItem.imageInsets = UIEdgeInsets(top: 7, left: 0, bottom: -7, right: 0)
         vc.tabBarItem!.image = scaled
         vc.tabBarItem!.selectedImage = scaled
-        
-        if vc.tabBarItem!.title == "Record" {
-          vc.tabBarItem.title = ""
-        }
+        vc.tabBarItem.title = ""
       }
       
       if let vc = vc as? UINavigationController {
@@ -69,54 +66,9 @@ class RootController: UIViewController {
     tabBar.tabBar.shadowImage = UIImage()
     tabBar.tabBar.insertSubview(blur, atIndex: 0)
     
-    let middleView = tabBar.tabBar.subviews[1]
-    middleView.layer.cornerRadius = 30.0
-    middleView.clipsToBounds = true
-    
-    let cover = UIView()
-    cover.frame = CGRectMake(0, 0, 70, 70)
-    cover.layer.cornerRadius = cover.frame.width / 2
-    cover.clipsToBounds = true
-    cover.backgroundColor = tabBar.tabBar.barTintColor
-    cover.translatesAutoresizingMaskIntoConstraints = false
-    tabBar.view.insertSubview(cover, atIndex: 2)
-    cover.addConstraint(NSLayoutConstraint(
-      item: cover,
-      attribute: NSLayoutAttribute.Height,
-      relatedBy: NSLayoutRelation.Equal,
-      toItem: nil,
-      attribute: NSLayoutAttribute.NotAnAttribute,
-      multiplier: 1.0,
-      constant: cover.frame.height
-    ))
-    cover.addConstraint(NSLayoutConstraint(
-      item: cover,
-      attribute: NSLayoutAttribute.Width,
-      relatedBy: NSLayoutRelation.Equal,
-      toItem: nil,
-      attribute: NSLayoutAttribute.NotAnAttribute,
-      multiplier: 1.0,
-      constant: cover.frame.width
-      ))
-    tabBar.view.addConstraint(NSLayoutConstraint(
-      item: cover,
-      attribute: NSLayoutAttribute.CenterX,
-      relatedBy: NSLayoutRelation.Equal,
-      toItem: tabBar.view,
-      attribute: NSLayoutAttribute.CenterX,
-      multiplier: 1.0,
-      constant: 0.0)
-    )
-    tabBar.view.addConstraint(NSLayoutConstraint(
-      item: cover,
-      attribute: NSLayoutAttribute.Bottom,
-      relatedBy: NSLayoutRelation.Equal,
-      toItem: tabBar.view,
-      attribute: NSLayoutAttribute.Bottom,
-      multiplier: 1.0,
-      constant: 5.0)
-    )
-    tabBar.view.layoutSubviews()
+    let border = UIView(frame: CGRectMake(0, 0, tabBar.tabBar.bounds.width, 2))
+    border.backgroundColor = UIColor(red: 255 / 255.0, green: 94 / 255.0, blue: 85 / 255.0, alpha: 1)
+    tabBar.tabBar.addSubview(border)
   }
   
   override func viewWillAppear(animated: Bool) {

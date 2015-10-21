@@ -21,6 +21,7 @@ class ActivityFeedViewController: UITableViewController {
 
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
+        tableView.separatorStyle = .None
             
         setupRefreshControl()
         loadMatches()
@@ -35,7 +36,6 @@ class ActivityFeedViewController: UITableViewController {
     }
 
     func addCompletedMatch(match: Match) {
-        print("Adding completed match")
         completedMatchJustAdded = true
         
         let newMatches = [match] + matches
@@ -49,14 +49,14 @@ class ActivityFeedViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ActivityCell") as! ActivityCell
+      let cell = tableView.dequeueReusableCellWithIdentifier("ActivityCell", forIndexPath: indexPath) as! ActivityCell
+      
+        cell.match = matches[indexPath.section]
 
-        cell.match = matches[indexPath.row]
-
-        if (indexPath.row == 0 && completedMatchJustAdded) {
+        if (indexPath.section == 0 && completedMatchJustAdded) {
             cell.contentView.alpha = 0
             cell.contentView.transform = CGAffineTransformMakeScale(4, 4)
-            UIView.animateWithDuration(1.0, delay: 0.1, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+            UIView.animateWithDuration(0.4, delay: 0.1, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
                     cell.contentView.alpha = 1
                     cell.contentView.transform = CGAffineTransformMakeScale(1, 1)
                 }, completion: { (Bool) -> Void in
@@ -68,24 +68,22 @@ class ActivityFeedViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return matches.count
+        return 1
     }
-    
-    // Hack to use Apple's standard UIRefreshControl in a UIViewController instead of a UITableViewController.
-    // See https://guides.codepath.com/ios/Table-View-Guide#implementing-pull-to-refresh-with-uirefreshcontrol
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+      return matches.count
+    }
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+      return 15
+    }
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+      let v = UIView()
+      v.backgroundColor = UIColor.clearColor()
+      return v
+    }
+  
     func setupRefreshControl() {
         refreshControl = UIRefreshControl()
         refreshControl!.addTarget(self, action: "loadMatches", forControlEvents: UIControlEvents.ValueChanged)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
