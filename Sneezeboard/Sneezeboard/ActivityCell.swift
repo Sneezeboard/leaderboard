@@ -47,15 +47,25 @@ class ActivityCell: UITableViewCell {
             match.user1?.fetchIfNeededInBackgroundWithBlock({ (obj: PFObject?, error: NSError?) -> Void in
                 let user = obj as! User
                 self.user1NameLabel.text = user.username
-                self.user1ImageView.file = user.avatar
-                self.user1ImageView.loadInBackground()
+                if (user.avatar != nil) {
+                    self.user1ImageView.file = user.avatar
+                    self.user1ImageView.loadInBackground()
+                } else {
+                    self.user1ImageView.image = UIImage(named: "default-avatar")
+                }
             })
 
             match.user2?.fetchIfNeededInBackgroundWithBlock({ (obj: PFObject?, error: NSError?) -> Void in
                 let user = obj as! User
                 self.user2NameLabel.text = user.username
-                self.user2ImageView.file = user.avatar
-                self.user2ImageView.loadInBackground()
+                
+                if (user.avatar != nil) {
+                    self.user2ImageView.file = user.avatar
+                    self.user2ImageView.loadInBackground()
+                } else {
+                    self.user2ImageView.image = UIImage(named: "default-avatar")
+                }
+
             })
         }
     }
