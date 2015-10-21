@@ -52,7 +52,11 @@ class LeagueDetailTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("LeagueLeaderTableViewCell", forIndexPath: indexPath) as! LeagueLeaderTableViewCell
+
+        // let the cell know whether we've got a dang league leader on our hands here
+        cell.leagueLeader = (indexPath.row == 0)
         cell.user = leaguePlayers[indexPath.row]
+
         return cell
     }
 

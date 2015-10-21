@@ -15,12 +15,15 @@ class LeagueLeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var eloLabel: UILabel!
     @IBOutlet weak var userImageView: PFImageView!
+    @IBOutlet weak var leaderTrophyLabel: UILabel!
     
     var user: User! {
         didSet {
             updateView()
         }
     }
+    
+    var leagueLeader: Bool?
     
     func updateView() {
         nameLabel.text = user.username
@@ -31,6 +34,11 @@ class LeagueLeaderTableViewCell: UITableViewCell {
             self.userImageView.loadInBackground()
         } else {
             self.userImageView.image = UIImage(named: "default-avatar")
+        }
+        
+        // give league leader a trophy
+        if let leagueLeader = leagueLeader {
+            leaderTrophyLabel.hidden = !leagueLeader
         }
     }
     

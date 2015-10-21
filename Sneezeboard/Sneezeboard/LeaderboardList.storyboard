@@ -27,8 +27,8 @@
                                                 <constraint firstAttribute="height" constant="48" id="qLY-b2-NcQ"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tumblr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1Y-gY-Z4q">
-                                            <rect key="frame" x="64" y="24" width="528" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tumblr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1Y-gY-Z4q">
+                                            <rect key="frame" x="64" y="27" width="54" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -37,6 +37,7 @@
                                     <constraints>
                                         <constraint firstItem="dJS-K2-bw0" firstAttribute="leading" secondItem="IgA-Lp-xWM" secondAttribute="leading" constant="8" id="Fey-sC-Wdr"/>
                                         <constraint firstItem="dJS-K2-bw0" firstAttribute="top" secondItem="IgA-Lp-xWM" secondAttribute="top" constant="11" id="IMd-tD-tA4"/>
+                                        <constraint firstItem="C1Y-gY-Z4q" firstAttribute="centerY" secondItem="IgA-Lp-xWM" secondAttribute="centerY" id="RL2-ed-IqI"/>
                                         <constraint firstAttribute="bottom" secondItem="dJS-K2-bw0" secondAttribute="bottom" constant="15" id="b6g-mm-ArX"/>
                                         <constraint firstItem="C1Y-gY-Z4q" firstAttribute="leading" secondItem="dJS-K2-bw0" secondAttribute="trailing" constant="8" id="ltN-Rx-sK8"/>
                                     </constraints>
@@ -94,12 +95,24 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🏆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAT-I5-ibT">
+                                            <rect key="frame" x="180" y="29" width="22" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="23" id="KT7-Tj-tnD"/>
+                                                <constraint firstAttribute="width" constant="22" id="Rgp-am-g0w"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="UkH-fc-YSB" secondAttribute="trailing" constant="8" id="29k-Dv-N4J"/>
                                         <constraint firstItem="pYh-Fb-LV1" firstAttribute="leading" secondItem="KrF-MQ-M40" secondAttribute="leading" constant="8" id="8Cz-fS-2qD"/>
                                         <constraint firstItem="HTK-i1-WPU" firstAttribute="leading" secondItem="pYh-Fb-LV1" secondAttribute="trailing" constant="8" id="BV4-ma-CMO"/>
                                         <constraint firstItem="pYh-Fb-LV1" firstAttribute="top" secondItem="KrF-MQ-M40" secondAttribute="top" constant="8" id="BgA-Jl-OlC"/>
+                                        <constraint firstItem="wAT-I5-ibT" firstAttribute="leading" secondItem="HTK-i1-WPU" secondAttribute="trailing" constant="6" id="epG-b6-Jsu"/>
+                                        <constraint firstItem="wAT-I5-ibT" firstAttribute="centerY" secondItem="KrF-MQ-M40" secondAttribute="centerY" id="f1p-jn-exs"/>
                                         <constraint firstItem="UkH-fc-YSB" firstAttribute="centerY" secondItem="KrF-MQ-M40" secondAttribute="centerY" id="m1X-1S-Pr6"/>
                                         <constraint firstItem="HTK-i1-WPU" firstAttribute="centerY" secondItem="KrF-MQ-M40" secondAttribute="centerY" id="mFA-hI-2YF"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="pYh-Fb-LV1" secondAttribute="bottom" constant="8" id="vTe-Gv-Qvw"/>
@@ -107,6 +120,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="eloLabel" destination="UkH-fc-YSB" id="V1K-8m-Lxm"/>
+                                    <outlet property="leaderTrophyLabel" destination="wAT-I5-ibT" id="eJS-5g-Jyl"/>
                                     <outlet property="nameLabel" destination="HTK-i1-WPU" id="hMT-Ie-sNe"/>
                                     <outlet property="userImageView" destination="pYh-Fb-LV1" id="e7I-xy-hFE"/>
                                 </connections>
