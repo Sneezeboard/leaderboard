@@ -262,11 +262,11 @@
 		826AFF2C1BBCB1C400AB12B8 /* Record Match */ = {
 			isa = PBXGroup;
 			children = (
+				4ED369641BBBAF240040AA0F /* Opponents Data Sources */,
 				4ED369601BBBADF60040AA0F /* OpponentTypesViewController.swift */,
 				4ED369621BBBAEB30040AA0F /* OpponentsViewController.swift */,
 				4ED3696B1BBBB9930040AA0F /* SportsPickerViewController.swift */,
 				826AFF2D1BBD13E200AB12B8 /* RecordMatchViewController.swift */,
-				4ED369641BBBAF240040AA0F /* Opponents Data Sources */,
 				9DA551CD1BD700BF00CD79A7 /* LeaguePickerTableViewController.swift */,
 			);
 			name = "Record Match";

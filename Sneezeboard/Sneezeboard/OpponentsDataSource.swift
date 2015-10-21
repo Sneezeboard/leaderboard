@@ -12,7 +12,6 @@ import Parse
 protocol OpponentsDataSource {
     
     func opponentForIndexPath(indexPath: NSIndexPath) -> User?
-    
     func fetch(completion: (users: [User]?, error: NSError?) -> Void)
-
+    func filter(search: String?)
 }

@@ -12,21 +12,39 @@ import Parse
 class RecentOpponentsDataSource: NSObject, UITableViewDataSource, OpponentsDataSource {
     var allOpponents: [User]?
     var recentOpponents: [User]?
-    
+  
+    var allOpponentsFiltered: [User]?
+    var recentOpponentsFiltered: [User]?
+  
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (section == 0) {
+        if hasRecent() && section == 0 {
+            if let opponents = recentOpponentsFiltered {
+                return opponents.count
+            }
             return recentOpponents?.count ?? 0
         } else {
+            if let opponents = allOpponentsFiltered {
+                return opponents.count
+            }
             return allOpponents?.count ?? 0
         }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return allOpponents == nil ? 0 : 2
+        if allOpponents == nil {
+            return 0
+        }
+        if let recent = recentOpponents {
+            if recent.count > 0 {
+                return 2
+            }
+        }
+
+        return 1
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if (section == 0) {
+        if recentOpponents != nil && recentOpponents!.count > 0 && section == 0 {
             return "Recent"
         } else {
             return "All Players"
@@ -36,10 +54,10 @@ class RecentOpponentsDataSource: NSObject, UITableViewDataSource, OpponentsDataS
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell.opponent", forIndexPath: indexPath)
         let opponentList: [User]?
-        if (indexPath.section == 0) {
-            opponentList = recentOpponents
+        if hasRecent() && indexPath.section == 0 {
+            opponentList = recentOpponentsFiltered ?? recentOpponents
         } else {
-            opponentList = allOpponents
+            opponentList = allOpponentsFiltered ?? allOpponents
         }
         let opponent = opponentList?[indexPath.row]
         cell.textLabel?.text = opponent?.username
@@ -47,17 +65,43 @@ class RecentOpponentsDataSource: NSObject, UITableViewDataSource, OpponentsDataS
     }
     
     // MARK: - OpponentsDataSource
-    
+  
+    func filter(search: String?) {
+        if let search = search {
+            if let opponents = allOpponents {
+                allOpponentsFiltered = doFilter(search, data: opponents)
+            }
+            if let opponents = recentOpponents {
+                recentOpponentsFiltered = doFilter(search, data: opponents)
+            }
+        } else {
+            allOpponentsFiltered = nil
+            recentOpponentsFiltered = nil
+        }
+    }
+  
+    private func doFilter(search: String, data: [User]) -> [User] {
+        return data.filter({ (user) -> Bool in
+          let result = (user.username ?? "").lowercaseString.rangeOfString(search.lowercaseString) != nil
+          NSLog("checking \(user.username!) against \(search) got \(result)")
+          return result
+        })
+    }
+  
+    private func hasRecent() -> Bool {
+        return recentOpponents != nil && recentOpponents!.count > 0
+    }
+  
     func opponentForIndexPath(indexPath: NSIndexPath) -> User? {
         let count = allOpponents?.count ?? 0
         guard 0 <= indexPath.row && indexPath.row < count else {
             return nil
         }
         
-        if (indexPath.section == 0) {
-            return recentOpponents?[indexPath.row]
+        if hasRecent() && indexPath.section == 0 {
+            return (recentOpponentsFiltered ?? recentOpponents)?[indexPath.row]
         } else {
-            return allOpponents?[indexPath.row]
+            return (allOpponentsFiltered ?? allOpponents)?[indexPath.row]
         }
     }
     

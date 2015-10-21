@@ -9,7 +9,6 @@
 import UIKit
 import AFNetworking
 
-@IBDesignable
 class UserView: UIView {
   @IBOutlet var contentView: UIView!
   @IBOutlet weak var usernameLabel: UILabel!

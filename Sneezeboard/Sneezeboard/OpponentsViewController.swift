@@ -8,8 +8,10 @@
 
 import UIKit
 
-class OpponentsViewController: UITableViewController {
-    
+class OpponentsViewController: UITableViewController, UISearchBarDelegate {
+  
+    let searchBar = UISearchBar()
+  
     var dataSource: protocol<UITableViewDataSource, OpponentsDataSource>? {
         didSet {
             if let tableView = tableView {
@@ -22,6 +24,12 @@ class OpponentsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        navigationItem.titleView = searchBar
+        searchBar.placeholder = "Search usernames"
+        searchBar.delegate = self
+        searchBar.tintColor = UIColor(red: 248 / 255.0, green: 70 / 255.0, blue: 72 / 255.0, alpha: 1)
+      
         tableView.dataSource = dataSource
         dataSource?.fetch({ (objects, error) -> Void in
             self.tableView.reloadData()
@@ -43,7 +51,7 @@ class OpponentsViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource?.tableView(tableView, numberOfRowsInSection: section) ?? 0
     }
-
+  
     // MARK: - Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -56,6 +64,12 @@ class OpponentsViewController: UITableViewController {
                 vc.match = match
             }
         }
+    }
+  
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        let search: String? = searchText == "" ? nil : searchText
+        dataSource?.filter(search)
+        tableView.reloadData()
     }
 
 }
