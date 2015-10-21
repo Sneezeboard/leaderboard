@@ -25,6 +25,7 @@ class LeagueLeaderTableViewCell: UITableViewCell {
     func updateView() {
         nameLabel.text = user.username
         eloLabel.text = "\(user!.elo)"
+        polishImage(userImageView)
         self.userImageView.file = user.avatar
         self.userImageView.loadInBackground()
     }
@@ -37,4 +38,12 @@ class LeagueLeaderTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
+    private func polishImage(view: UIImageView) {
+        view.layer.borderWidth = 2
+        view.layer.masksToBounds = false
+        view.layer.cornerRadius = view.frame.size.width / 2
+        view.layer.borderColor = UIColor.blackColor().CGColor //UIColor(red: 255 / 255.0, green: 94 / 255.0, blue: 85 / 255.0, alpha: 1).CGColor
+        view.clipsToBounds = true
+    }
+    
 }

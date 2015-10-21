@@ -63,33 +63,33 @@
         <scene sceneID="KsO-OF-tXE">
             <objects>
                 <tableViewController id="CrS-Qx-d7Y" customClass="LeagueDetailTableViewController" customModule="Sneezeboard" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="GaZ-vY-KfV">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" id="GaZ-vY-KfV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeagueLeaderTableViewCell" rowHeight="75" id="OjU-Lt-0JW" customClass="LeagueLeaderTableViewCell" customModule="Sneezeboard" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="75"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeagueLeaderTableViewCell" rowHeight="82" id="OjU-Lt-0JW" customClass="LeagueLeaderTableViewCell" customModule="Sneezeboard" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="82"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OjU-Lt-0JW" id="KrF-MQ-M40">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="81"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paul Bunyan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTK-i1-WPU">
-                                            <rect key="frame" x="64" y="21" width="94" height="21"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pYh-Fb-LV1" customClass="PFImageView">
+                                            <rect key="frame" x="8" y="8" width="64" height="64"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="64" id="mV3-zd-E2q"/>
+                                                <constraint firstAttribute="height" constant="64" id="sSe-eW-N9m"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="150" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkH-fc-YSB">
+                                            <rect key="frame" x="564" y="21" width="28" height="39"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pYh-Fb-LV1" customClass="PFImageView">
-                                            <rect key="frame" x="8" y="8" width="48" height="48"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="48" id="mV3-zd-E2q"/>
-                                                <constraint firstAttribute="height" constant="48" id="sSe-eW-N9m"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkH-fc-YSB">
-                                            <rect key="frame" x="564" y="21" width="28" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paul Bunyan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTK-i1-WPU">
+                                            <rect key="frame" x="80" y="30" width="94" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -100,8 +100,8 @@
                                         <constraint firstItem="pYh-Fb-LV1" firstAttribute="leading" secondItem="KrF-MQ-M40" secondAttribute="leading" constant="8" id="8Cz-fS-2qD"/>
                                         <constraint firstItem="HTK-i1-WPU" firstAttribute="leading" secondItem="pYh-Fb-LV1" secondAttribute="trailing" constant="8" id="BV4-ma-CMO"/>
                                         <constraint firstItem="pYh-Fb-LV1" firstAttribute="top" secondItem="KrF-MQ-M40" secondAttribute="top" constant="8" id="BgA-Jl-OlC"/>
-                                        <constraint firstItem="HTK-i1-WPU" firstAttribute="top" secondItem="KrF-MQ-M40" secondAttribute="top" constant="21" id="EjQ-O4-Kgz"/>
-                                        <constraint firstItem="UkH-fc-YSB" firstAttribute="top" secondItem="KrF-MQ-M40" secondAttribute="top" constant="21" id="djo-UB-IJo"/>
+                                        <constraint firstItem="UkH-fc-YSB" firstAttribute="centerY" secondItem="KrF-MQ-M40" secondAttribute="centerY" id="m1X-1S-Pr6"/>
+                                        <constraint firstItem="HTK-i1-WPU" firstAttribute="centerY" secondItem="KrF-MQ-M40" secondAttribute="centerY" id="mFA-hI-2YF"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="pYh-Fb-LV1" secondAttribute="bottom" constant="8" id="vTe-Gv-Qvw"/>
                                     </constraints>
                                 </tableViewCellContentView>
