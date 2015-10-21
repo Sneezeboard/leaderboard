@@ -11,30 +11,28 @@ import RAMAnimatedTabBarController
 import ParseUI
 
 class RecordMatchViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    @IBOutlet weak var user1View: UserView!
+    @IBOutlet weak var user2View: UserView!
     
     var match: Match!
     var scores: [Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]
 
-    @IBOutlet weak var user1ImageView: PFImageView!
-    @IBOutlet weak var user1Label: UILabel!
-    @IBOutlet weak var user2ImageView: PFImageView!
-    @IBOutlet weak var user2Label: UILabel!
+
+    @IBOutlet weak var doneButton: UIButton!
     
     @IBOutlet weak var scorePicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
       
+        doneButton.backgroundColor = doneButton.titleColorForState(.Normal)
+        doneButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+      
         self.scorePicker.dataSource = self
         self.scorePicker.delegate = self
-        
-        user1Label.text = User.currentUser()?.username
-        user1ImageView.file = User.currentUser()?.avatar
-        user1ImageView.loadInBackground()
-        
-        user2Label.text = match.user2?.username
-        user2ImageView.file = match.user2?.avatar
-        user2ImageView.loadInBackground()
+      
+        user1View.user = match.user1
+        user2View.user = match.user2      
     }
 
     override func didReceiveMemoryWarning() {

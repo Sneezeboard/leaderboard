@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserView" customModule="Sneezeboard" customModuleProvider="target">
@@ -21,10 +22,10 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OCf-SE-jES">
-                    <rect key="frame" x="0.0" y="334" width="398" height="66"/>
+                    <rect key="frame" x="0.0" y="320" width="398" height="80"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Uib-xW-oYi">
-                            <rect key="frame" x="145" y="20" width="108" height="27"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Uib-xW-oYi">
+                            <rect key="frame" x="80" y="0.0" width="239" height="80"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -32,10 +33,11 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="Uib-xW-oYi" firstAttribute="top" secondItem="OCf-SE-jES" secondAttribute="top" constant="20" id="1HW-rd-MP0"/>
-                        <constraint firstAttribute="bottom" secondItem="Uib-xW-oYi" secondAttribute="bottom" constant="20" id="2Lf-2B-yJf"/>
-                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Uib-xW-oYi" secondAttribute="trailing" constant="40" id="b2j-Sj-RPV"/>
-                        <constraint firstItem="Uib-xW-oYi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OCf-SE-jES" secondAttribute="leading" constant="40" id="ge2-vf-n0a"/>
+                        <constraint firstItem="Uib-xW-oYi" firstAttribute="top" secondItem="OCf-SE-jES" secondAttribute="top" id="1HW-rd-MP0"/>
+                        <constraint firstAttribute="bottom" secondItem="Uib-xW-oYi" secondAttribute="bottom" id="2Lf-2B-yJf"/>
+                        <constraint firstItem="Uib-xW-oYi" firstAttribute="width" secondItem="OCf-SE-jES" secondAttribute="width" multiplier="0.6" priority="750" id="JZe-3o-jCJ"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Uib-xW-oYi" secondAttribute="trailing" constant="10" id="b2j-Sj-RPV"/>
+                        <constraint firstItem="Uib-xW-oYi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OCf-SE-jES" secondAttribute="leading" constant="10" id="ge2-vf-n0a"/>
                         <constraint firstItem="Uib-xW-oYi" firstAttribute="centerX" secondItem="OCf-SE-jES" secondAttribute="centerX" id="s3m-xb-dah"/>
                     </constraints>
                 </view>
@@ -48,6 +50,7 @@
                 <constraint firstItem="g3l-rJ-5bh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Vtp-S4-v9S"/>
                 <constraint firstAttribute="trailing" secondItem="g3l-rJ-5bh" secondAttribute="trailing" id="a1P-FN-Jiy"/>
                 <constraint firstAttribute="bottom" secondItem="g3l-rJ-5bh" secondAttribute="bottom" id="bPZ-OA-PhH"/>
+                <constraint firstItem="OCf-SE-jES" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="f0t-kr-n4T"/>
                 <constraint firstAttribute="trailing" secondItem="OCf-SE-jES" secondAttribute="trailing" id="qKT-aW-boz"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
